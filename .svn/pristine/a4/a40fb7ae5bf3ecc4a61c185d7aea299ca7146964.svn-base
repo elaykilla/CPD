@@ -1,0 +1,149 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<form class="well form-inline"
+      action="@{Administration.createMandate}" method="POST">
+    #{ifnot _caller?.mandate?.poste}
+    <h2>Ajout d'un nouveau mandat</h2>
+    #{/ifnot}
+    #{else}
+    <h2>Mise à jour du mandat</h2>
+    #{/else}
+    #{field 'mandate.user_id'}
+    <!--    <select id="${field.id}" name="${field.name}" required>
+            <option value="${_caller?.mandate?.user?.id}">${_caller?.mandate?.user?.fullName()}</option>
+        </select>-->
+    <input id="userid" type="hidden" name="${field.name}" value="${_caller?.mandate?.user?.id}"/>
+    #{/field}
+    <div id="admin-instant-search" class="search-open-inner">
+        <div class="input-append">
+            <input type="text" class="content" autocomplete="off" 
+                   placeholder="Search" name="q" value="${_caller?.mandate?.user?.fullName()}"
+                   onkeyup="return instantSearch('admin-');"/>
+            <div class="blog-page blog-item">
+                <ul id="admin-instant-search-result" style="background-color: #ccc;"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        #{field 'mandate.poste.id'}
+        <div class="control-group span4 ${_caller.errors.forKey(field.name) ? 'error' : ''}">
+            <label for="mandate-postes">Poste</label>
+            #{if field.error}
+            <span class="help-inline">${field.error}</span>
+            #{/if}
+            <select id="mandate-postes" name="${field.name}" required>
+                #{list items:_caller?.postes, as:'poste'}
+                <option title="${poste.general ? 'Cellule' : 'Dendrite'}" value="${poste.id}" #{if _caller?.mandate?.poste?.id == poste?.id } selected="selected" #{/if}>${poste.title}</option>
+                #{/list}
+            </select>
+        </div>
+        #{/field}
+        #{field 'mandate.dendrite_id'}
+        <div class="control-group span4 ${_caller.errors.forKey(field.name) ? 'error' : ''}">
+            <label for="mandate-dendrite">Dendrite</label>
+            #{if field.error}
+            <span class="help-inline">${field.error}</span>
+            #{/if}
+            <select id="mandate-dendrite" name="${field.name}"
+                    onchange="updatePosteList();" 
+                    onclick="updatePosteList();" required>
+                #{ifnot _caller?.dendrites}
+                <option value="${_caller?.mandate?.user?.dendrite?.id}" 
+                        #{if _caller?.mandate?.dendrite_id == _caller?.mandate?.user?.dendrite?.id} 
+                        selected="selected" #{/if}>
+                        ${_caller?.mandate?.user?.dendrite?.named}
+            </option>
+            <option value="${controllers.Cellule.dendriteId()}" 
+                    #{if _caller?.mandate?.dendrite_id == controllers.Cellule.dendriteId()} 
+                    selected="selected" #{/if}>${controllers.Cellule.laCellule()?.named}
+        </option>
+        #{/ifnot}
+        #{else}
+        <option value="${controllers.Cellule.dendriteId()}" 
+                #{if _caller?.mandate?.dendrite_id == controllers.Cellule.dendriteId()} 
+                selected="selected" #{/if}>${controllers.Cellule.laCellule()?.named}
+    </option>
+    #{list items:_caller?.dendrites, as:'dendrite'}
+    <option title="${dendrite.description}" value="${dendrite.id}" #{if _caller?.mandate?.dendrite?.id == dendrite?.id } selected="selected" #{/if}>${dendrite.named}</option>
+    #{/list}
+    #{/else}
+</select>
+</div>
+#{/field}
+
+#{field 'mandate.election_id'}
+<div class="control-group span4 ${_caller.errors.forKey(field.name) ? 'error' : ''}">
+    <label for="${field.id}">Election</label>
+    #{if field.error}
+    <span class="help-inline">${field.error}</span>
+    #{/if}
+    <select id="${field.id}" name="${field.name}" required>
+        #{list items:_caller?.elections, as:'election'}
+        <option value="${election.id}" #{if _caller?.mandate?.election_id == election?.id } selected="selected" #{/if}>${election.code}</option>
+        #{/list}
+    </select>
+</div>
+#{/field}
+</div>
+<div class="row-fluid">
+    <div class="span6">
+        #{field 'mandate.beginMandate'}
+        <div class="control-group ${_caller.errors.forKey(field.name) ? 'error' : ''}">
+            <label class="control-label span12" for="${field.id}">Date de début</label>
+            #{if field.error}
+            <span class="help-inline">${field.error}</span>
+            #{/if}
+            <div class="datepicker input-append">
+                <!--<input data-format="yyyy-MM-dd" type="text">-->
+                <input id="${field.id}" type="text" name="${field.name}"
+                       placeholder="yyyy-MM-dd" required value="${_caller?.mandate?.beginMandate?.format()}" data-format="yyyy-MM-dd"/>
+                <span class="add-on">
+                    <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                    </i>
+                </span>
+            </div>
+        </div>
+        #{/field}
+        #{field 'mandate.endMandate'}
+        <div class="control-group ${_caller.errors.forKey(field.name) ? 'error' : ''}">
+            <label class="control-label span12" for="${field.id}">Date de fin</label>
+            #{if field.error}
+            <span class="help-inline">${field.error}</span>
+            #{/if}
+            <div class="datepicker input-append">
+                <!--<input data-format="yyyy-MM-dd" type="text">-->
+                <input id="${field.id}" type="text" name="${field.name}"
+                       placeholder="yyyy-MM-dd" 
+                       value="${_caller?.mandate?.endMandate?.format()}" data-format="yyyy-MM-dd"/>
+                <span class="add-on">
+                    <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                    </i>
+                </span>
+            </div>
+        </div>
+        #{/field}
+    </div>
+    <div class="span6">
+        #{field 'mandate.description'}
+        <div
+            class="control-group span11 ${_caller.errors.forKey(field?.name) ? 'error' : ''}">
+            <label class="control-label" for="${field.id}">&{'Description du mandat'}</label>
+            <div class="controls">
+                #{if field.error}
+                <span class="help-inline">${field.error}</span>
+                #{/if}
+                <textarea id="${field.id}" name="${field.name}"
+                          placeholder="&{'Description du mandat'}" class="input-xlarge span12" 
+                          rows="10" required>${_caller?.mandate?.description}</textarea> 
+            </div>
+        </div>
+        #{/field}
+    </div>
+</div>
+<div class="form-actions">
+    <input type="submit" value="Valider" class="btn btn-u" />
+</div>
+</form>

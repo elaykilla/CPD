@@ -1,0 +1,100 @@
+#{extends 'Administration/template.html' /}
+#{set title:feedback?.subject /}
+<div class="container-fluid span9">
+    <form class="well form-inline" method="POST" action="@{Administration.updateFeedback}">
+        <legend>Mise à jour feedback</legend>
+        <input type="hidden" value="${feedback?.id}" name="feedback.id"/>
+        <input type="hidden" value="${feedback?.progress}" name="oldProgress"/>
+        <input type="hidden" value="${feedback?.priority}" name="oldPriority"/>
+        #{field 'responsableId'}
+        <div
+            class="control-group ${errors?.forKey(field?.name) ? 'error' : ''}">
+            <label for="${field.id}">&{'Responsable: '}</label>
+            <select class="span12" id="${field.id}" name="${field.name}" required> 
+                <option></option>
+                #{list items:devs, as:'user'}
+                <option value="${user?.id}" #{if feedback?.responsable?.id == user?.id } selected="selected" #{/if}>${user?.fullName()}</option> 
+                #{/list}
+            </select> 
+        </div>
+        #{/field}
+        #{field 'feedback.progress'}
+        <div
+            class="control-group ${errors.forKey(field?.name) ? 'error' : ''}">
+            <div class="controls">
+                #{if field.error}
+                <span class="help-inline">${field.error}</span>
+                #{/if}
+                <div class="input">
+                    <label for="">Progression: <span></span></label>
+                    <input class="range" type="hidden" value="${feedback?.progress}" name="${field.name}"/>
+                </div>
+
+            </div>
+        </div>
+        #{/field}
+
+        #{field 'feedback.priority'}
+        <div
+            class="control-group ${errors.forKey(field?.name) ? 'error' : ''}">
+            <div class="controls">
+                #{if field.error}
+                <span class="help-inline">${field.error}</span>
+                #{/if}
+                <div class="input">
+                    <label for="">Priorité: <span></span></label>
+                    <input class="range" type="hidden" value="${feedback?.priority}" name="${field.name}"/>
+                </div>
+            </div>
+        </div>
+        #{/field}
+        <div class="body">
+
+            <div class="name">
+                #{if feedback?.author}
+                <a href="@{Users.user(feedback?.author?.id)}">${feedback?.author?.fullName()}</a>
+                #{/if}
+                #{else}
+                <a href="#" onclick="return false;">${feedback?.poster}</a>
+                #{/else}
+                <br/>
+                <span>${feedback?.subject}</span>
+            </div>
+            <div class="text">${feedback?.content}</div>
+            <div class="time pull-right">
+                <i class="icon-time"></i>
+                <span class="green">${feedback?.created.since()}</span>
+            </div>
+        </div>
+
+
+        <table cellpadding="0" cellspacing="0" border="0"
+               class="table table-striped table-bordered">
+            <caption>
+                <h4>Les évolutions</h4>
+            </caption>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Auteur</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            #{list items:evolutions, as:'evolution'}
+
+            <tbody>
+                <tr>
+                    <td><strong>${evolution?.description}</strong></td>
+                    <td><strong><a href="@{Users.user(evolution?.modifier?.id)}">${evolution?.modifier}</a></strong></td>
+                    <td><span>${evolution?.created.format('dd MMMM yyyy HH:mm:ss')}</span></td>
+                </tr>
+            </tbody>
+            #{/list}
+        </table>
+
+
+        <div class="form-actions">
+            <input type="submit" value="Update" class="btn btn-u" />
+        </div>
+    </form>
+</div>

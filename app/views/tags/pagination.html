@@ -1,0 +1,255 @@
+#{if _nbPages > 1}
+<div class="row-fluid"> 
+    <div class="pagination pagination-centered">
+        <ul>
+            *{ Previous }*
+
+            #{if _page == 1}
+            #{/if}
+            #{else}
+            #{if _search}
+            <form id="form-search-${_as}" class="form-search-${_as} previous" method="post"
+                  #{if _as=='admin'} action="@{Administration.search()}" #{/if} 
+                  #{else} action="@{Annuaires.search()}" #{/else}>
+                  <input name="search.type" type="hidden" value="${_search?.type}" />
+                #{if _page}
+                <input name="page" type="hidden" value="${_page - 1}" />
+                #{/if}
+                <input type="hidden" name="search.firstName" value="${_search?.firstName}">
+                <input type="hidden" name="search.lastName" value="${_search?.lastName}">
+                <input type="hidden" name="search.promo_from" value="${_search?.promo_from}">
+                <input type="hidden" name="search.promo_to" value="${_search?.promo_to}">
+                <!--<a type="submit" href="">&larr; Previous</a>-->
+                <button type="submit" >&larr; Previous</button>
+            </form>
+            #{/if}
+            #{else}
+            <li class="previous">
+                <a href="${controllers.Application.createPaginationLink(_page-1)}">&larr; Previous</a>
+            </li>
+            #{/else} 
+            #{/else}
+
+            #{if _page > 3}
+            #{if _search}
+            <form id="form-search-${_as}" class="form-search-${_as}" method="post"
+                  #{if _as=='admin'} action="@{Administration.search()}" #{/if} 
+                  #{else} action="@{Annuaires.search()}" #{/else}>
+                  <input name="search.type" type="hidden" value="${_search?.type}" />
+                #{if _page }
+                <input name="page" type="hidden" value="1" />
+                #{/if}
+                <input type="hidden" name="search.firstName" value="${_search?.firstName}">
+                <input type="hidden" name="search.lastName" value="${_search?.lastName}">
+                <input type="hidden" name="search.promo_from" value="${_search?.promo_from}">
+                <input type="hidden" name="search.promo_to" value="${_search?.promo_to}">
+                <!--<a href="${request.path}?page=1">1</a>-->
+                <button type="submit" >1</button>
+                <!--<input type="submit" value="1" />-->
+            </form>
+            #{/if}
+            #{else}
+            <li>
+                <a href="${controllers.Application.createPaginationLink(1)}">1</a>
+            </li>
+            #{/else}
+            #{if _search}
+            <form id="form-search-${_as}" class="form-search-${_as}" method="post" method="post"
+                  #{if _as=='admin'} action="@{Administration.search()}" #{/if} 
+                  #{else} action="@{Annuaires.search()}" #{/else}>
+                  <input name="search.type" type="hidden" value="${_search?.type}" />
+                #{if _page }
+                <input name="page" type="hidden" value="${_page}" />
+                #{/if}
+                <input type="hidden" name="search.firstName" value="${_search?.firstName}">
+                <input type="hidden" name="search.lastName" value="${_search?.lastName}">   
+                <input type="hidden" name="search.promo_from" value="${_search?.promo_from}">
+                <input type="hidden" name="search.promo_to" value="${_search?.promo_to}">
+                <!--<a href="${request.path}?page=${_nbPages}">${_nbPages}</a>-->
+                <button type="submit" >...</button>
+                <!--<input type="submit" value="${_nbPages}" />-->
+            </form>
+            #{/if}
+            #{else} 
+            <li><a href="#">...</a></li>
+            #{/else}
+            #{/if}
+            #{list items:((1 < (_page-2)) ? (_page-2) : 1).._page, as:'i'}
+            #{if i==_page}
+            #{if _search}
+            <form id="form-search-${_as}" class="form-search-${_as} active" method="post" 
+                  #{if _as=='admin'} action="@{Administration.search()}" #{/if} 
+                  #{else} action="@{Annuaires.search()}" #{/else}>
+                  <input name="search.type" type="hidden" value="${_search?.type}" />
+                #{if _page}
+                <input name="page" type="hidden" value="${i}" />
+                #{/if}
+                <input type="hidden" name="search.firstName" value="${_search?.firstName}">
+                <input type="hidden" name="search.lastName" value="${_search?.lastName}">   
+                <input type="hidden" name="search.promo_from" value="${_search?.promo_from}">
+                <input type="hidden" name="search.promo_to" value="${_search?.promo_to}">
+                <!--<a href="${request.path}?page=${i}">${i}</a>-->
+                <button type="submit" >${i}</button>
+                <!--<input type="submit" value="${i}" />-->
+            </form>
+            #{/if}
+            #{else}
+            <li class="active">
+                <a href="${controllers.Application.createPaginationLink(i)}">${i}</a>
+            </li>
+            #{/else}
+            #{/if}
+            #{else}
+            #{if _search}
+            <form id="form-search-${_as}" class="form-search-${_as}" method="post"
+                  #{if _as=='admin'} action="@{Administration.search()}" #{/if} 
+                  #{else} action="@{Annuaires.search()}" #{/else}>
+                  <input name="search.type" type="hidden" value="${_search?.type}" />
+                #{if _page }
+                <input name="page" type="hidden" value="${i}" />
+                #{/if}
+                <input type="hidden" name="search.firstName" value="${_search?.firstName}">
+                <input type="hidden" name="search.lastName" value="${_search?.lastName}">   
+                <input type="hidden" name="search.promo_from" value="${_search?.promo_from}">
+                <input type="hidden" name="search.promo_to" value="${_search?.promo_to}">
+                <!--<a href="${request.path}?page=${i}">${i}</a>-->
+                <button type="submit" >${i}</button>
+                <!--<input type="submit" value="${i}" />-->
+            </form>
+            #{/if}
+            #{else}
+            <li>
+                <a href="${controllers.Application.createPaginationLink(i)}">${i}</a>
+            </li>
+            #{/else}
+            #{/else}
+            #{/list}
+            #{if (_page + 2) < _nbPages}
+            #{list items:(_page + 1)..(_page+2), as:'i'}
+            #{if _search}
+            <form id="form-search-${_as}" class="form-search-${_as}" method="post"
+                  #{if _as=='admin'} action="@{Administration.search()}" #{/if} 
+                  #{else} action="@{Annuaires.search()}" #{/else}>
+                  <input name="search.type" type="hidden" value="${_search?.type}" />
+                #{if _page }
+                <input name="page" type="hidden" value="${i}" />
+                #{/if}
+                <input type="hidden" name="search.firstName" value="${_search?.firstName}">
+                <input type="hidden" name="search.lastName" value="${_search?.lastName}">   
+                <input type="hidden" name="search.promo_from" value="${_search?.promo_from}">
+                <input type="hidden" name="search.promo_to" value="${_search?.promo_to}">
+                <!--<a href="${request.path}?page=${i}">${i}</a>-->
+                <button type="submit" >${i}</button>
+                <!--<input type="submit" value="${i}" />-->
+            </form>
+            #{/if}
+            #{else}
+            <li>
+                <a href="${controllers.Application.createPaginationLink(i)}">${i}</a>
+            </li>
+            #{/else}
+            #{/list}
+            #{if _search}
+            <form id="form-search-${_as}" class="form-search-${_as}" method="post" method="post"
+                  #{if _as=='admin'} action="@{Administration.search()}" #{/if} 
+                  #{else} action="@{Annuaires.search()}" #{/else}>
+                  <input name="search.type" type="hidden" value="${_search?.type}" />
+                #{if _page }
+                <input name="page" type="hidden" value="${_page}" />
+                #{/if}
+                <input type="hidden" name="search.firstName" value="${_search?.firstName}">
+                <input type="hidden" name="search.lastName" value="${_search?.lastName}">   
+                <input type="hidden" name="search.promo_from" value="${_search?.promo_from}">
+                <input type="hidden" name="search.promo_to" value="${_search?.promo_to}">
+                <!--<a href="${request.path}?page=${_nbPages}">${_nbPages}</a>-->
+                <button type="submit" >...</button>
+                <!--<input type="submit" value="${_nbPages}" />-->
+            </form>
+            #{/if}
+            #{else} 
+            <li><a href="#">...</a></li>
+            #{/else}
+            #{if _search}
+            <form id="form-search-${_as}" class="form-search-${_as}" method="post"
+                  #{if _as=='admin'} action="@{Administration.search()}" #{/if} 
+                  #{else} action="@{Annuaires.search()}" #{/else}>
+                  <input name="search.type" type="hidden" value="${_search?.type}" />
+                #{if _page }
+                <input name="page" type="hidden" value="${_nbPages}" />
+                #{/if}
+                <input type="hidden" name="search.firstName" value="${_search?.firstName}">
+                <input type="hidden" name="search.lastName" value="${_search?.lastName}">   
+                <input type="hidden" name="search.promo_from" value="${_search?.promo_from}">
+                <input type="hidden" name="search.promo_to" value="${_search?.promo_to}">
+                <!--<a href="${request.path}?page=${_nbPages}">${_nbPages}</a>-->
+                <button type="submit" >${_nbPages}</button>
+                <!--<input type="submit" value="${_nbPages}" />-->
+            </form>
+            #{/if}
+            #{else}
+            <li>
+                <a href="${controllers.Application.createPaginationLink(_nbPages)}">${_nbPages}</a>
+            </li>
+            #{/else}
+            #{/if}
+            #{elseif (_page + 1) <= _nbPages}
+            #{list items:(_page + 1).._nbPages, as:'i'}
+            #{if _search}
+            <form id="form-search-${_as}" class="form-search-${_as}" method="post"
+                  #{if _as=='admin'} action="@{Administration.search()}" #{/if} 
+                  #{else} action="@{Annuaires.search()}" #{/else}>
+                  <input name="search.type" type="hidden" value="${_search?.type}" />
+                #{if _page }
+                <input name="page" type="hidden" value="${i}" />
+                #{/if}
+                <input type="hidden" name="search.firstName" value="${_search?.firstName}">
+                <input type="hidden" name="search.lastName" value="${_search?.lastName}">   
+                <input type="hidden" name="search.promo_from" value="${_search?.promo_from}">
+                <input type="hidden" name="search.promo_to" value="${_search?.promo_to}">
+                <!--<a href="${request.path}?page=${i}">${i}</a>-->
+                <button type="submit" >${i}</button>
+                <!--<input type="submit" value="${i}" />-->
+            </form>
+            #{/if}
+            #{else}
+            <li>
+                <a href="${controllers.Application.createPaginationLink(i)}">${i}</a>
+            </li>
+            #{/else}
+            #{/list}
+            #{/elseif}
+
+            *{ Next }*
+
+            #{if _page == _nbPages}
+            #{/if}
+            #{else}
+            #{if _search }
+            <form id="form-search-${_as}" class="form-search-${_as} next" method="post"
+                  #{if _as=='admin'} action="@{Administration.search()}" #{/if} 
+                  #{else} action="@{Annuaires.search()}" #{/else}>
+                  <input name="search.type" type="hidden" value="${_search?.type}" />
+                #{if _page }
+                <input name="page" type="hidden" value="${_page+1}" />
+                #{/if}
+                <input type="hidden" name="search.firstName" value="${_search?.firstName}" />
+                <input type="hidden" name="search.lastName" value="${_search?.lastName}" />   
+                <input type="hidden" name="search.promo_from" value="${_search?.promo_from}" />
+                <input type="hidden" name="search.promo_to" value="${_search?.promo_to}" />
+                <!--<a href="${request.path}?page=${_page+1}">Next &rarr;</a>-->
+                <button type="submit" >Next &rarr;</button>
+                <!--<input type="submit" value="Next &rarr;"/>-->
+            </form>
+            #{/if}
+            #{else}
+            <li class="next">
+                <a href="${controllers.Application.createPaginationLink(_page+1)}">Next &rarr;</a>
+            </li>
+            #{/else}
+            #{/else}
+        </ul>
+    </div>
+</div>
+#{/if}
+
+

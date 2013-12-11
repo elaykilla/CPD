@@ -1,0 +1,10 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="span12 cv-info">
+    <div class="row">
+        <span class="school span3">${_skill?.domain} : </span>
+        <span class="span3">${_skill?.comment}</span>
+    </div>
+</div>

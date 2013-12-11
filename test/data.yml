@@ -1,0 +1,322 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+# Dendrites
+
+# Les mots de passe sont "secret"
+
+Dendrite(paris):
+  code:             dendrite_paris
+  named:            Paris
+  description:      La dendrite de Paris est la dendrite qui est à Paris.
+  
+Dendrite(grenoble):
+  code:             dendrite_grenoble
+  named:            Grenoble
+  description:      La dendrite de Grenoble est la dendrite qui est à Grenoble.
+  
+Dendrite(valence):
+  code:             dendrite_valence
+  named:            Valence
+  description:      La dendrite de Valence est la dendrite qui est à Valence.
+ 
+Dendrite(angers):
+  code:             dendrite_angers
+  named:            Angers
+  description:      La dendrite de Angers est la dendrite qui est à Angers.
+
+# Visibilities
+
+Visibility(restricted):
+  code:             RESTRICTED
+  
+Visibility(not_restricted):
+  code:             NOT_RESTRICTED
+
+# Rights  
+
+Right(edit_user):
+  code:             EDIT_USER
+  description:      Permet la modification des utilisateurs.
+  
+Right(delete_user):
+  code:             DELETE_USER
+  description:      Permet la suppression des utilisateurs.
+  
+Right(create_user):
+  code:             CREATE_USER
+  description:      Permet la création des utilisateurs.
+  
+Right(create_role):
+  code:             CREATE_ROLE
+  description:      Permet la création des rôles.
+  
+Right(edit_role):
+  code:             EDIT_ROLE
+  description:      Permet la modification des rôles.
+  
+Right(delete_role):
+  code:             DELETE_ROLE
+  description:      Permet la suppression des rôles.
+
+Right(create_dendrite):
+  code:             CREATE_DENDRITE
+  description:      Permet la création des dendrites.
+  
+Right(edit_dendrite):
+  code:             EDIT_DENDRITE
+  description:      Permet la modification des dendrites.
+  
+Right(delete_dendrite):
+  code:             DELETE_DENDRITE
+  description:      Permet la suppression des dendrites.
+  
+Right(remove_role_from_user):
+  code:             REMOVE_ROLE_FROM_USER
+  description:      Permet enlève un rôle d'un utilisateur.
+  
+Right(add_role_to_user):
+  code:             ADD_ROLE_TO_USER
+  description:      Permet l'ajout d'un rôle d'un utilisateur.
+  
+Right(remove_right_from_role):
+  code:             REMOVE_RIGHT_FROM_ROLE
+  description:      Permet enlève un droit d'un rôle.
+  
+Right(add_right_to_role):
+  code:             ADD_RIGHT_TO_ROLE
+  description:      Permet l'ajout d'un rôle d'un utilisateur.
+  
+Right(remove_user_from_dendrite):
+  code:             REMOVE_USER_FROM_DENDRITE
+  description:      Permet enlève un utilisateur d'une dendrite.
+  
+Right(add_user_to_dendrite):
+  code:             ADD_USER_TO_DENDRITE
+  description:      Permet l'ajout d'un utilsateur dans une dendrite.
+  
+Right(remove_user_from_his_dendrite):
+  code:             REMOVE_USER_FROM_HIS_DENDRITE
+  visibility:       restricted
+  description:      Permet enlève un utilisateur de sa dendrite.
+  
+Right(add_user_to_his_dendrite):
+  code:             ADD_USER_TO_HIS_DENDRITE
+  visibility:       restricted
+  description:      Permet l'ajout d'un utilsateur dans sa dendrite.
+
+# Event
+
+Right(create_event):
+  code:             CREATE_EVENT
+  description:      Permet la création des évènements.
+  
+Right(edit_event):
+  code:             EDIT_EVENT
+  description:      Permet la modification des évènements.
+  
+Right(delete_event):
+  code:             DELETE_EVENT
+  description:      Permet la suppression des évènements. 
+ 
+# Article
+
+Right(create_article):
+  code:             CREATE_ARTICLE
+  description:      Permet la création des articles.
+  
+Right(edit_article):
+  code:             EDIT_ARTICLE
+  description:      Permet la modification des articles.
+  
+Right(delete_article):
+  code:             DELETE_ARTICLE
+  description:      Permet la suppression des articles.
+
+# Announce
+
+Right(create_announce):
+  code:             CREATE_ANNOUNCE
+  description:      Permet la création des announces.
+  
+Right(edit_announce):
+  code:             EDIT_ANNOUNCE
+  description:      Permet la modification des announces.
+  
+Right(delete_announce):
+  code:             DELETE_ANNOUNCE
+  description:      Permet la suppression des announces.
+  
+Right(access_admin):
+  code:             ACCESS_ADMIN
+  description:      Permet l'accès à l'administration.
+  
+# Roles
+
+Role(super_user):
+  code:             SUPER_USER
+  description:      Le rôle super utilisateur.
+  rights:           [access_admin, edit_user, edit_role, delete_user, delete_role, create_user, create_role, add_right_to_role, remove_right_from_role, add_user_to_dendrite, remove_user_from_dendrite]
+
+Role(moderator):
+  code:             MODERATOR
+  description:      Le rôle modérateur.
+  rights:           [edit_article, delete_article, edit_event, delete_event, edit_announce, delete_announce]
+  
+Role(president):
+  code:             PRESIDENT
+  description:      Le rôle président.
+  rights:           [create_event, edit_event, add_user_to_his_dendrite, remove_user_from_his_dendrite]
+
+# Users
+
+User(cheick):
+    email:          mcicheick@yahoo.fr
+    password:       $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    firstName:      Cheick Mahady
+    lastName:       SISSOKO
+    dendrite:       paris
+    boursier:       true
+    birthday:       1989-02-03
+    promotion:      2008
+    roles:          [super_user]
+    
+User(elay):
+    email:          elay@yahoo.fr
+    password:       $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    firstName:      Abdoulaye
+    lastName:       MAIGA
+    dendrite:       paris
+    boursier:       true
+    birthday:       1989-04-24
+    promotion:      2007
+    rolse:          [moderator]
+    
+User(baya):
+    email:          baya@yahoo.fr
+    password:       $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    firstName:      Baya
+    lastName:       DEMBA
+    dendrite:       paris
+    boursier:       true
+    birthday:       1988-10-17
+    promotion:      2006
+    roles:          president
+    
+User(mina):
+    email:          mina.mint@yahoo.fr
+    password:       $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    firstName:      Mina Mint
+    lastName:       MOHAMED
+    dendrite:       angers
+    boursier:       true
+    birthday:       1990-12-22
+    promotion:      2008
+    
+User(mah):
+    email:          mah@yahoo.fr
+    password:       $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    firstName:      Mah Kadidia
+    lastName:       KONATE
+    dendrite:       paris
+    boursier:       true
+    birthday:       1989-04-19
+    promotion:      2007
+    
+User(solomane):
+    email:          solomane.nanakasse@yahoo.fr
+    password:       $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    firstName:      Solomane
+    lastName:       NANAKASSE
+    dendrite:       paris
+    boursier:       true
+    birthday:       1989-04-14
+    promotion:      2007
+    
+User(mohamed):
+    email:          momo.h14@live.fr
+    password:       $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    firstName:      Mohamed dit Mady
+    lastName:       TRAORE
+    dendrite:       grenoble
+    boursier:       true
+    birthday:       1991-02-14
+    promotion:      2008
+    
+User(anonymous):
+    email:          anonymous@cpd.com
+    password:       $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    firstName:      Anonyme
+    lastName:       Anonyme
+    boursier:       false
+    birthday:       1991-02-14
+    
+User(djamma):
+    email:          djamma@djamma.com
+    password:       $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    firstName:      Djamma
+    lastName:       Djamma
+    boursier:       false
+    birthday:       2010-02-14
+    
+User(cpd):
+    email:          cpd@cpd.com
+    password:       $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    firstName:      CPD
+    lastName:       CPD
+    boursier:       false
+    birthday:       2010-02-14
+    
+# Articles
+    
+articles.Article(a1):
+  title:            L'enfant de la plage
+  author:           cheick
+  content:          >
+                    Un homme se baladait un jour sur une plage.
+                    C'était la marée basse et la plage était couverte de millions d'étoiles de mer qui séchaient au soleil.
+                    Tout à coup, l'homme aperçoit un enfant qui ramasse des etoiles de mer et les remets à l'eau.
+
+                    - mais que fais-tu là mon bonhomme? demande l'adulte
+                    - je sauve les étoiles de mer! répond l'enfant!
+                    - c'est ridicule, regarde autour de toi! des millions d'étoiles sont entrain de mourir au soleil, déjà! Tu ne pourras jamais toutes les sauver, et ce que tu fais ne change rien!"
+
+                    Imperturbable, l'enfant ramasse encore une étoile qui gigote et la pose dans l'eau, puis dit à l'homme:
+                      
+# Announces
+
+articles.Announce(an1):
+  title:            Minicode Valence 2013
+  author:           baya
+  dendrite:         paris
+  content:          >
+                    Le minicode 2013 est organisé comme toutes les autres années
+                    mais cette année est un peu spéciale car on va présenter le site CPD.
+
+# Comments
+
+articles.Comment(c1):
+    author:         mina
+    content:        >
+                    You are right !
+    article:        a1
+    
+articles.Comment(c2):
+    author:         elay
+    content:        >
+                    I knew that ...
+    article:        a1
+    
+articles.Comment(c3):
+    author:         cheick
+    content:        >
+                    Ah oui c'est vrai mais sauf que on n'est pas trop motivé pour y aller.
+                    Déjà le billet est inachétable plus tout le tralala.
+    announce:       an1
+                 
+articles.Comment(c4):
+    author:         cpd
+    content:        >
+                    Ah le minicode ça va être géant!
+    announce:       an1
+

@@ -1,0 +1,87 @@
+#{extends 'main.html' /}
+<div class="container-fluid">
+
+    #{if ext}
+    #{subtitleTag as:'Les articles', ext:ext/}
+    #{/ if}
+    #{else}
+    #{subtitleTag as:'Les articles' /}
+    #{/ else}
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span1" align="left"></div>
+            #{if recents}
+            <div class="span6 offset1">
+                #{doLayout /}
+            </div>
+            <div class="span2" id="recents">
+                <!-- Search Bar -->
+                <form action="@{Articles.search}">
+                    <div class="headline"><h3>Trouver quelque chose</h3></div>
+                    <div class="input-append  margin-bottom-20">
+                        <input type="text" class="span9" name="q">
+                        <button type="submit" class="btn-u">Search</button>
+                    </div>
+                </form>
+                <!-- Posts -->
+                <div class="posts margin-bottom-20">
+                    #{if recents?.size()}
+                    <div class="headline"><h3>Les articles récents</h3></div>
+                    #{list items:recents, as:'a'}
+                    <dl class="dl-horizontal" id="white-part">
+                        #{if (a.myType() == 'article')}
+                        <dt><a href="@{Users.user(a?.author.id)}"><img src="${a?.author?.smallUrl()}" alt="" /></a></dt>
+                        <dd>
+                            <a href="@{Articles.article(a?.id)}"><div class="zoneTexte">${a?.title}</div></a>
+                        </dd>
+                        #{/if}
+                    </dl>
+                    #{/list}
+                    #{/if}
+
+                    <!--Liste des annonces recentes-->
+                    #{if recents?.size()}
+                    <dl class="dl-horizontal">
+                    <div class="headline"><h3>Les annonces récentes</h3></div>
+                    #{list items:recents, as:'a'}
+                    #{if (a.myType() == 'announce')}
+                    <dt><a href="@{Users.user(a?.author.id)}"><img src="${a?.author?.smallUrl()}" alt="" /></a></dt>
+                    <dd>
+                        <a href="@{Announces.announce(a?.id)}"><div class="zoneTexte">${a?.title}</div></a>
+                    </dd>
+                    #{/if}
+                    </dl>
+                    #{/list}
+                    #{/if}
+
+                    <!--Les evenements recents-->
+                    #{if recents?.size()}
+                    <div class="headline"><h3>Les evènements récents</h3></div>
+                    #{list items:recents, as:'a'}
+                    <dl class="dl-horizontal">
+                    #{if (a.myType() == 'event')}
+                    <dt><a href="@{Users.user(a?.author.id)}"><img src="${a?.author?.smallUrl()}" alt="" /></a></dt>    
+                    <dd>
+                        <a href="@{Events.event(a?.id)}"><div class="zoneTexte">${a?.title}</div></a>
+                    </dd>
+                    #{/if}
+                    </dl>
+                    #{/list}
+                    #{/if}
+
+
+                    #{else}
+                    <p>Aucun article</p>
+                    #{/else}
+                </div><!--/posts-->
+
+            </div><!--/span3-->
+            #{/if}
+            #{else}
+            <div class="span9">
+                #{doLayout /}
+            </div>
+            #{/else}
+        </div>
+    </div>
+</div>

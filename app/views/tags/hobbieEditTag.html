@@ -1,0 +1,39 @@
+<!--
+Edit a hobbie
+-->
+<form id="${_hobbie?.id ? 'form-hobbie' : '' }" class="${_hobbie?.id ? 'form-hobbie' : '' } well form-horizontal"  action="@{Cvs.updateHobbie}" method="POST"
+      accept-charset="UTF-8">
+    <div class="ajaxable">
+        <input type='hidden' value="${_cv?.id}" name="cv_id"/>
+        <input type='hidden' value="cv" name='act'/>
+        <input type='hidden' value="${_hobbie?.id}" name='hobbie.id'/>
+        #{field 'hobbie.title'}
+        <div
+            class="control-group">
+            <label class="control-label span2" for="${field.id}">Titre : </label>
+            <div class="controls">
+                <input class="span10" id="${field.id}" type="text" name="${field.name}"
+                       value="${_hobbie?.title}" placeholder="Titre" required /> 
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+        #{field 'hobbie.comment'}
+        <div
+            class="control-group ${_caller?.errors?.forKey(field?.name) ? 'error' : ''}">
+            <label class="control-label span2" for="${field.id}">Commentaire : </label>
+            <div class="controls">
+                <textarea cols="20" class="field-area span10" id="${field.id}" type="text" name="${field.name}"
+                          placeholder="Commentaire" required>${_hobbie?.comment}</textarea> 
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+        <div class="form-actions">
+            <input type="submit" value="Valider" class="btn btn-u" />
+            #{if _hobbie?.id }
+            <a class="btn btn-danger" href="@{Cvs.deleteHobbie(_hobbie?.id, 'cv')}" onclick="return(confirm('Confirmer la suppression de cet intérêt.'));">X</a>
+            #{/if}
+        </div>
+    </div>
+</form>

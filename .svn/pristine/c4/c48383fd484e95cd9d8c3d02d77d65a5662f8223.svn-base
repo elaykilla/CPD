@@ -1,0 +1,106 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                                                       Application.index
+GET     /contact                                                                Application.contact
+GET	/signup                                                                 Users.signup
+POST	/signup                                                                 Users.register
+GET	/login                                                                  Users.login
+POST	/login                                                                  Users.loggedIn
+
+GET     /admin                                                                  Administration.admin
+
+GET     /admin/dendrites/{<[0-9]+>id}/edit                                      Administration.editdendrite
+GET	/admin/dendrites/{<[0-9]+>id}                                           Administration.dendrite
+GET     /admin/dendrites                                                        Administration.dendrites
+
+GET     /admin/roles/{<[0-9]+>id}/edit                                          Administration.editRole
+GET     /admin/roles/new                                                        Administration.editRole
+GET     /admin/roles                                                            Administration.roles
+
+GET     /admin/elections/{<[0-9]+>id}/edit                                      Administration.editelection
+GET     /admin/elections                                                        Administration.elections
+
+GET     /admin/postes/{<[0-9]+>id}/edit                                         Administration.editposte
+GET     /admin/postes                                                           Administration.postes
+
+GET     /admin/users/{<[0-9]+>id}/edit                                          Administration.edituser
+GET     /admin/users                                                            Administration.users
+POST    /admin/users                                                            Administration.search
+
+GET     /admin/feedbacks                                                        Administration.feedbacks
+GET     /admin/feedback/{<[0-9]+>id}                                            Administration.feedback
+GET     /admin/message                                                          Administration.sendmessage
+
+GET     /membres                                                                Users.membres
+GET     /users/{<[0-9]+>id}/edit/{act}                                          Users.edituser
+GET     /users/{<[0-9]+>id}/articles                                            Users.articles
+GET     /users/{<[0-9]+>id}/announces                                           Users.announces
+GET     /users/{<[0-9]+>id}/events                                              Users.events
+GET     /users/{<[0-9]+>id}/{username}                                          Users.user
+
+GET     /articles                                                               Articles.articles
+GET     /articles/{<[0-9]+>id}/{title}                                          Articles.article
+GET     /articles/{<[0-9]+>id}/edit                                             Articles.editarticle
+GET     /articles/new                                                           Articles.editarticle
+GET     /articles/{<[0-9]+>id}/del                                              Articles.deletearticle
+GET     /articles/{<[0-9]+>id}/del/{<[0-9]+>commentId}                          Articles.deletecomment
+
+GET     /dendrites                                                              Dendrites.dendrites
+GET     /dendrites/{<[0-9]+>id}                                                 Dendrites.dendrite
+GET     /dendrites/{<[0-9]+>id}/announces                                       Dendrites.announces
+GET     /dendrites/{<[0-9]+>id}/elections                                       Dendrites.elections
+GET     /dendrites/{<[0-9]+>id}/events                                          Dendrites.events
+GET     /dendrites/{<[0-9]+>id}/users                                           Dendrites.users
+GET     /dendrites/{<[0-9]+>dendriteId}/events/{<[0-9]+>id}/{title}             Dendrites.event
+
+GET     /dendrites/{<[0-9]+>dendriteId}/events/new                              Events.editevent
+GET     /dendrites/{<[0-9]+>dendriteId}/events/edit/{<[0-9]+>eventId}           Events.editevent
+
+GET     /dendrites/{<[0-9]+>dendriteId}/announces/edit/{<[0-9]+>announceId}     Announces.editannounce
+GET     /dendrites/{<[0-9]+>dendriteId}/announces/new                           Announces.editannounce
+GET     /dendrites/{<[0-9]+>dendriteId}/announces/{<[0-9]+>id}/{title}          Dendrites.announce
+
+GET     /dendrites/{<[0-9]+>dendriteId}/elections/{<[0-9]+>electionId}          Dendrites.showelection
+GET     /dendrites/{<[0-9]+>dendriteId}/elections/{<[0-9]+>electionId}/edit     Dendrites.editelection
+GET     /dendrites/{<[0-9]+>dendriteId}/elections/new                           Dendrites.editelection
+
+GET     /announces                                                              Announces.announces
+GET     /announces/{<[0-9]+>id}/{title}                                         Announces.announce
+GET     /announces/{<[0-9]+>announceId}/edit                                    Announces.editannounce
+GET     /announces/new                                                          Announces.editannounce
+GET     /announces/{<[0-9]+>id}/del                                             Announces.deleteannounce
+GET     /announces/{<[0-9]+>announce_id}/del/{<[0-9]+>id}                       Announces.deletecomment
+
+GET     /events                                                                 Events.events
+GET     /events/{<[0-9]+>id}/{title}                                            Events.event
+GET     /events/{<[0-9]+>eventId}/edit                                          Events.editevent
+GET     /events/new                                                             Events.editevent
+GET     /events/{<[0-9]+>id}/del                                                Events.deleteevent
+GET     /events/{<[0-9]+>event_id}/del/{<[0-9]+>id}                             Events.deletecomment
+
+GET     /annuaires                                                              Annuaires.annuaireWelcome
+POST    /annuaires                                                              Annuaires.search
+
+GET     /conversations                                                          Conversations.conversations
+GET     /conversations/{type}/{<[0-9]+>id}                                      Conversations.messages
+GET     /conversations/{<[0-9]+>id}                                             Conversations.messages
+
+GET     /cellule                                                                Cellule.bureauWelcome
+GET     /cellule/elections                                                      Cellule.listelection
+GET     /cellule/elections/{<[0-9]+>electionId}                                 Cellule.showelection
+
+GET     /search                                                                 Application.search
+GET     /articles/search                                                        Articles.search
+
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

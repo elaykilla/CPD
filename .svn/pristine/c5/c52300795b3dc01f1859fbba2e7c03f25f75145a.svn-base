@@ -1,0 +1,32 @@
+#{extends 'Cellule/bureauTemplate.html' /}
+#{set title:'Annuaire' /}
+
+<div class="ajaxable-annuaire container-fluid">
+    <div class="row-fluid blog-page blog-item">
+        <!--<h2 class="titles">Rechercher un Boursier D'Excellence</h2>-->
+        #{searchFormTag page:page, search:search, as:'annuaire' /}
+        #{if users?.size()}
+        
+        #{pagination page:page, size:size, nbPages:nbPages, nbPagesMax:nbPagesMax, search:search, as:'annuaire' /}
+
+        <div class="media">
+            #{list items:users, as:'user'}
+            <div class="media">
+                <a class="pull-left" href="@{Users.user(user?.id)}">
+                    <img class="media-object" #{if user?.photo == null}  src="@{'/public/images/election.jpg'}" #{/if} #{else} src="${user?.photo?.profileUrl()}" #{/else} alt="Mon image" alt="" />
+                </a>
+                <div class="media-body">
+                    <a href="@{Users.user(user?.id)}">
+                        <h4 class="media-heading">${user?.fullName()} 
+                            <span> ${user?.dendrite?.named}
+                            </span>
+                        </h4>
+                    </a>
+                    <p>${user?.cv?.resume}</p>
+                </div><!--/media-->
+            </div>
+            <hr />
+            #{/list}
+        </div><!--/blog-->
+    #{/if}
+</div>

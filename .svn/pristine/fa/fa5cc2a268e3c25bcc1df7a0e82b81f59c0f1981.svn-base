@@ -1,0 +1,5 @@
+#{extends 'Events/template.html' /}
+
+#{set title: event?.title /}
+
+#{eventTag /}

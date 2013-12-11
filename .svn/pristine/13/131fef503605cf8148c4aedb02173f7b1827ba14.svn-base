@@ -1,0 +1,5 @@
+#{extends 'Administration/template.html' /} 
+#{set title:'Administration - Utilisateurs' /}
+<div class="container-fluid span10">
+#{listTag users:users, as:'listUserAdmin', page:page ?: 1, size:size , nbPages:nbPages, nbPagesMax:nbPagesMax, search:search/}
+</div>

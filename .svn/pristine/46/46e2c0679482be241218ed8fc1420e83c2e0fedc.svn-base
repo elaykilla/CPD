@@ -1,0 +1,171 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<div class="col-sm-6">
+    <div class="widget-box ">
+        <div class="widget-header">
+            <h4 class="lighter smaller">
+                <i class="icon-comment blue"></i>
+                Conversation
+            </h4>
+        </div>
+
+        <div class="widget-body">
+            <div class="widget-main no-padding">
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;">
+                    <div class="dialogs" style="overflow: hidden; width: auto; height: 300px;">
+                        <div class="itemdiv dialogdiv">
+                            <div class="user">
+                                <img alt="Alexa's Avatar" src="assets/avatars/avatar1.png">
+                            </div>
+
+                            <div class="body">
+                                <div class="time">
+                                    <i class="icon-time"></i>
+                                    <span class="green">4 sec</span>
+                                </div>
+
+                                <div class="name">
+                                    <a href="#">Alexa</a>
+                                </div>
+                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+                                <div class="tools">
+                                    <a href="#" class="btn btn-minier btn-info">
+                                        <i class="icon-only icon-share-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="itemdiv dialogdiv">
+                            <div class="user">
+                                <img alt="John's Avatar" src="assets/avatars/avatar.png">
+                            </div>
+
+                            <div class="body">
+                                <div class="time">
+                                    <i class="icon-time"></i>
+                                    <span class="blue">38 sec</span>
+                                </div>
+
+                                <div class="name">
+                                    <a href="#">John</a>
+                                </div>
+                                <div class="text">Raw denim you probably haven't heard of them jean shorts Austin.</div>
+
+                                <div class="tools">
+                                    <a href="#" class="btn btn-minier btn-info">
+                                        <i class="icon-only icon-share-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="itemdiv dialogdiv">
+                            <div class="user">
+                                <img alt="Bob's Avatar" src="assets/avatars/user.jpg">
+                            </div>
+
+                            <div class="body">
+                                <div class="time">
+                                    <i class="icon-time"></i>
+                                    <span class="orange">2 min</span>
+                                </div>
+
+                                <div class="name">
+                                    <a href="#">Bob</a>
+                                    <span class="label label-info arrowed arrowed-in-right">admin</span>
+                                </div>
+                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+                                <div class="tools">
+                                    <a href="#" class="btn btn-minier btn-info">
+                                        <i class="icon-only icon-share-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="itemdiv dialogdiv">
+                            <div class="user">
+                                <img alt="Jim's Avatar" src="assets/avatars/avatar4.png">
+                            </div>
+
+                            <div class="body">
+                                <div class="time">
+                                    <i class="icon-time"></i>
+                                    <span class="grey">3 min</span>
+                                </div>
+
+                                <div class="name">
+                                    <a href="#">Jim</a>
+                                </div>
+                                <div class="text">Raw denim you probably haven't heard of them jean shorts Austin.</div>
+
+                                <div class="tools">
+                                    <a href="#" class="btn btn-minier btn-info">
+                                        <i class="icon-only icon-share-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="itemdiv dialogdiv">
+                            <div class="user">
+                                <img alt="Alexa's Avatar" src="assets/avatars/avatar1.png">
+                            </div>
+
+                            <div class="body">
+                                <div class="time">
+                                    <i class="icon-time"></i>
+                                    <span class="green">4 min</span>
+                                </div>
+
+                                <div class="name">
+                                    <a href="#">Alexa</a>
+                                </div>
+                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+                                <div class="tools">
+                                    <a href="#" class="btn btn-minier btn-info">
+                                        <i class="icon-only icon-share-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slimScrollBar ui-draggable" 
+                         style="background-color: rgb(0, 0, 0); 
+                         width: 7px; position: absolute; top: 72px; 
+                         opacity: 0.4; display: none; 
+                         border-top-left-radius: 7px; 
+                         border-top-right-radius: 7px; 
+                         border-bottom-right-radius: 7px; 
+                         border-bottom-left-radius: 7px; z-index: 99; 
+                         right: 1px; height: 228.4263959390863px; 
+                         background-position: initial initial; 
+                         background-repeat: initial initial;">
+
+                    </div>
+                    <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; background-color: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px; background-position: initial initial; background-repeat: initial initial;"></div></div>
+
+                <form>
+                    <div class="form-actions">
+                        <div class="input-group">
+                            <input placeholder="Type your message here ..." type="text" class="form-control" name="message">
+                            <span class="input-group-btn">
+                                <button class="btn btn-sm btn-info no-radius" type="button">
+                                    <i class="icon-share-alt"></i>
+                                    Send
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- /widget-main -->
+        </div><!-- /widget-body -->
+    </div><!-- /widget-box -->
+</div>

@@ -1,0 +1,52 @@
+#{if dendrite.general}
+#{extends 'Cellule/bureauTemplate.html' /}
+#{/ if}
+#{else}
+#{extends 'Dendrites/template.html' /} 
+#{/else}
+#{set title:'Modification Annonce' /}
+<div class="container-fluid">
+<form id="announceEditForm" class="well form-inline announce-edit" method="POST" action="@{Announces.postAnnounce}">
+    <fieldset>
+        <legend>Edition d'annonce</legend>
+        <input type="hidden" value="${dendrite?.id}" name="dendriteId"/> 
+        #{field 'announce.id'}
+        <input id="${field.id}" type="hidden" name="${field.name}"
+               value="${announce?.id}"  /> 
+        #{/field}
+        #{field 'announce.title'}
+        <div
+            class="control-group  ${errors.forKey(field?.name) ? 'error' : ''}">
+            <label for="${field.id}">&{'Titre : '}</label>
+            #{if field.error}
+            <span class="help-inline">${field.error}</span>
+            #{/if}
+            <input id="${field.id}" class="span12" type="text" name="${field.name}"
+                   value="${announce?.title}" placeholder="&{'Titre'}" required /> 
+        </div>
+        #{/field}
+
+        #{field 'announce.content'}
+        <div
+            class="control-group ${errors.forKey(field?.name) ? 'error' : ''}">
+            <label for="${field.id}">&{'Content : '}</label>
+            #{if field.error}
+            <span class="help-inline">${field.error}</span>
+            #{/if}
+            <textarea id='edit' rows="10" class="span12" id="${field.id}" 
+                      type="text" name="${field.name}" 
+                      placeholder="&{'Contenu'}" required>${announce?.content ? announce?.content : 'Contenu'}</textarea>
+        </div>
+        #{/field}
+        <div class="form-actions">
+            <input type="submit" value="Valider" class="btn btn-u" />
+            #{if announce?.id}
+            <a  href="@{Dendrites.announce(dendrite.id, announce?.id)}" class="btn">&{'Annuler'}</a>
+            #{/if}
+            #{else}
+            <a  href="@{Announces.announces()}" class="btn">&{'Annuler'}</a>
+            #{/else}
+        </div>
+    </fieldset>
+</form>
+</div>

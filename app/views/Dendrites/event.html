@@ -1,0 +1,45 @@
+#{extends 'Dendrites/template.html' /}
+
+#{set title: event?.title /}
+
+#{eventTag as:'dendrite'/}
+
+<script type="text/javascript">
+    function participer(id) {
+        $.ajax({
+            type: "POST",
+            url: "/events/participer",
+            data: {
+                id: id
+            },
+            success: function(data) {
+                $("#participe-" + id).text("Je ne vais plus");
+                $("#participe-" + id).attr("onclick", "return departiciper(" + id + ");");
+                $("#participe-" + id).css("background", "#FF0000");
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(errorThrown);
+            }
+        });
+        return false;
+    }
+
+    function departiciper(id) {
+        $.ajax({
+            type: "POST",
+            url: "/events/departiciper",
+            data: {
+                id: id
+            },
+            success: function(data) {
+                $("#participe-" + id).text("Participer à cet évènement");
+                $("#participe-" + id).attr("onclick", "return participer(" + id + ");");
+                $("#participe-" + id).css("background", "#008800");
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(errorThrown);
+            }
+        });
+        return false;
+    }
+</script>

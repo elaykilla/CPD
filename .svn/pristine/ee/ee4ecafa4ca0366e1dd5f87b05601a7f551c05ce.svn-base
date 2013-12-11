@@ -1,0 +1,201 @@
+# Rights  
+
+models.Right(edit_user):
+  code:             EDIT_USER
+  description:      Permet la modification des utilisateurs.
+  
+models.Right(delete_user):
+  code:             DELETE_USER
+  description:      Permet la suppression des utilisateurs.
+  
+models.Right(create_user):
+  code:             CREATE_USER
+  description:      Permet la création des utilisateurs.
+  
+models.Right(create_role):
+  code:             CREATE_ROLE
+  description:      Permet la création des rôles.
+  
+models.Right(edit_role):
+  code:             EDIT_ROLE
+  description:      Permet la modification des rôles.
+  
+models.Right(delete_role):
+  code:             DELETE_ROLE
+  description:      Permet la suppression des rôles.
+
+models.Right(create_dendrite):
+  code:             CREATE_DENDRITE
+  description:      Permet la création des dendrites.
+  
+models.Right(edit_dendrite):
+  code:             EDIT_DENDRITE
+  description:      Permet la modification des dendrites.
+  
+models.Right(delete_dendrite):
+  code:             DELETE_DENDRITE
+  description:      Permet la suppression des dendrites.
+  
+models.Right(remove_role_from_user):
+  code:             REMOVE_ROLE_FROM_USER
+  description:      Permet enlève un rôle d'un utilisateur.
+  
+models.Right(add_role_to_user):
+  code:             ADD_ROLE_TO_USER
+  description:      Permet l'ajout d'un rôle d'un utilisateur.
+  
+models.Right(remove_right_from_role):
+  code:             REMOVE_RIGHT_FROM_ROLE
+  description:      Permet enlève un droit d'un rôle.
+  
+models.Right(add_right_to_role):
+  code:             ADD_RIGHT_TO_ROLE
+  description:      Permet l'ajout d'un rôle d'un utilisateur.
+  
+models.Right(remove_user_from_dendrite):
+  code:             REMOVE_USER_FROM_DENDRITE
+  description:      Permet enlève un utilisateur d'une dendrite.
+  
+models.Right(add_user_to_dendrite):
+  code:             ADD_USER_TO_DENDRITE
+  description:      Permet l'ajout d'un utilsateur dans une dendrite.
+  
+models.Right(remove_user_from_my_dendrite):
+  code:             REMOVE_USER_FROM_MY_DENDRITE
+  description:      Permet enlève un utilisateur de sa dendrite.
+  
+models.Right(add_user_to_my_dendrite):
+  code:             ADD_USER_TO_MY_DENDRITE
+  description:      Permet l'ajout d'un utilsateur dans sa dendrite.
+  
+models.Right(add_and_remove_role_user):
+  code:             ADD_AND_REMOVE_ROLE_USER
+  description:      L'ajout et suppression d'un rôle de l'utilisateur.
+  
+models.Right(add_and_remove_right_role):
+  code:             ADD_AND_REMOVE_RIGHT_ROLE
+  description:      L'ajout et suppression d'un droit d'un rôle.
+
+# Event
+  
+models.Right(edit_event):
+  code:             EDIT_EVENT
+  description:      Permet la modification des évènements.
+  
+models.Right(delete_event):
+  code:             DELETE_EVENT
+  description:      Permet la suppression des évènements.
+  
+models.Right(edit_my_event):
+  code:             EDIT_MY_EVENT
+  description:      Permet la modification des évènements de sa dendrite.
+  
+models.Right(delete_my_event):
+  code:             DELETE_MY_EVENT
+  description:      Permet la suppression des évènements de sa dendrite.
+ 
+# Article
+  
+models.Right(edit_article):
+  code:             EDIT_ARTICLE
+  description:      Permet la modification des articles.
+  
+models.Right(delete_article):
+  code:             DELETE_ARTICLE
+  description:      Permet la suppression des articles.
+    
+models.Right(edit_my_article):
+  code:             EDIT_MY_ARTICLE
+  description:      Permet la modification des articles de sa dendrite.
+  
+models.Right(delete_my_article):
+  code:             DELETE_MY_ARTICLE
+  description:      Permet la suppression des articles de sa dendrite.
+
+# Announce
+  
+models.Right(edit_announce):
+  code:             EDIT_ANNOUNCE
+  description:      Permet la modification des announces.
+  
+models.Right(delete_announce):
+  code:             DELETE_ANNOUNCE
+  description:      Permet la suppression des announces.
+    
+models.Right(edit_my_announce):
+  code:             EDIT_MY_ANNOUNCE
+  description:      Permet la modification des announces.
+  
+models.Right(delete_my_announce):
+  code:             DELETE_MY_ANNOUNCE
+  description:      Permet la suppression des announces de la dendrite de l'utilisateur.
+  
+models.Right(access_admin):
+  code:             ACCESS_ADMIN
+  description:      Permet l'accès à l'administration.
+  
+models.Right(create_election):
+  code:             CREATE_ELECTION
+  description:      Permet de créer une élection.
+  
+models.Right(edit_election):
+  code:             EDIT_ELECTION
+  description:      Permet de modifier une élection.
+  
+models.Right(delete_election):
+  code:             DELETE_ELECTION
+  description:      Permet de supprimer une élection.
+  
+models.Right(create_candidature):
+  code:             CREATE_CANDIDATURE
+  description:      Permet de créer une candidature.
+  
+models.Right(create_my_candidature):
+  code:             CREATE_MY_CANDIDATURE
+  description:      Permet de créer une candidature dans sa dendrite.
+  
+models.Right(edit_candidature):
+  code:             EDIT_CANDIDATURE
+  description:      Permet de modifier une candidature.
+  
+models.Right(edit_my_candidature):
+  code:             EDIT_MY_CANDIDATURE
+  description:      Permet de modifier une candidature dans sa dendrite.
+  
+models.Right(delete_candidature):
+  code:             DELETE_CANDIDATURE
+  description:      Permet de supprimer une candidature.
+  
+models.Right(edit_my_election):
+  code:             EDIT_MY_ELECTION
+  description:      Permet de modifier l'élection de la dendrite de l'utilisateur.
+    
+models.Right(create_my_election):
+  code:             CREATE_MY_ELECTION
+  description:      Permet de créer l'élection de la dendrite de l'utilisateur.
+  
+models.Right(delete_my_election):
+  code:             DELETE_MY_ELECTION
+  description:      Permet de supprimer une élection dans sa dendrite.
+  
+models.Right(add_and_remove_user_to_dendrite):
+  code:             ADD_AND_REMOVE_USER_TO_DENDRITE
+  description:      Permet d'ajouter ou d'enléver un utilisateur d'une dendrite.
+  
+models.Right(add_and_remove_poste_to_dendrite):
+  code:             ADD_AND_REMOVE_POSTE_TO_DENDRITE
+  description:      Permet d'ajouter ou d'enléver un poste d'une dendrite.
+  
+models.Right(add_and_remove_role_to_poste):
+  code:             ADD_AND_REMOVE_ROLE_TO_POSTE
+  description:      Permet d'ajouter ou d'enléver un rôle d'un poste.
+  
+models.Right(delete_poste):
+  code:             DELETE_POSTE
+  description:      Permet de supprimer un poste.
+    
+models.Right(edit_poste):
+  code:             EDIT_POSTE
+  description:      Permet de modifier un poste.
+
+  

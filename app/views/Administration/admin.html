@@ -1,0 +1,13 @@
+#{extends 'Administration/template.html' /} #{set title:'Administration' /}
+<div class="container-fluid span9">
+    <h1>Welcome in your administration</h1>
+    <h2> #{if connected} ${connected.fullName()} #{/if} </h2>
+    <p>
+        Vous pouvez gérer les utilisateurs en cliquant sur <a class="btn-info" href="@{Administration.users}">Utilisateurs</a><br/>
+        Les rôles <a class="btn-info" href="@{Administration.roles}">Rôles</a><br/>
+        Les dendrites <a class="btn-info" href="@{Administration.dendrites}">Dendrites</a><br/>
+        Les postes <a class="btn-info" href="@{Administration.postes}">Postes</a><br/>
+        Les élections <a class="btn-info" href="@{Administration.elections}">Élections</a><br/>
+        Les feedbacks <a class="btn-info" href="@{Administration.feedbacks}">Feedbacks</a>
+    </p>
+</div>

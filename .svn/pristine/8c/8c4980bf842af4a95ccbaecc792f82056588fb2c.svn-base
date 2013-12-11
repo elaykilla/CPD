@@ -1,0 +1,103 @@
+<!--La page d'entrée de l'espace utilisateur
+URL: /membres-->
+#{extends 'main.html' /}
+#{set title:'Membres' /}
+<!--
+Section 1
+Comment l'espace membre fonctionne ?
+Les groupes par catégorie, par centre d'intérêt, par domaine
+Tu peux aussi communiquer avec les autres membres du site.
+-->
+
+<!--
+Section 2
+Mon profil.!
+Ben voilà, ton profil c'est toi en fait c'est à travers ça que tu pourras aider tes successeurs.
+Car il regroupe les informations sur ton parcours.
+Ce que tu as fait pour arriver à ce niveau.
+Quels sont les cours que tu as suivi; les trucs du genre qui pourra aider ton ami.
+-->
+
+<!--
+Section 3
+Qui utilise le site CPD ? 
+C'est tes collègues qui sont prêt à t'aider.
+Si tu as besoin d'une information sur une personne il te suffit de connaitre son nom.
+Tu pars dans l'annuaire dans laquelle tu peux chercher une personne.
+-->
+
+#{subtitleTag as:'Accueil Membres' /}
+
+<!--<div class="fb-float-likebox">
+  <div>
+    <iframe src="http://www.facebook.com/plugins/
+     likebox.php?href=http%3A%2F%2Ffacebook.com%2F YOUR_FACEBOOK_FANPAGE_NAME&width=245&
+     colorscheme=light&show_faces=true&
+     %20connections=9&stream=false&header=false&height=270"
+     style="background: #fff; border: medium none; height: 270px;
+     overflow: hidden; width: 245px;" frameborder="0" scrolling="no"></iframe>
+  </div>
+</div>-->
+
+<div class="container-fluid inner-body">
+    <!--<div class="row-fluid">-->
+    <!--<div class="row span12">-->
+    <div class="container">
+        <div class="featurette">
+            <a href="@{Dendrites.dendrite(connected?.dendrite?.id)}"><img class="img-circle featurette-image pull-left" src="@{'/public/images/events.jpg'}" alt=""/></a>
+            <div class="full-text">
+                <p class="lead">
+                    Bienvenu cher(e) CPDien(ne)!!!! L’espace membre est ton espace de communication avec la communauté !!! Il permet de faciliter la 
+                    communication et l’échange avec ta dendrite mais aussi avec tous les membres de la CPD ! 
+                    Alors <a id="themecolor" href="@{Articles.articles()}">les Articles</a>, <a id="themecolor" href="@{Announces.announces()}">Annonces</a> et <a id="themecolor" href="@{Events.events()}">Evenements</a> ne sont plus qu’à un CLIC !! 
+
+                </p>
+            </div>
+            <a href="@{Dendrites.dendrite(connected?.dendrite?.id)}" class="btn btn-u">En savoir plus »</a>
+        </div>
+        <!--</div>-->
+        <hr class="featurette-divider">
+        <!--<div class="row span12">-->
+        <div class="featurette">
+            <a href="@{Users.user(connected?.id, connected?.username())}"><img class="img-circle featurette-image pull-right"
+                                                        alt=""
+                                                        src="@{'/public/images/minicode.jpg'}"
+                                                        /></a>
+            <!--src="@{'/public/images/activite.JPG'}"!-->
+            <div class="full-text">
+                <p class="lead">
+                    <a id="themecolor" href="@{Users.editUser(connected?.id, 'info')}">Mon profil!</a><br/>
+                    Ton profil est à ton image. C’est une fenêtre envers ta personnalité. Il n’est visible que par les membres de la communauté. Ainsi, libre à 
+                    toi de le compléter comme bon te semble. Il permet entre autre de te <a id="themecolor" href="@{Users.editUser(connected?.id, 'info')}">présenter à la communauté</a>, 
+                    de <a id="themecolor" href="@{Users.editUser(connected?.id, 'info')}">partager tes loisirs</a> et de 
+                    <a id="themecolor" href="@{Users.editUser(connected?.id, 'info')}">renseigner les informations</a> sur ton parcours et ton activité. 
+                </p>
+            </div>
+            <a href="@{Users.user(connected?.id, connected?.username())}" class="btn btn-u pull-right">En savoir plus »</a>
+        </div>
+        <hr class="featurette-divider">
+
+        <div class="featurette">
+            <a href="@{Annuaires.annuaireWelcome}"><img class="img-circle featurette-image pull-left" src="@{'/public/images/tutorat.jpg'}" alt=""/></a>
+            <div class="full-text">
+                <p class="lead">
+                    <a id="themecolor" href="@{Annuaires.annuaireWelcome}">La communauté</a><br/>
+                    Finalement la CPD est aussi un réseau ! C’est le moyen le plus facile pour trouver le maximum d’information sur tes 
+                    <a id="themecolor" href="@{Annuaires.annuaireWelcome}">Co-CPDiens</a>. 
+                    Tu peux donc facilement rentrer en contact avec un ou plusieurs autres membres. <br/>
+                    Surtout si tu n'arrives pas à trouver ce que tu cherches il y a quelqu'un qui sera là pour toi.
+                </p>
+            </div>
+            <a href="@{Annuaires.annuaireWelcome}" class="btn btn-u">En savoir plus »</a>
+        </div>
+        <!--</div>-->
+        <hr class="featurette-divider">
+    </div>
+
+    <!--</div>-->
+</div>
+<style>
+    .featurette-divider{
+        border: #0099ff 2px dotted;
+    }
+</style>

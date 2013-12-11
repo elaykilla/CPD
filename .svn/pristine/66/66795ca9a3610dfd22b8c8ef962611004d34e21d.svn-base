@@ -1,0 +1,21 @@
+<!-- This tag displays the members of the current Executive Board
+This tag receives a mandate
+-->
+
+<li class="span6 pricing hover-effect" id="white-part-border">
+    <div class="thumbnail-style">
+        <a href="@{Users.user(_mandate?.user_id)}">
+            <img #{if _mandate?.user?.photo == null}  
+                src="@{'/public/images/user.jpeg'}" #{/if} 
+                #{else} src="${_mandate?.user?.profileUrl()}" #{/else} alt="Mon image" alt="" />
+        </a>
+        <a href="@{Users.user(_mandate?.user_id)}">
+            <h3 class="featurette-heading">
+                <span class="muted" id="themecolor">${_mandate?.user?.fullName()}</span>
+                <small>${_mandate?.poste?.title}</small>
+
+            </h3>
+        </a>
+        <p class="lead">${_mandate?.poste?.description} </p>
+    </div>
+</li><br>

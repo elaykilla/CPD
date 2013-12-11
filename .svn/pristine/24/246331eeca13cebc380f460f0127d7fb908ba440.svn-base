@@ -1,0 +1,8 @@
+#{extends 'Administration/template.html' /} 
+#{set title:'Administration - Rôles' /}
+<div class="container-fluid span10">
+    <div style="float:right;" class="span3">
+        <a class="btn btn-u" href="@{Administration.editRole}">Nouveau Rôle</a>
+    </div>
+    #{listTag roles:roles, as:'listRoleAdmin' /}
+</div>

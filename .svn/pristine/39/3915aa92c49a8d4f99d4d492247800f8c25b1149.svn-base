@@ -1,0 +1,20 @@
+<div class="row-fluid blog-page blog-item">
+    <h2>Les membres</h2>
+    #{list items:_users, as:'user'}
+    <div class="posts margin-bottom-20">
+        <dl class="dl-horizontal">
+            <dt><a href="@{Users.user(user?.id)}">
+                <img #{if user?.photo == null}  
+                    src="@{'/public/images/election.jpg'}" #{/if} 
+                    #{else} src="${user?.profileUrl()}" #{/else} alt="Mon image" alt="" />
+            </a>
+            <dd>
+                <a id="themecolor" href="@{Users.user(user?.id)}">${user?.fullName()}</a>
+                <hr style="margin-bottom: 0px;"/>
+                <span>${user?.dendrite?.named}</span> <span> ${user?.promotion} </span><br/>
+                <span>${user?.cv?.resume}</span>
+            </dd>
+        </dl>
+    </div>
+    #{/list}
+</div>

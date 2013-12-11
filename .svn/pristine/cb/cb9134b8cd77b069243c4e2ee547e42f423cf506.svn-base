@@ -1,0 +1,28 @@
+#{extends 'Events/template.html' /}
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<div>
+    Coucoucoucoucoucoucou
+    <form class="well form-inline" method="POST" action="@{Events.postEvent}">
+
+        
+        #{field 'event.eventInvitations'}
+        <div
+            class="control-group  ${errors.forKey(field?.name) ? 'error' : ''}">
+            <label class="control-label" for="${field.id}">&{'Invités : '}</label>
+            <div class="controls">
+                <input id="${field.id}" class="span12" type="text" name="${field.name}"
+                       value="${event?.guets}" placeholder="&{'Invités'}" required /> 
+                <span class="help-inline">${field.error}</span>
+
+            </div>
+        </div>
+        #{/field}
+        <div class="form-actions">
+            <input type="submit" value="Valider" class="btn btn-u" />
+            <a  href="@{Events.events()}" class="btn">&{'Annuler'}</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+#{extends 'Articles/template.html' /} 
+#{set title:'Articles' /}
+
+<div class="container-fluid span12">
+    #{if connected}
+    <div style="float:right;">
+        <a class="btn btn-u" href="@{Articles.editArticle}">Nouvel article</a>
+    </div>
+    #{/if}
+    #{listArticlesTag articles:articles, connected:connected /}
+</div><!--/span12-->

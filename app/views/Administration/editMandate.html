@@ -1,0 +1,39 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+#{extends 'Administration/template.html' /} 
+#{set title:'Edit mandat' /}
+
+<div class="container-fluid span10">
+    #{editMandateTag /}
+</div>
+<script type="text/javascript">
+    function updatePosteList() {
+        var dendrite_id = $("#mandate-dendrite option:selected").val();
+        var poste_id = $("#mandate-postes option:selected").val();
+        $.ajax({
+            type: "GET",
+            url: "@{Administration.dendritePosteList()}",
+            data: {
+                id: dendrite_id
+            },
+            success: function(data) {
+                $("#mandate-postes").html("");
+                var title = data['general'];
+                $.each(data, function(key, value) {
+                    if (key != 'general') {
+                        if (key == poste_id) {
+                            $("#mandate-postes").append("<option title = " + title + " value = '" + key + "' selected>" + value + "</option>");
+                        } else {
+                            $("#mandate-postes").append("<option title = " + title + " value = '" + key + "'>" + value + "</option>");
+                        }
+                    }
+                });
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(textStatus);
+            }
+        });
+    }
+</script>

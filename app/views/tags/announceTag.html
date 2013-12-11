@@ -1,0 +1,128 @@
+<!--Le tag annonce
+Il est utilisé dans toutes les pages affichant une annonce!-->
+<div class="container-fluid ${_caller?.connected ? 'span10' : 'span12'}">
+    <div class="span12" style="margin-top: 30px; margin-bottom: -20px;">
+        <ul id="pagination">
+            #{if _caller.announce.previous()}
+            <li id="previous">
+                #{if _as=='dendrite'}
+                <a href="@{Dendrites.announce(_caller.dendrite.id, _caller.announce.previous().id, , _caller.announce.previous().title())}">${_caller.announce.previous().title}</a>
+                #{/if}
+                #{else}
+                <a href="@{Announces.announce(_caller.announce.previous().id, _caller.announce.previous().title())}">${_caller.announce.previous().title}</a>
+                #{/else}
+            </li>
+            #{/if}
+            #{if _caller.announce.next()}
+            <li id="next">
+                #{if _as=='dendrite'}
+                <a href="@{Dendrites.announce(_caller.dendrite.id, _caller.announce.next().id, _caller.announce.next().title())}">${_caller.announce.next().title}</a>
+                #{/if}
+                #{else}
+                <a href="@{Announces.announce(_caller.announce.next().id, _caller.announce.next().title())}">${_caller.announce.next().title}</a>
+                #{/else}
+            </li>
+            #{/if}
+        </ul>
+    </div>
+    #{if _caller.connected}
+    <div class="span12">
+        #{if _caller.announce.isMine(_caller.connected)}
+        <div class="span3">
+            <a class="btn btn-u" href="@{Announces.editAnnounce(_caller.announce?.dendrite?.id, _caller.announce.id)}">Modifier</a>
+        </div>
+        #{/if}
+        #{if _caller.connected.contains('DELETE_EVENT') || _caller.announce.isMine(_caller.connected)}
+        <div class="span3">
+            <a href="@{Announces.deleteAnnounce(_caller.announce?.id)}" class="btn btn-danger"
+               onClick="return(confirm('êtes vous sûr de vouloir supprimer cette annonce?\nCes commentaires aussi seront supprimés'));">Supprimer</a>
+        </div>
+        #{/if}
+        <div class="span3">
+            <a class="btn btn-u" href="@{Announces.editAnnounce(_caller?.dendrite?.id)}">Nouvelle annonce </a>   
+        </div>
+        <button id="subscribe-announces-${_caller.announce?.id}" class="btn btn-u pull-right" 
+                type="button"
+                #{if _caller.announce?.isSubscribed(_caller?.connected)}
+                onclick="return subscribe('announces', 'un', '${_caller.announce?.id}');"
+                style="background: #FF0000;"
+                #{/if}
+                #{else}
+                onclick="return subscribe('announces', '', '${_caller.announce?.id}');"
+                style="background: #008800;"
+                #{/else}
+                >${_caller.announce?.isSubscribed(_caller?.connected) ? 'Se désabonner' : 'S\'abonner'}</button>
+        <div id="social" class="pull-left">
+            <div class="fb-like" data-href="@@{Announces.announce(_caller.announce?.id, _caller.announce?.title())}"
+                 data-send="false" data-layout="button_count" data-width="450"
+                 data-show-faces="false">
+            </div>
+        </div>
+    </div>
+    #{/if}
+
+    <div class="row-fluid blog-page blog-item">
+        <div class="blog margin-bottom-30">
+            <h3>${_caller.announce?.title}</h3>
+            <ul class="unstyled inline blog-info">
+                <li><i class="icon-calendar"></i> ${_caller.announce.created.format('MMMM dd, yyyy')}</li>
+                <li><i class="icon-pencil"></i> <a href="@{Users.user(_caller.announce.author.id, _caller.announce.author.username())}"> ${_caller.announce.author.fullName()}</a></li>
+                <li><i class="icon-comments"></i> <a id="announce-comments-count" href="#">${_caller.announce.comments.size()} Comment${_caller.announce.comments.size().pluralize()}</li>
+                <li><i class="icon-user"></i> <a onclick="return false;" href="#">${_caller.announce.viewed} Vue${_caller.announce.viewed?.pluralize()}</a></li>
+            </ul>
+            <div class="posts margin-bottom-20">
+                <dl class="dl-horizontal">
+                    <dt><a href="@{Users.user(_caller.announce?.author?.id, _caller.announce.author.username())}"><img src="${_caller.announce?.author?.smallUrl()}" alt="" /></a></dt>
+                    <dd>
+                        <h2><div class='text'>${_caller.announce?.content}</div></h2>
+                    </dd>
+                </dl>
+            </div>
+        </div><!--/blog--> 
+        <hr />
+        <div id="announce-comments">
+            <!--            {list items:_caller.announce.comments, as:'ac'}
+                        {commentTag comment:ac.comment, announce:_caller.announce, as:'announce', connected:_caller.connected /}
+                        {/list}-->
+            #{commentsTag comments:_caller?.comments, type:_caller?.type, 
+            commentSize:_caller?.commentSize, maxSize:_caller?.maxSize, 
+            connected:_caller?.connected, article:_caller?.article, commentPage:_caller?.commentPage /}
+        </div>
+        <hr/>
+        <!--        <h3 class="color-green">
+                    ${_caller?.maxSize ?: 'no'} 
+                    Commentaire${_caller.maxSize?.pluralize()}</h3>-->
+        #{if _caller.connected}
+        <!-- Leave a Comment -->
+        <div class="post-comment">
+            <span class="cachable-button cursor"><h3 class="color-green">Laisser un commentaire</h3></span>
+            <div class="cachable">
+                <form id="announce-comment" class="well form-inline" action="@{Announces.postComment()}" method="POST">
+                    <p class="error" style="display: none;"></p>
+                    <input type="hidden" value="${_caller.announce.id}" name="id" />
+                    <p>
+                        <textarea id="content" class="field-area span12" placeholder="Ecrire un commentaire" name="content">${params.content}</textarea>
+                    </p>
+                    <p>
+                        <input type="submit" onclick="return postComment('announce', '${_caller.announce.id}');" value="Commenter" class="btn btn-u"/>
+                    </p>
+                </form>
+            </div>
+            <!--            <span class="cachable-button cursor"><h3 class="color-green">Les commentaires Facebook</h3></span>
+                        <div class="cachable active">
+                            <div class="fb-comments" data-href="@@{Announces.announce(_caller.announce?.id)}" data-numposts="5"></div>
+                        </div>-->
+        </div><!--/post-comment-->
+        #{/if}
+        #{else}
+        <div id="helpbar" class="hidden-phone">
+            <a class="btn btn-u" role="button" href="#loginModal"
+               data-toggle="modal" ><strong>Connectez vous pour pouvoir poster</strong></a>
+            <div  id="loginModal" class="modal hide fade" tabindex="-1" role="dialog"
+                  aria-labelledby="loginModalLabel" aria-hidden="true">
+                #{loginTag /}
+            </div>
+        </div>
+        #{/else}
+    </div>
+</div>

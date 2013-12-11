@@ -1,0 +1,57 @@
+#{extends 'Administration/template.html' /}
+#{set title:'Envoi de message' /}
+<div class="container-fluid">
+    <form id="messageEditForm" class="well form-inline" method="POST" action="@{Administration.sendMail}">
+        <fieldset>
+            <legend>
+                Envoi de message.<br/>
+                Ce message sera envoyé à tous les membres de la dendrite choisie.
+            </legend>
+            #{field 'dendriteId'}
+            <div
+                class="control-group ${errors?.forKey(field?.name) ? 'error' : ''}">
+                <label for="${field.id}">&{'À: '}</label>
+                <select class="span12" id="${field.id}" name="${field.name}" required> 
+                    <option></option>
+                    #{list items:dendrites, as:'dendrite'}
+                    <option value="${dendrite?.id}" #{if connected?.dendrite?.id == dendrite?.id } selected="selected" #{/if}>${dendrite?.named}</option> 
+                    #{/list}
+                </select> 
+            </div>
+            #{/field}
+            #{field 'subject'}
+            <div
+                class="control-group  ${errors?.forKey(field?.name) ? 'error' : ''}">
+                <label for="${field.id}">&{'Objet : '}</label>
+                #{if field.error}
+                <span class="help-inline">${field.error}</span>
+                #{/if}
+                <input id="${field.id}" class="span12" type="text" name="${field.name}"
+                       value="${field.value}" placeholder="&{'Objet'}" /> 
+                <span class="help-inline">${field.error}</span>
+
+            </div>
+            #{/field}
+            #{field 'content'}
+            <div
+                class="control-group ${errors?.forKey(field?.name) ? 'error' : ''}">
+                <label for="${field.id}">&{'Content : '}</label>
+                #{if field.error}
+                <span class="help-inline">${field.error}</span>
+                #{/if}
+                <textarea rows="10" class="span12" id="edit" type="text" 
+                          name="${field.name}" placeholder="&{'Contenu'}" 
+                          required>${content ? content : 'Contenu'}</textarea>
+                <span class="help-inline">${field.error}</span>
+            </div>
+            #{/field}
+            <div class="form-actions">
+                <input type="submit" value="Valider" class="btn btn-u" />
+                <a  href="@{Administration.admin()}" class="btn">&{'Annuler'}</a>
+                <label><input title="Cocher pour un envoie externe" type="checkbox" name="m" ${m ? 'checked' : ''}/>
+                    Cocher pour un envoie externe
+                </label>
+            </div>
+        </fieldset>
+    </form>
+</div>

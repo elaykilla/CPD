@@ -1,0 +1,14 @@
+models.elections.Candidature(ca1): 
+   poste :          prez
+   candidate :      u144
+   election :       el2
+   
+models.elections.Candidature(ca2): 
+   poste :          prez
+   candidate :      u121
+   election :       el2
+   
+models.elections.Candidature(ca3):
+   poste :          prez
+   candidate :      u123
+   election :       el2

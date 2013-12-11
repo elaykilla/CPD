@@ -1,0 +1,29 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div>
+            Bonjour ${ass?.user?.firstName},<br/>
+            #{if type == 'article'}
+            Un commentaire vient d'être laissé, par <a href="@@{Users.user(connected?.id)}">${connected?.firstName}</a>, à un article auquel vous êtes abonné(e) <br/>
+            <a href="@@{Articles.article(ass?.article?.id)}">${ass?.article?.title}</a>
+            #{/if}
+            #{if type == 'announce'}
+            Un commentaire vient d'être laissé, par <a href="@@{Users.user(connected?.id)}">${connected?.firstName}</a>, à une annonce à laquelle vous êtes abonné(e) <br/>
+            <a href="@@{Announces.announce(ass?.announce?.id)}">${ass?.announce?.title}</a>
+            #{/if}
+            #{if type == 'event'}
+            Un commentaire vient d'être laissé, par <a href="@@{Users.user(connected?.id)}">${connected?.firstName}</a>, à un évènement auquel vous êtes abonné(e) <br/>
+            <a href="@@{Events.event(ass?.event?.id)}">${ass?.event?.title}</a>
+            #{/if}
+             <br/>
+            L'équipe <a href="@@{Application.index}">CPD</a>
+        </div>
+    </body>
+</html>

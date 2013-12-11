@@ -1,0 +1,122 @@
+<!--Users template-->
+
+#{extends 'main.html' /}
+<!--<div class="container">-->
+<div class="row-fluid">
+
+
+    <!--=== Breadcrumbs ===-->
+
+
+    <!--<div class="breadcrumbs margin-bottom-40">-->
+    <!--<div class="container">-->
+    <!--<h1 class="pull-left" style="color:green; font-size:40px; margin-left: 200px;">-->
+    #{if !connected}
+    #{subtitleTag as:'Inscription' /}
+    #{/if}
+    #{else}
+    #{if events}
+    #{subtitleTag as:(user != null && user != connected ? 'Évènements de ' + user?.firstName : (connected ? 'Mes évènements' : 'Évènements')) /}
+    #{/if}
+    #{elseif articles}
+    #{subtitleTag as:(user != null && user != connected ? 'Articles de ' + user?.firstName : (connected ? 'Mes articles' : 'Articles')) /}
+    #{/elseif}
+    #{elseif announces}
+    #{subtitleTag as:(user != null && user != connected ? 'Annonces de ' + user?.firstName : (connected ? 'Mes annonces' : 'Annonces')) /}
+    #{/elseif}
+    #{elseif conMessages}
+    #{subtitleTag as:(user != null && user != connected ? 'Messages de ' + user?.firstName : (connected ? 'Mes messages' : 'Messages')) /}
+    #{/elseif}
+    #{else}
+    #{subtitleTag as:(user != null && user != connected ? 'Profil de ' + user?.firstName : (connected ? 'Mon Profil' : 'Profil')) /}
+    #{/else}
+    #{/else}
+
+    <!--</h1>-->
+    <!--</div>/container-->
+    <!--</div>/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+
+
+    #{if connected}
+    <div class="offset1 span2">
+        <div id="left-container">
+            <div id="sidebar-nav-fixed">
+                <div id="left-nav">
+                    <ul class="nav nav-tabs nav-stacked my-left-navbar">
+                        <li
+                            class="${request?.action == 'Users.user' ? 'active' : ''}">
+                            <a href="@{Users.user(connected?.id)}">Mon profil</a>
+                        </li>
+                        #{if connected?.id == user?.id || !user}
+                        <li
+                            class="${request?.action == 'Users.articles' ? 'active' : ''}">
+                            <a href="@{Users.articles(connected?.id)}">Mes articles</a>
+                        </li>
+                        <li 
+                            class="${request?.action == 'Users.announces' ? 'active' : ''}">
+                            <a href="@{Users.announces(connected?.id)}" onclick="return true;">Mes annonces</a>
+                        </li>
+
+                        <li
+                            class="${request?.action == 'Users.events' ? 'active' : ''}">
+                            <a href="@{Users.events(connected?.id)}" onclick="return true;">Mes évènements</a>
+                        </li>
+                        <li
+                            class="${request?.action == 'Conversations.conversations' || request?.action == 'Conversations.messages' ? 'active' : ''}">
+                            <a href="@{Conversations.conversations()}"><i class="icon-envelope"></i>  Messages (${connected?.unread()})</a>
+                        </li>
+                        #{/if}
+                        #{else}
+                        <li
+                            class="${request?.action == 'Users.articles' ? 'active' : ''}">
+                            <a href="@{Users.articles(user?.id)}">Ses articles</a>
+                        </li>
+                        <li
+                            class="${request?.action == 'Users.announces' ? 'active' : ''}">
+                            <a href="@{Users.announces(user?.id)}">Ses annonces</a>
+                        </li>
+                        <li
+                            class="${request?.action == 'Users.events' ? 'active' : ''}">
+                            <a href="@{Users.events(user?.id)}">Ses évènements</a>
+                        </li>
+                        <li
+                            class="${request?.action == 'Conversations.messages' ? 'active' : ''}">
+                            <a class="accordion-toggle" href="@{Conversations.messages(user?.id)}">
+                                <i class="icon-envelope"></i> &{'Lui Contacter'}
+                            </a>
+                        </li>
+                        #{/else}
+                    </ul>
+                </div>
+                <hr class="phone-nav visible-phone">
+            </div>
+        </div>
+    </div>
+    #{/if}
+    #{else}
+    #{if user?.id}
+    <div class="offset1 span2">
+        <div id="left-container">
+            <div id="sidebar">
+                <div id="left-nav">
+                    <ul class="nav nav-tabs nav-stacked my-left-navbar">
+                        <li
+                            class="${request?.action == 'Dendrites.contact' ? 'active' : ''}">
+                            <a class="accordion-toggle" href="@{Dendrites.contact(user?.id)}">
+                                <i class="icon-envelope"></i> &{'Me Contacter'}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="phone-nav visible-phone">
+            </div>
+        </div>
+    </div>
+    #{/if}
+    #{/else}
+    <div class="container">
+        #{doLayout /}
+    </div>
+</div>
+<!--</div>-->

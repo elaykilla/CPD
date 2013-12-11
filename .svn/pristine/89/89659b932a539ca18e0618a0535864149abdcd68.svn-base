@@ -1,0 +1,77 @@
+<!--Dendrites template-->
+
+#{extends 'main.html' /}
+<div class="container-fluid">
+
+    <!--=== Breadcrumbs ===-->
+    <!--<div class="breadcrumbs margin-bottom-40">-->
+    <!--<div class="container">-->
+    #{if dendrite}
+    #{if ext}
+    #{subtitleTag as:dendrite?.named, ext:ext, dendrite:dendrite /}
+    #{/ if}
+    #{else}
+    #{subtitleTag as:dendrite?.named, dendrite:dendrite /}
+    #{/else}
+    #{/ if}
+    #{else}
+    #{subtitleTag as:'Les Dendrites' /}
+    #{/else}
+
+
+    <div class="row-fluid">
+        <div class="offset1 span2" align="left">
+
+            <!--<div id="sidebar-nav-fixed">-->
+                <div id="left-container">
+                    <div class="sidebar-nav-fixed" id="leftMenu">
+                        <ul class="nav nav-tabs nav-stacked my-left-navbar" id="fixed">
+                             #{if dendrite}
+                            <li class="${request?.action == 'Dendrites.dendrites' ? 'active' : ''}">
+                                <a class="accordion-toggle" href="@{Dendrites.dendrites}">
+                                    <i class="icon-home"></i> Les Dendrites
+                                </a>
+                            </li>
+                        
+                            <li class="${request?.action == 'Dendrites.leBureau' ? 'active' : ''}">
+                                <a class="accordion-toggle" href="@{Dendrites.leBureau(dendrite.id)}">
+                                    <i class="icon-home"></i> Le Bureau
+                                </a>
+                            </li>
+                            
+                            <li class="${request?.action == 'Dendrites.announces' ? 'active' : ''}">
+                                <a href="@{Dendrites.announces(dendrite.id)}">
+                                    <i class="icon-comments"></i> &{'Annonces'}
+                                </a>
+                            </li>
+
+                            <li class="${request?.action == 'Dendrites.elections' ? 'active' : ''}">
+                                <a  href="@{Dendrites.elections(dendrite.id)}">
+                                    <i class="icon-comments"></i> &{'Elections'}
+                                </a>
+                            </li>
+                            <li class="${request?.action == 'Dendrites.events' ? 'active' : ''}">
+                                <a href="@{Dendrites.events(dendrite.id)}">
+                                    <i class="icon-comments"></i> &{'Evènements'}
+                                </a>
+                            </li>
+                            
+                            <li class="${request?.action == 'Dendrites.users' ? 'active' : ''}">
+                                <a href="@{Dendrites.users(dendrite.id)}">
+                                    <i class="icon-comments"></i> &{'Membres'}
+                                </a>
+                            </li>
+                            #{/ if}
+                        </ul>
+                    </div>
+                    <hr class="phone-nav visible-phone">
+                </div>
+
+            <!--</div>-->
+
+        </div>
+        <div class="container-fluid span9">
+            #{doLayout /}
+        </div>
+    </div>
+</div>

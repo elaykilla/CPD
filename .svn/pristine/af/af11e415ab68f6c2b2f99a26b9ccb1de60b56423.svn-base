@@ -1,0 +1,3 @@
+#{extends 'Dendrites/template.html' /} 
+#{set title:'Evenements' /}
+#{eventFrontsTag /}

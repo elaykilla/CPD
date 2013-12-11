@@ -1,0 +1,6 @@
+#{extends 'Administration/template.html' /} 
+#{set title:'Administration - Rôles' /}
+<div class="container-fluid span10">
+    <a href="@{Administration.editPoste}" class="btn btn-u pull-right">+Ajouter un nouveau poste</a>
+#{listTag postes:postes, as:'listPosteAdmin' /}
+</div>

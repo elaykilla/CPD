@@ -1,0 +1,74 @@
+{
+    "id": "100000617074517",
+    "name": "Cheick Mahady Sissoko",
+    "first_name": "Cheick Mahady",
+    "last_name": "Sissoko",
+    "link": "https:\/\/www.facebook.com\/Mcicheick",
+    "username": "Mcicheick",
+    "quotes": "La vie est une suite d'actions et de r\u00e9actions.",
+    "favorite_teams": [
+        {
+            "id": "197394889304",
+            "name": "FC Barcelona"
+        }],
+    "education": [
+        {
+            "school": {
+                "id": "115052491863586",
+                "name": "Lyc\u00e9e Dougoukolo Konar\u00e9 de Kayes"
+            },
+            "type": "High School"
+        },
+        {
+            "school": {
+                "id": "115460661812053",
+                "name": "ldkk"
+            },
+            "year": {
+                "id": "137616982934053",
+                "name": "2006"
+            },
+            "type": "High School",
+            "with": [
+                {
+                    "id": "100001362651706",
+                    "name": "Amy Sira Ciss\u00e9"
+                }]
+        },
+        {
+            "school": {
+                "id": "102891896413940",
+                "name": "\u00c9cole Polytechnique"
+            },
+            "year": {
+                "id": "105576766163075",
+                "name": "2015"
+            },
+            "type": "College"
+        },
+        {
+            "school": {
+                "id": "108236899206767",
+                "name": "Joseph Fourier University"
+            },
+            "year": {
+                "id": "142963519060927",
+                "name": "2010"
+            }, "type": "College"
+        }],
+    "gender": "male",
+    "email": "mcicheick\u0040yahoo.fr",
+    "timezone": 2,
+    "locale": "en_GB",
+    "languages": [
+        {
+            "id": "106059522759137",
+            "name": "English"
+        },
+        {
+            "id": "104083226293708",
+            "name": "Bambara"
+        }],
+    "verified": true,
+    "updated_time": "2013-10-19T22:49:29+0000"
+}

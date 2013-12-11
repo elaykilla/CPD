@@ -1,0 +1,77 @@
+<!--
+Display an article.
+-->
+<!-- Left Sidebar -->
+<div class="span12">
+    <div class="blog margin-bottom-30">
+        <div class="row-fluid" id="white-part">
+            <h3>${_article?.title}</h3> 
+        </div>
+        <ul class="unstyled inline blog-info">
+            <li><i class="icon-calendar"></i> ${_article.created.format('MMMM dd, yyyy')}</li>
+            <li><i class="icon-pencil"></i> <a href="@{Users.user(_article.author.id, _article?.author?.username())}"> ${_article.author.fullName()}</a></li>
+            <li><i class="icon-comments"></i> <a id="article-comments-count" href="#">${_article.comments.size()} Comment${_article.comments.size().pluralize()}</li>
+        </ul>
+        <div class="posts margin-bottom-20" id="white-part">
+            <dl class="dl-horizontal">
+                <dt><a href="@{Users.user(_article?.author?.id, _article?.author?.username())}"><img src="${_article?.author?.smallUrl()}" alt="" /></a></dt>
+                <dd>
+                    <div class="text">${_article?.content}</div>
+                </dd>
+            </dl>
+        </div>
+    </div><!--/blog-->
+
+    <!-- Media -->
+    <hr/>
+    <div id="article-comments">
+        <!--        {list items:_article.comments, as:'ac'}
+                {commentTag comment:ac.comment, article:_article, as:'article', connected:_connected /}
+                {/list}-->
+        #{commentsTag comments:_caller?.comments, type:_caller?.type, 
+        commentSize:_caller?.commentSize, maxSize:_caller?.maxSize, 
+        article:_caller?.article, connected:_caller?.connected, commentPage:_caller?.commentPage/}
+     </div>
+     <hr/>
+<!--    <h3 class="color-green">
+            ${_caller?.maxSize ?: 'no'} 
+            Commentaire${_caller?.maxSize?.pluralize()}</h3>-->
+    #{if _connected}
+    <!-- Leave a Comment -->
+    <div class="post-comment">
+        <span class="cachable-button cursor"><h3 class="color-green">Laisser un commentaire</h3></span>
+        <div class="cachable">
+            <form id="article-comment" class="well form-inline" action="@{Articles.postComment()}" method="POST">
+                <p class="error" style="display: none;"></p>
+                <input type="hidden" name="id" value="${_article.id}" />
+                <p>
+                    <textarea id="comment-content" class="field-area span12" 
+                              placeholder="Ecrire un commentaire" name="content" id="content">${params.content}</textarea>
+                </p>
+                <p>
+                    <input type="submit" onclick="return postComment('article', '${_article.id}', '@{Articles.article(_article.id)}');" 
+                           value="Comment" class="btn btn-u"/>
+                </p>
+            </form>
+        </div>
+    </div><!--/post-comment-->
+    #{/if}
+    #{else}
+    <div id="helpbar" class="hidden-phone">
+        <a class="btn btn-u" role="button" href="#loginModal"
+           data-toggle="modal" ><strong>Connectez vous pour pouvoir poster</strong></a>
+        <div  id="loginModal" class="modal hide fade" tabindex="-1" role="dialog"
+              aria-labelledby="loginModalLabel" aria-hidden="true">
+            #{loginTag /}
+        </div>
+    </div>
+    #{/else}
+    
+    <!--/media-->
+
+
+    <!--        <span class="cachable-button cursor"><h3 class="color-green">Les commentaires facebook</h3></span>
+            <div class="cachable active">
+                <div class="fb-comments" data-href="@@{Articles.article(_caller.article?.id)}"></div>
+            </div>-->
+</div><!--/span9-->

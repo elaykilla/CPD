@@ -1,0 +1,27 @@
+<div class="blog margin-bottom-30">
+    #{list items:_articles, as:'a'}
+    <div class="blog margin-bottom-30">
+        <a href="@{Articles.article(a.id, a.title())}"><h3>${a.title}</h3></a>
+
+        <ul class="unstyled inline blog-info">
+            <li><i class="icon-calendar"></i> ${a.created.format('MMMM dd, yyyy')}</li>
+            <li><i class="icon-pencil"></i> <a href="@{Users.user(a.author.id, a.author.fullName())}"> ${a.author.fullName()}</a></li>
+            <li><i class="icon-comments"></i> <a href="@{Articles.article(a.id, a.title())}">${a.comments.size()} Comment${a.comments.size().pluralize()}</a></li>
+        </ul>
+        <div class="posts margin-bottom-20" id="white-part-border">
+            <!--<dl class="dl-horizontal">-->
+                <!--<dd><a href="@{Articles.article(a.id)}"><img #{if user?.photo == null} src="@{'/public/images/user_profil.jpeg'}" #{/if} #{else} src="${user?.profileUrl()}" #{/else} alt="Mon image" /></a></dd>-->
+<!--                <dd>
+                    <a href="@{Articles.article(a.id)}"><div class="zoneTexte">${a?.content}</div></a>
+                </dd>-->
+            <!--</dl>-->
+            <div class="row-fluid">
+                <div class="span2"><a href="@{Articles.article(a.id, a.title())}"><img #{if a.author?.profileUrl() == null} src="@{'/public/images/user_profil.jpeg'}" #{/if} #{else} src="${a.author?.profileUrl()}" #{/else} alt="Mon image" /></a></div>
+                <div class="span8"><a href="@{Articles.article(a.id, a.title())}"><div class="zoneTexte">${a?.content}</div></a></div>
+            </div>
+             <p><a class="btn-u btn-u-small" href="@{Articles.article(a.id, a.title())}">Lire la suite</a></p>
+        </div>
+       
+    </div>
+    #{/list}
+</div><!--/blog-->

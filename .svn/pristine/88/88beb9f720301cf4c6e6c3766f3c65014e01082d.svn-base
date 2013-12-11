@@ -1,0 +1,53 @@
+#{extends 'Cellule/bureauTemplate.html' /}
+#{set title:'La CPD' /}
+
+<div class="container span8" id="white-part" style="text-align: justify;" >
+    <!--<div class="container-fluid span9" id="white-part" style="text-align: justify;">-->
+
+    <ul class="thumbnails">
+        <h2>Présentation de la CPD</h2>
+
+        <p class="descriptions">
+            La Cellule Pour le Développement est une association créée en 2007 par des  jeunes étudiants maliens résidant en France. 
+            L’initiative est venue des premiers étudiants maliens issus du “programme 300 jeunes cadres pour le Mali” lancé par l’ancien président 
+            malien Alpha Oumar Konaré. 
+        </p>
+        <br/>
+        <p>
+            L’objectif à la création de l’association était d’oeuvrer à l’édification d’un Mali indépendant, prospère et rayonnant, en contribuant à son 
+            développement éducatif et socio-économique, de faciliter l’intégration des jeunes boursiers maliens, les aider dans les démarches 
+            administratives et organiser des activités culturelles et intellectuelles afin de créer une cohésion sociale entre des personnes
+            venues de divers horizons du Mali. 
+        <li class="span6 pull-left">
+            <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Minicode 2012 #1" href="@{'/public/images/index/pres4.jpg'}">
+                <div class="overlay-zoom">	
+                    <img src="@{'/public/images/index/pres4.jpg'}">
+                    <div class="zoom-icon"></div>					
+                </div>												
+            </a>
+        </li>
+        </p><br/>
+        <p>
+            Avec la dispersion  à l’intérieur et l’extérieur de la France et le nombre croissant de boursiers d’excellence, la Cellule Pour 
+            le Développement a pris aujourd’hui une dimension globale avec l’élargissement de son champ d’action. Elle s’investi aujourd’hui 
+            dans des domaines tels que l’éducation, la promotion de la culture malienne, la formation continue, l’insertion professionnelle, 
+            l’organisation de colloques pour présenter les travaux des boursiers et autres étudiants malien  la réalisation  de projets de 
+            développement etc. 
+
+        <li class="span6 pull-right">
+            <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Minicode 2012 #2" href="@{'/public/images/index/pres5.jpg'}">
+                <div class="overlay-zoom">	
+                    <img src="@{'/public/images/index/pres5.jpg'}" >
+                    <div class="zoom-icon"></div>					
+                </div>												
+            </a>
+        </li>
+        </p><br/>
+        <p>
+            La Cellule Pour le Développement est aujourd’hui un réservoir de jeunes talents au service de la nation malienne, 
+            un ambassadeur de la culture et du savoir faire malien, un groupe de réflexion contribuant au processus de développement du Mali. 
+            En somme « l’excellence au service du Mali .
+        </p>
+    </ul>
+    <!--</div>-->
+</div>

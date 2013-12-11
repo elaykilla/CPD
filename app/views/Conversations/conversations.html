@@ -1,0 +1,19 @@
+#{extends 'Users/template.html' /} 
+#{set title: 'Messages - CPD'/}
+<div class="container-fluid span9">
+    <div class="posts margin-bottom-20" style="overflow: scroll; width: auto; height: 500px;">
+        #{if convers.size() > 0}
+        #{list items:convers, as:'conversation'}
+        #{conversationItemTag conversation:conversation /}
+        #{/list}
+        #{if (size < maxSize)}
+        <a class="btn btn-u" href="${controllers.Application.createPaginationLink(page+1)}">
+            ${(maxSize - size)} Conversation${(maxSize - size).pluralize()} restante${(maxSize - size).pluralize()}</a>
+        #{/if}
+        #{/if}
+        #{else}
+        Aucune conversation<br/>
+        <a class="btn btn-u" href="@{Annuaires.annuaireWelcome}" style="text-align: center">Lancer une conversation avec quelqu'un</a>
+        #{/else}
+    </div>
+</div>

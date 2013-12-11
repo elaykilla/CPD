@@ -1,0 +1,3 @@
+#{extends 'Cellule/bureauTemplate.html' /}
+
+#{resultsElectionTag election:election, postes:postes, leaders:leaders /}

@@ -1,0 +1,16 @@
+<div class="row-fluid">
+    <div class=span12">
+        <div class="span3" align="center">
+            <img class="photo" alt="Photo" #{if _article?.author?.profileUrl == null} src="@{'/public/images/user_profile.jpg'}" #{/if} #{else} src="${_article?.author?.profileUrl()}" #{/else}><br />
+            <!--<img src="@{'/public/images/user_profile.jpg'}">-->
+            <a href="@{Users.user(_article?.author?.id, _article?.author?.fullName())}">${_article?.author?.fullName()}</a>
+        </div>
+        <div class="content span9">
+            <a href="@{Articles.article(_article.id, _article.title())}">${_article?.title}</a>
+            <div class="zoneTexte">
+                ${_article.resume()}
+            </div>
+            <span class="date pull-right">${_article.created.format('dd MMM yy')}</span>
+        </div>
+    </div>
+</div>

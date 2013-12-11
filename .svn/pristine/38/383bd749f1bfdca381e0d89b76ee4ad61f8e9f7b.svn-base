@@ -1,0 +1,9 @@
+<!--
+Display cv hobbies
+-->
+<div class="span12 cv-info">
+    <div class="row">
+        <span class="school span3">${_hobbie?.title} : </span>
+        <span class="span9">${_hobbie?.comment}</span>
+    </div>
+</div>

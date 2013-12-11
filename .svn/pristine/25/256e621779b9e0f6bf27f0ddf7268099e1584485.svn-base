@@ -1,0 +1,26 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div>
+            Bonjour ${user?.firstName},<br/>
+            #{if type == 'event'}
+            Un nouvel évèment vient d'être publié par ${connected?.firstName} dans ta dendrite il pourra peut être t'intéresser. <br/>
+            <a href="@@{Events.event(stand?.id)}">${stand?.title}</a>
+            #{/if}
+            #{if type == 'announce'}
+            Une nouvelle annonce vient d'être publiée par ${connected?.firstName} dans ta dendrite elle pourra t'intéresser. <br/>
+            <a href="@@{Announces.announce(stand?.id)}">${stand?.title}</a>
+            #{/if}
+             <br/>
+            L'équipe <a href="@@{Application.index}">CPD</a>
+        </div>
+    </body>
+</html>

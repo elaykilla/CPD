@@ -1,0 +1,3 @@
+#{extends 'Dendrites/template.html' /} 
+
+#{createElectionTag election:election, dendriteId:dendriteId/}

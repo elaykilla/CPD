@@ -1,0 +1,25 @@
+#{extends 'Cellule/bureauTemplate.html' /}
+#{set title:'La CPD - Bureau' /}
+
+
+<!--<div class="container">-->
+<div class="container-fluid span9" id="white-part" style="text-align: justify;">
+    <div class="headline">  
+        <h2>Le Bureau</h2>
+    </div>
+    #{if currentMandates.isEmpty()}
+    <h3 style="margin-bottom: 40px"> Cette dendrite n'a pas encore de Bureau. Veuillez organiser des Elections. </h3>
+    #{/if }
+    #{else}
+    <h3 style="margin-bottom: 40px">Le Bureau de la Cellule est l'unité Centrale. Dirigé par le President, élu annuellement, le Bureau à pour objectif principal d'assurer le bon fonctionnement de la Cellule. 
+        Les membres du bureau actuel sont les suivants.
+    </h3>
+
+    <ul class="thumbnails team">
+        #{list items:currentMandates, as:'mandate'}
+            #{membreBureauTag mandate:mandate /}
+        #{/list}
+    </ul>
+    #{/else}
+</div>
+<!--</div>-->

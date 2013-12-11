@@ -1,0 +1,4 @@
+Rmarque non fondée
+Quand veut supprimer un objet à travers une liste se trouvant dans un autre objet il faire attention de ne pas appeler le getter de la liste en question.
+Exemple j'ai essayé de supprimer un Mandate dans la liste des Mandate de User mais ça ne marchait pas parce que j'avais appelé user.mandates
+C'est bizarre mais on découvre avec Play!

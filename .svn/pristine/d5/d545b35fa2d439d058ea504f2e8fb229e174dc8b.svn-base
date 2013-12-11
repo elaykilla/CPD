@@ -1,0 +1,14 @@
+<!--
+Envoie du message par ajax
+-->
+#{if (size < maxSize)}
+<a class="btn btn-u" href="${controllers.Application.createPaginationLink(page+1)}">
+    ${(maxSize - size)} Message${(maxSize - size).pluralize()} restant${(maxSize - size).pluralize()}</a>
+#{/if}
+<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;">
+    <div class="dialogs" style="overflow: hidden; width: auto;">
+        #{list items:conMessages, as:'message'}
+        #{messageItemTag message:message /}
+        #{/list}
+    </div>
+</div>

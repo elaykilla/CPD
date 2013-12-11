@@ -1,0 +1,29 @@
+<div class="blog margin-bottom-30">
+    #{list items:_events, as:'event'}
+    <div class="blog margin-bottom-30">        
+        #{if _as=='dendrite'}
+        <a href="@{Dendrites.event(event?.dendrite?.id, event?.id, event?.title())}"><h3>${event?.title}</h3></a>
+        #{/if}
+        #{else}
+        <a href="@{Events.event(event?.id, event?.title())}"><h3>${event.title}</h3></a>
+        #{/else}        
+        <ul class="unstyled inline blog-info">
+            <li><i class="icon-calendar"></i> ${event.created.format('MMMM dd, yyyy')}</li>
+            <li><i class="icon-comments"></i> <a href="#">${event.comments.size()} Comment${event.comments.size().pluralize()}</a></li>
+        </ul>
+        <div class="posts margin-bottom-20" id="white-part">
+            <dl class="dl-horizontal">
+                <dt><a href="#"><img src="${event.author?.smallUrl()}" alt="" /></a></dt>
+                <dd>
+                    #{if _as=='dendrite'}
+                    <a href="@{Dendrites.event(event?.dendrite?.id, event?.id, event?.title())}"><div class="zoneTexte">${event?.content}</div></a>
+                    #{/if}
+                    #{else}
+                    <a href="@{Events.event(event?.id, event?.title())}"><div class="zoneTexte">${event?.content}</div></a>
+                    #{/else}
+                </dd>
+            </dl>
+        </div>
+    </div>
+    #{/list}
+</div>

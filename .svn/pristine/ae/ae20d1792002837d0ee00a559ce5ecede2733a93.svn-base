@@ -1,0 +1,93 @@
+<!--This tag receives connected, election and poste-->
+
+<div id="white-part-border">
+    <div class="row-fluid">
+        <div class="span12">
+            <h4 class="titles"><a href="#">${_poste?.title}</a></h4>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span4 thumbnail-style thumbnail-kenburn">
+
+            <div class="thumbnail-img">
+                <div class="overflow-hidden"><a href="">
+                        <a class="span12" href="">
+                            <img src="@{'/public/images/poste.jpeg'}">
+                        </a>
+                </div>
+                <!--<a class="btn-more hover-effect" href="#">lire +</a>-->
+            </div>
+
+
+            <div class="caption">
+               
+            </div>
+
+        </div>
+        <div class="span8">      
+            <p>
+                ${_poste?.description}
+            </p>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="row-fluid">
+            #{if _election.status() == "candidature"}
+            <span class="btn cachable-button" id="candidater">Candidater</span>
+            #{/ if}
+
+            #{if _election.status() == "candidature" || _election.status() == "voting"}
+            <span class="btn cachable-button" id="voirCandidature">Voir Les Candidats</span>
+            #{/ if}
+
+
+        </div>
+        <div class="row-fluid">
+            #{if _election.status() == "candidature"}
+            <div class="cachable">
+                <h2 id="highlighted-titles">Deposer votre candidature pour: ${_poste?.title}</h2>
+                <form spellcheck="true" action="@{Elections.createCandidature}" >
+                    <div class="span6">
+                        <div class="pCenter">
+                            <input type='hidden' value=${_connected.id} name="candidateId"/>
+                            <input type='hidden' value=${_election.id} name="electionId"/>
+                            <input type='hidden' value=${_poste.id} name="posteId"/>
+
+                            <label class="control-label span12"></label>
+
+                            <label class="control-label span6">&{'Nom : '}</label> 
+                            <input id="name" name="user.fullName" disabled="disabled" value="${_connected.fullName()}"  type="text" class="span6"><br> 
+
+                            <label class="control-label span6">&{'Poste : '}</label> 
+                            <input id="name" name="poste.code" disabled="disabled" value="${_poste.title}" type="text" class="span6">
+
+
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="pCenter span12" >
+                            <label class="control-label">&{'Lettre de Candidature : '}</label>
+                        </div>
+                        <textarea id="message" name="presentation" class="span12" placeholder="Lettre de Candidature" rows="5">${_election.candidatureByPosteForUser(_connected,_poste)?.presentation}</textarea>
+                    </div>
+
+                    <div class="pCenter"><br>
+                        <button id="contact-submit" type="submit" class="btn btn-u input-medium pull-right">Valider</button>
+                    </div>
+                </form>
+            </div>
+            #{/ if}
+
+            #{if _election.status() == "candidature" || _election.status() == "voting"}
+            <div class="cachable">
+                 
+                <h2 id="highlighted-titles">Les Candidats</h2>
+                #{listCandidaturesTag connected:_connected, election:_election, candidatures:_election.candidaturesByPoste(_poste.id), poste:_poste/}
+            </div>
+            #{/ if}
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+#{extends 'main.html' /} #{set title:'Login - CPD'
+/}
+
+<div class="breadcrumbs margin-bottom-50">
+    <div class="container">
+        <h1 class="color-green pull-left">Login</h1>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== Content Part ===-->
+<div class="container">		
+    <div class="row-fluid">
+        <form class="log-page" action="@{Users.loggedin}"
+              method="POST">
+            ${flash.fromURL}
+            <input type="hidden" name="formURL" value="${flash.fromURL}"/>
+            <h3>Connection</h3>  
+            #{field 'email'}
+            <div class="control-group  ${errors.forKey(field.name) ? 'error' : ''}">
+                <div class="controls">
+                    #{if field.error}
+                    <span class="help-inline">${field.error}</span>
+                    #{/if}
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input class="input-xlarge" type="email" name="${field.name}" value="${flash.email}" placeholder="Email">
+                    </div>
+                </div>
+            </div>
+            #{/field}
+            #{field 'password'}
+            <div class="control-group  ${errors.forKey(field.name) ? 'error' : ''}">
+                <div class="controls">
+                    #{if field.error}
+                    <span class="help-inline">${field.error}</span>
+                    #{/if}
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-lock"></i></span>
+                        <input class="input-xlarge" type="password" name="${field.name}" value="${field.value}" placeholder="Password">
+                    </div>
+                </div>
+            </div>
+            #{/field}
+            <div class="controls form-inline">
+                <label class="checkbox"><input type="checkbox" /> Rester connecté</label>
+                <div class="pull-right">
+                    <button class="btn-u" type="submit">Login</button> or 
+                    <a class="btn btn-u" href="@{Users.signup}">  &{'Signup'}</a>
+                </div>
+            </div>
+            <hr />
+            <h4>Mot de passe oublié ?</h4>
+            <p>no worries, <a class="color-green" href="@{Users.password}">Cliquer ici</a> pour changer.</p>
+        </form>
+    </div><!--/row-fluid-->
+</div><!--/container-->		
+<!--=== End Content Part ===-->

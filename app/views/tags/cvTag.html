@@ -1,0 +1,56 @@
+<!--
+Display a complete cv of profile
+-->
+<div class="span12" style="margin-left: 0px;">
+    <div class="cv-info resume">
+        <h2 align="center">${_cv?.title}</h2>
+        <div class="cv-title blog"><h3>Résumé</h3></div>
+        <hr class="barre_separation"/>
+        <p>${_cv?.resume}</p>
+    </div>
+    #{if _cv?.formations.size()}
+    <div class="cv-info">
+        <div class="cv-title blog"><h3>Formations</h3></div>
+        <hr class="barre_separation"/>
+        #{list items:_cv?.formations, as:'formation'}
+        #{formationTag formation:formation/}
+        #{/list}
+    </div>
+    #{/if}
+    #{if _cv?.experiences.size()}
+    <div class="cv-info">
+        <div class="cv-title blog"><h3>Expériences</h3></div>
+        <hr class="barre_separation"/>
+        #{list items:_cv?.experiences, as:'experience'}
+        #{experienceTag experience:experience/}
+        #{/list}
+    </div>
+    #{/if}
+    #{if _cv?.skills.size()}
+    <div class="cv-info">
+        <div class="cv-title blog"><h3>Compétences</h3></div>
+        <hr class="barre_separation"/>
+        #{list items:_cv?.skills, as:'skill'}
+        #{skillTag skill:skill/}
+        #{/list}
+    </div>
+    #{/if}
+    #{if _cv?.languages.size()}
+    <div class="cv-info">
+        <div class="cv-title blog"><h3>Langues</h3></div>
+        <hr class="barre_separation"/>
+        #{list items:_cv?.languages, as:'language'}
+        #{languageTag language:language/}
+        #{/list}
+    </div>
+    #{/if}
+    #{if _cv?.hobbies.size()}
+    <div class="cv-info">
+        <div class="cv-title blog"><h3>Centres d'intérêt</h3></div>
+        <hr class="barre_separation"/>
+        #{list items:_cv?.hobbies, as:'hobbie'}
+        #{hobbieTag hobbie:hobbie/}
+        #{/list}
+    </div>
+    #{/if}
+</div>

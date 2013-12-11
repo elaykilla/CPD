@@ -1,0 +1,96 @@
+
+
+<!--/breadcrumbs
+=== Content Part ===
+<div class="container-fluid">	
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+    <h3>Renseigner vos informations de connection.</h3>
+</div>
+<div class="breadcrumbs margin-bottom-50">
+    <div class="container">
+        <h1 class="color-green pull-left">Login</h1>
+    </div>
+</div>
+<div class="container">-->
+<!--<div id="login-box" class="login-box ${ass == 'login' ? 'visible' : '' } widget-box no-border">
+    <div class="widget-body">
+        <div class="widget-main">-->
+<form id="form-login" class="log-page " style="padding: 20px;" action="@{Users.loggedin}"
+      method="POST">
+    <input type="hidden" value="${_caller?.flash.fromURL}"/>
+    <h3>Connection</h3>  
+    #{field 'email'}
+    <div class="control-group  ${_caller?.errors?.forKey(field.name) ? 'error' : ''}">
+        <div class="controls">
+            #{if field.error}
+            <span class="help-inline">${field.error}</span>
+            #{/if}
+            <label class="block clearfix">
+                <span class="block input-icon input-icon-right">
+                    <input class="input" type="email" name="${field.name}" value="${flash.email}" placeholder="Email">
+                    <i class="icon-user"></i>
+                </span>
+            </label>
+        </div>
+    </div>
+    #{/field}
+
+    #{field 'password'}
+    <div class="control-group  ${_caller?.errors?.forKey(field.name) ? 'error' : ''}">
+        <div class="controls">
+            #{if field.error}
+            <span class="help-inline">${field.error}</span>
+            #{/if}
+            <label class="block clearfix">
+                <span class="block input-icon input-icon-right">
+                    <input class="input" type="password" name="${field.name}" value="${field.value}" placeholder="Password">
+                    <i class="icon-lock"></i>
+                </span>
+            </label>
+        </div>
+    </div>
+    #{/field}
+
+    <button class="btn-u" type="submit">Connectez-vous</button> 
+    <label style="text-align:center;margin-top:5px">---</label>
+    <div class="control-group" >
+        <a href="@{Users.signup}"><span class="label label-info">&{'S\'inscrire'}</span></a>
+        <a href="@{Users.password}"><span class="label label-important">Mot de passe oublié ?</span></a>
+        <br/>
+        <br/>
+        #{if user?.id} 
+        <a class="btn btn-sm" href="@{Users.resendConfirm(user?.id)}">Renvoyer le mail de confirmation</a>
+        #{/if}
+        <div class="space-2"></div>
+    </div>
+    <div class="social-or-login center" style="margin-top: 11%;">
+        <span class="bigger-110">Ou connectez vous avec</span>
+    </div>
+
+    <div class="social-login center">
+        <a href="@{Security.auth()}" class="btn btn-primary">
+            <i class="icon-facebook"></i>
+        </a>
+
+        <a class="btn btn-info">
+            <i class="icon-twitter"></i>
+        </a>
+
+        <a class="btn btn-danger">
+            <i class="icon-google-plus"></i>
+        </a>
+    </div>
+</form>
+
+
+<!--        </div>
+    </div>
+</div>-->
+
+<!--</div>-->
+<!--</div>-->
+<!--/container-->		
+<!--=== End Content Part ===-->

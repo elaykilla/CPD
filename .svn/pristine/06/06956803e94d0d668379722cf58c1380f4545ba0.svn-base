@@ -1,0 +1,54 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+#{extends 'Administration/template.html' /} #{set title:'Edit Election'
+/}
+
+<div class="container-fluid span10">
+    <div class="cachable-group">
+        <div class="submenu">
+            <span class="cachable-button btn-u">Informations élection</span>
+            <div class="cachable active">
+                #{createElectionTag election:election, as:'admin' /}
+            </div>
+        </div>
+    </div>
+    <div class="cachable-group">
+        <div class="submenu">
+            <span class="cachable-button btn-u">Les postes</span>
+            <div class="cachable">
+                #{list items:election.postes(), as:'poste'}
+                <div class="cachable-group">
+                    <div class="submenu">
+                        <span class="cachable-button btn-u">${poste?.title}</span>
+                        <div class="cachable">
+                            #{editPosteTag poste:poste, candidatures:election.candidaturesByPoste(poste.id), election:election, users:users /}
+                        </div>
+                    </div>
+                </div>
+                #{/list}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function updateDendritePromotion(poste_id) {
+        var user_id = $("#candidate-" + poste_id + " option:selected").val();
+        $.ajax({
+            type: "GET",
+            url: "@{Users.userInfo()}",
+            data: {
+                id: user_id
+            },
+            success: function(data) {
+                $("#dendrite-" + poste_id).text(data[0]);
+                $("#promotion-" + poste_id).text(data[1]);
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(textStatus);
+            }
+        });
+    }
+</script>

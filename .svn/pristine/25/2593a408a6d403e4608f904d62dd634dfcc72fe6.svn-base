@@ -1,0 +1,64 @@
+<!--Administration-->
+
+#{extends 'main.html' /}
+
+<div class="container-fluid">
+    #{subtitleTag as:'Administration' /}
+    <div class="row-fluid">
+        <div id="sidebar" class="offset1 span2">
+            <div id="left-container">
+                <div id="left-nav">
+                    <ul class="nav nav-tabs nav-stacked my-left-navbar">
+
+                        <li
+                            class="${request?.action == 'Administration.users' ? 'active' : ''}">
+                            <a href="@{Administration.users}">Utilisateurs</a>
+                        </li>
+                        
+                        <li
+                            class="${request?.action == 'Administration.roles' ? 'active' : ''}">
+                            <a href="@{Administration.roles}">Rôles</a>
+                        </li>
+
+                        <li
+                            class="${request?.action == 'Administration.dendrites' ? 'active' : ''}">
+                            <a href="@{Administration.dendrites}">Dendrites</a>
+                        </li>
+
+                        <li
+                            class="${request?.action == 'Administration.postes' ? 'active' : ''}">
+                            <a href="@{Administration.postes}">Postes</a>
+                        </li>
+
+                        <li
+                            class="${request?.action == 'Administration.elections' ? 'active' : ''}">
+                            <a href="@{Administration.elections}">Élections</a>
+                        </li>
+                        
+                        <li
+                            class="${request?.action == 'Administration.mandates' ? 'active' : ''}">
+                            <a href="@{Administration.mandates(null)}">Mandats</a>
+                        </li>
+
+                        <li
+                            class="${request?.action == 'Administration.feedbacks' ? 'active' : ''}">
+                            <a href="@{Administration.feedbacks}">Feedbacks</a>
+                        </li>
+                        <li
+                            class="${(request?.action == 'Administration.messages' 
+                            || request?.action == 'Administration.sendMessage') ? 'active' : ''}">
+                            <a href="@{Administration.messages}">Messages</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="phone-nav visible-phone">
+            </div>
+
+        </div>
+        <!--<div id="right" class="span1 visible-desktop"></div>-->
+        <div class="span9">
+            #{doLayout /}
+        </div>
+
+    </div>
+</div>

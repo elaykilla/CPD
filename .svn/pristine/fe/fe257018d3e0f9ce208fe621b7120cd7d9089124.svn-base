@@ -1,0 +1,19 @@
+#{extends 'main.html' /}
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="desactive" align="center">
+    <h1>
+        Désolé ${user?.fullName()}, vous ne pouvez pas avoir accès au site complet parce que vous n'avez pas payer votre cotisation de ce mois.
+    </h1>
+    <p>
+        Pour payer veuillez cliquer sur <a href="#">Me mettre à jour</a>
+    </p>
+    <p>
+        Donc vous ne pouvez pas avoir accès à ${message}
+    </p>
+    <p>
+        Cliquer sur <a href="@{Application.index}">Accueil</a> pour aller sur la page principale
+    </p>
+</div>

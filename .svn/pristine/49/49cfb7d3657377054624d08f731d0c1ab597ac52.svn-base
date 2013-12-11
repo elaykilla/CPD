@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<div class="row-fluid">
+    <div align="center" class="comment-metadata span3">
+        <a class="span12" href="@{Users.user(_comment.author?.id)}">
+            <img alt="Photo" #{if _comment?.author?.photo == null} src="../public/images/Mockup_Cpd_Homepage.JPG" #{/if} #{else} src="${_comment?.author?.photo?.smallUrl()}" #{/else}><br />
+        </a>
+        <strong><a href="@{Users.user(_comment.author?.id)}">${_comment?.author?.fullName()}</a></strong>
+    </div>
+    <div class="span9">
+        <div class="row">
+            ${_comment.content.escape().nl2br()}
+            #{if _connected?.contains('DELETE_COMMENT') || _connected?.isMine(_comment)}
+            <a class="btn btn-danger pull-right" href="@{Articles.deleteComment(_comment.id, _article_id)}">X</a>
+            #{/if}
+            <span class="comment-date pull-right "> ${_comment.created.since()} </span>
+        </div>
+    </div>
+</div>

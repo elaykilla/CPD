@@ -1,0 +1,100 @@
+#{extends 'Administration/template.html' /} #{set title:'Mise à jour
+Rôle' /}
+
+<div class="container-fluid span10">
+    #{ifnot role?.id}
+    <form class="well form-inline" method="POST"
+          action="@{Administration.saveRole}">
+        #{/ifnot}
+        <div class="cachable-group">
+            <span class="cachable-button btn btn-u">Information rôle</span>
+            <div class="cachable active">
+
+                #{if role?.id}
+                <form class="well form-inline" method="POST"
+                      action="@{Administration.updateRole}">
+                    <legend>${role.code}</legend>
+                    #{/if}
+                    <fieldset>
+                        #{field 'role.code'}
+                        <div
+                            class="control-group  ${errors.forKey(field.name) ? 'error' : ''}">
+                            <label class="control-label" for="${field.id}">&{'Code'}</label>
+                            <div class="controls">
+                                <input class="span12" id="${field.id}" type="text"
+                                       name="${field.name}" value="${role?.code}" required placeholder="Code" />
+                            </div>
+                        </div>
+                        #{/field}
+                        #{field 'role.id'} 
+                        <input id="${field.id}" type="hidden"
+                               name="${field.name}" value="${role?.id}" required /> #{/field}
+
+                        #{field 'role.description'}
+                        <div
+                            class="control-group  ${errors.forKey(field.name) ? 'error' : ''}">
+                            <label class="control-label" for="${field.id}">&{'Description'}</label>
+                            <div class="controls">
+                                <textarea class="span12" id="${field.id}" name="${field.name}"
+                                          placeholder="&{'Description'}">${field.value}</textarea>
+                                <span class="help-inline"> ${field.error} </span>
+                            </div>
+                        </div>
+                        #{/field}
+                        <div class="form-actions">
+                            <input type="submit" value="Valider" class="btn btn-u" /> <a
+                                href="@{Administration.roles()}" class="btn">Cancel</a>
+                        </div>
+                    </fieldset>
+                    #{if role?.id}
+                </form>
+                #{/if}
+            </div>
+        </div>
+
+        <div class="cachable-group">
+            <span class="cachable-button btn btn-u">Les droits</span>
+            <a class="btn btn-u" href="@{Administration.updateRights}">Mise à jour des rôles</a>
+            <div class="cachable">
+                #{if role?.id}
+                <form class="well form-inline"
+                      action="@{Administration.updateRoleRights}" method="POST">
+                    #{/if}
+                    <fieldset>
+                        <legend>Les droits</legend>
+                        <input type="hidden" value=${role?.id} name="role_id" /> 
+                        #{field 'rightCode[]'}
+                        <table cellpadding="0" cellspacing="0" border="0"
+                               class="table table-striped table-bordered">
+                            <caption>
+                                <h4>La liste des droits </h4>
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            #{list rights, as:'right'}
+                            <tbody>
+                                <tr>
+                                    <td><a href="#">${right?.code}</a></td>
+                                    <td><input name="${field.name}" type="checkbox"
+                                               value="${right?.id}" #{if role?.hasRight(right)} checked='checked' #{/if}/></td>
+                                </tr>
+                            </tbody>
+                            #{/list} #{/field}
+                        </table>
+                        <div class="form-actions">
+                            <input type="submit" value="Update" class="btn btn-u" />
+                        </div>
+                    </fieldset>
+                    #{if role?.id}
+                </form>
+                #{/if}
+            </div>
+        </div>
+        #{ifnot role?.id}
+    </form>
+    #{/ifnot}
+</div>

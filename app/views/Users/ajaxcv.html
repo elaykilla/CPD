@@ -1,0 +1,453 @@
+
+<div id="ajaxable">
+    #{if ass=='cv'}
+    <fieldset>
+        <legend>Les informations du CV</legend>
+        <input type="hidden" name="cv.id" value="${cv?.id}"/>
+        <input type="hidden" name="act" value="cv"/>
+        #{field 'cv.title'}
+        <div
+            class="control-group">
+            <label class="control-label" for="${field.id}">&{'Titre'}</label>
+            <div class="controls">
+                <input class="span10" id="${field.id}" type="text" name="${field.name}"
+                       value="${cv?.title}" placeholder="&{'Titre'}" required /> 
+            </div>
+        </div>
+        #{/field}
+        #{field 'cv.resume'}
+        <div
+            class="control-group">
+            <label class="control-label" for="${field.id}">&{'Résumé'}</label>
+            <div class="controls">
+                <textarea class="span10" id="${field.id}" type="text" name="${field.name}"
+                          placeholder="Résumé" required>${cv?.resume}</textarea> 
+            </div>
+        </div>
+        #{/field}
+        <div class="form-actions">
+            <input type="submit" value="&{'Valider'}" class="btn btn-u" />
+        </div>
+    </fieldset>
+    #{/if}
+    #{if ass=='adresse'}
+    <fieldset>
+        <legend>L'adresse actuelle</legend>
+        <input type="hidden" name="act" value="adress"/>
+        <input type="hidden" name="adresse.id" value="${adresse?.id}"/>
+        <input type="hidden" value="${user?.id}" name="user_id" />
+        #{field 'adresse.adress'}
+        <div
+            class="control-group  ${errors.forKey(field?.name) ? 'error' : ''}">
+            <label class="control-label" for="${field.id}">&{'Adresse :'}</label>
+            <div class="controls">
+                <input id="${field.id}" type="text" name="${field.name}"
+                       value="${user?.cv?.adresse?.adress}" placeholder="&{'Adresse'}" required /> 
+                <span class="help-inline">${field.error}</span>
+
+            </div>
+        </div>
+        #{/field} 
+        #{field 'adresse.zipCode'}
+        <div
+            class="control-group  ${errors.forKey(field?.name) ? 'error' : ''}">
+            <label class="control-label" for="${field.id}">&{'Code postal :'}</label>
+            <div class="controls">
+                <input id="${field.id}" type="text" name="${field.name}"
+                       value="${user?.cv?.adresse?.zipCode}" placeholder="&{'Code postal'}" required /> 
+                <span class="help-inline">${field.error}</span>
+
+            </div>
+        </div>
+        #{/field}
+        #{field 'adresse.ville'}
+        <div
+            class="control-group  ${errors.forKey(field?.name) ? 'error' : ''}">
+            <label class="control-label" for="${field.id}">&{'Ville :'}</label>
+            <div class="controls">
+                <input id="${field.id}" type="text" name="${field.name}"
+                       value="${user?.cv?.adresse?.ville}" placeholder="&{'Ville'}" required /> 
+                <span class="help-inline">${field.error}</span>
+
+            </div>
+        </div>
+        #{/field} 
+        #{field 'adresse.pays'}
+        <div
+            class="control-group  ${errors.forKey(field?.name) ? 'error' : ''}">
+            <label class="control-label" for="${field.id}">&{'Pays :'}</label>
+            <div class="controls">
+                <input id="${field.id}" type="text" name="${field.name}"
+                       value="${user?.cv?.adresse?.pays}" placeholder="&{'Pays'}" required /> 
+                <span class="help-inline">${field.error}</span>
+
+            </div>
+        </div>
+        #{/field}
+        #{field 'adresse.phone'}
+        <div
+            class="control-group  ${errors.forKey(field?.name) ? 'error' : ''}">
+            <label class="control-label" for="${field.id}">&{'Phone :'}</label>
+            <div class="controls">
+                <input id="${field.id}" type="text" name="${field.name}"
+                       value="${user?.cv?.adresse?.phone}" placeholder="&{'0612345789'}" /> 
+                <span class="help-inline">${field.error}</span>
+
+            </div>
+        </div>
+        #{/field}
+        <div class="form-actions">
+            <input type="submit" value="&{'Valider'}" class="btn btn-u" />
+            <a id="user-adress-delete" style="display: ${!user?.cv?.adresse ? 'none' : ''}" href="@{Cvs.deleteAdresse(user?.cv?.id, 'adress')}" class="btn btn-danger" onclick="return(confirm('Confirmer la suppression de cette Adresse.'));">&{'X'}</a>
+        </div>
+    </fieldset>
+    #{/if}
+    #{if ass=='formation'}
+    <input type='hidden' value="${cv?.id}" name="cv_id"/>
+    <input type='hidden' value="cv" name='act'/>
+    <input type='hidden' value="${formation?.id}" name='formation.id'/>
+    #{field 'formation.school'}
+    <div
+        class="control-group">
+        <label class="control-label" for="formation.school">&{'Etablissement'}</label>
+        <div class="controls">
+            <input id="${field.id}" type="text" name="${field.name}"
+                   value="${formation?.school}" placeholder="&{'Etablissement'}" required /> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    #{field 'formation.level'}
+    <div
+        class="control-group">
+        <label class="control-label" for="${field.id}">&{'Niveau : '}</label>
+        <div class="controls">
+            <input id="${field.id}" type="text" name="${field.name}"
+                   value="${formation?.level}" placeholder="&{'Niveau'}" required /> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    #{field 'formation.domain'}
+    <div
+        class="control-group">
+        <label class="control-label" for="${field.id}">&{'Domaine : '}</label>
+        <div class="controls">
+            <input id="${field.id}" type="text" name="${field.name}"
+                   value="${formation?.domain}" placeholder="&{'Domaine'}" required /> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    #{field 'formation.beginYear'}
+    <div
+        class="control-group">
+        <label class="control-label" for="${field.id}">&{'Début : '}</label>
+        <div class="controls">
+            <input id="${field.id}" type="number" name="${field.name}"
+                   value="${formation?.beginYear}" placeholder="&{'2000'}" required /> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    #{field 'onGoing'}
+    <div
+        class="control-group">
+        <label class="control-label" for="boursier">&{'En cours : '}</label>
+        <div class="controls">
+            <input class="cochable-inverse" type="checkbox" name="${field.name}" #{if formation?.onGoing == true} checked='checked' #{/if}/><span>Cocher si votre formation est en cours.</span> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    <div class="cochable-effect-inverse">
+        #{field 'formation.endYear'}
+        <div
+            class="control-group">
+            <label class="control-label" for="${field.id}">&{'Fin : '}</label>
+            <div class="controls">
+                <input id="${field.id}" type="number" name="${field.name}"
+                       value="${formation?.endYear}" placeholder="&{'2015'}" /> 
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+    </div>
+    <div class="form-actions">
+        <input type="submit" value="&{'Valider'}" class="btn btn-u" />
+        #{if formation?.id }
+        <a class="btn btn-danger" href="@{Cvs.deleteFormation(formation?.id, 'cv')}" onclick="return(confirm('Confirmer la suppression de cette formation.'));">X</a>
+        #{/if}
+    </div>
+    #{/if}
+    #{if ass=='experience'}
+    <input type='hidden' value="${cv?.id}" name="cv_id"/>
+    <input type='hidden' value="cv" name='act'/>
+    <input type='hidden' value="${experience?.id}" name='experience.id'/>
+    #{field 'experience.company'}
+    <div
+        class="control-group">
+        <label class="control-label" for="${field.id}">&{'Compagnie'}</label>
+        <div class="controls">
+            <input id="${field.id}" type="text" name="${field.name}"
+                   value="${experience?.company}" placeholder="&{'Compagnie'}" required /> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    #{field 'experience.sector'}
+    <div
+        class="control-group">
+        <label class="control-label" for="${field.id}">&{'Secteur : '}</label>
+        <div class="controls">
+            <input id="${field.id}" type="text" name="${field.name}"
+                   value="${experience?.sector}" placeholder="&{'Secteur'}" required /> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    #{field 'experience.poste'}
+    <div
+        class="control-group">
+        <label class="control-label" for="${field.id}">&{'Poste : '}</label>
+        <div class="controls">
+            <input id="${field.id}" type="text" name="${field.name}"
+                   value="${experience?.poste}" placeholder="&{'Poste'}" required /> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    #{field 'experience.mission'}
+    <div
+        class="control-group">
+        <label class="control-label" for="${field.id}">&{'Mission : '}</label>
+        <div class="controls">
+            <textarea class="span6" id="${field.id}" type="text" name="${field.name}" placeholder="&{'Mission'}" required >${experience?.mission}</textarea> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    <div class="row-fluid">
+        #{field 'experience.beginMonth'}
+        <div
+            class="control-group span6">
+            <label class="control-label" for="${field.id}">&{'Mois début : '}</label>
+            <div class="controls">
+                <select class="span10" id="${field.id}" name="${field.name}" required> 
+                    #{list items:months, as:'month' }
+                    <option value="${month}" #{if experience?.beginMonth == month} selected="selected" #{/if}>${month}</option>
+                    #{/list}
+                </select>
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+        #{field 'experience.beginYear'}
+        <div
+            class="control-group span6">
+            <label class="control-label" for="${field.id}">&{'Année début : '}</label>
+            <div class="controls">
+                <select class="span10" id="${field.id}" name="${field.name}" required > 
+                    #{list items:years, as:'year' }
+                    <option value=${year} #{if experience?.beginYear == year} selected="selected" #{/if}>${year}</option>
+                    #{/list}
+                </select>
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+    </div>
+    #{field 'onGoing'}
+    <div
+        class="control-group">
+        <label class="control-label" for="${field.id}">&{'En cours : '}</label>
+        <div class="controls">
+            <input class="cochable-inverse" type="checkbox" name="${field.name}" #{if experience?.onGoing == true} checked='checked' #{/if}/><span>Cocher si votre expérience est en cours.</span> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    <div class="cochable-effect-inverse row-fluid">
+        #{field 'experience.endMonth'}
+        <div
+            class="control-group span6">
+            <label class="control-label" for="${field.id}">&{'Mois fin : '}</label>
+            <div class="controls">
+                <select class="span10" id="${field.id}" name="${field.name}" > 
+                    <option></option>
+                    #{list items:months, as:'month' }
+                    <option value="${month}" #{if experience?.endMonth == month} selected="selected" #{/if}>${month}</option>
+                    #{/list}
+                </select>
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+        #{field 'experience.endYear'}
+        <div
+            class="control-group span6">
+            <label class="control-label" for="${field.id}">&{'Année fin : '}</label>
+            <div class="controls">
+                <select class="span10" id="${field.id}" type="number" name="${field.name}" > 
+                    <option></option>
+                    #{list items:years, as:'year' }
+                    <option value=${year} #{if experience?.endYear == year} selected="selected" #{/if}>${year}</option>
+                    #{/list}
+                </select>
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+    </div>
+    <div class="form-actions">
+        <input type="submit" value="&{'Valider'}" class="btn btn-u" />
+        #{if experience?.id }
+        <a class="btn btn-danger" href="@{Cvs.deleteExperience(experience?.id, 'cv')}" onclick="return(confirm('Confirmer la suppression de cette expérience.'));">X</a>
+        #{/if}
+    </div>
+    #{/if}
+    #{if ass=='contact'}
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+                aria-hidden="true">×</button>
+        <h3>Renseigner vos informations et le message.</h3>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <label class="">Nom complet</label>
+            <input name="name" type="text" class="span12" value="${connected?.fullName()}" required />
+            <label>Email Address</label>
+            <input name="email" type="text" class="span12" placeholder="Your email address" value="${connected?.email}" required />
+            <label>Subject</label>
+            <input name="subject" type="text" class="span12" placeholder="Subject" required/>
+        </div>
+        <div class="span6">
+            <label>Message</label>
+            <textarea type="text/html" name="content" id="message" class="input-xlarge span12" rows="10" placeholder="Content" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-u pull-right">Send</button>
+    </div>
+    #{/if}
+    #{if ass=='skill'}
+    <input type='hidden' value="${cv?.id}" name="cv_id"/>
+    <input type='hidden' value="cv" name='act'/>
+    <input type='hidden' value="${skill?.id}" name='skill.id'/>
+    #{field 'skill.domain'}
+    <div
+        class="control-group">
+        <label class="control-label" for="${field.id}">&{'Domaine : '}</label>
+        <div class="controls">
+            <input class="span6" id="${field.id}" type="text" name="${field.name}"
+                   value="${skill?.domain}" placeholder="&{'Domaine'}" required /> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    #{field 'skill.comment'}
+    <div
+        class="control-group">
+        <label class="control-label" for="skill.comment">Commentaire:</label>
+        <div class="controls">
+            <textarea class="span6" id="${field.id}" type="text" name="${field.name}" placeholder="Commentaire:">${skill?.comment}</textarea> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+
+    <div class="form-actions">
+        <input type="submit" value="Valider" class="btn btn-u" />
+        #{if skill?.id }
+        <a class="btn btn-danger" href="@{Cvs.deleteSkill(skill?.id, 'cv')}" onclick="return(confirm('Confirmer la suppression de cette compétence.'));">X</a>
+        #{/if}
+    </div>
+    #{/if}
+    #{if ass=='hobbie'}
+    <input type='hidden' value="${cv?.id}" name="cv_id"/>
+    <input type='hidden' value="cv" name='act'/>
+    <input type='hidden' value="${hobbie?.id}" name='hobbie.id'/>
+    #{field 'hobbie.title'}
+    <div
+        class="control-group">
+        <label class="control-label span2" for="${field.id}">Titre : </label>
+        <div class="controls">
+            <input class="span10" id="${field.id}" type="text" name="${field.name}"
+                   value="${hobbie?.title}" placeholder="Titre" required /> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    #{field 'hobbie.comment'}
+    <div
+        class="control-group ${_caller?.errors?.forKey(field?.name) ? 'error' : ''}">
+        <label class="control-label span2" for="${field.id}">Commentaire : </label>
+        <div class="controls">
+            <textarea cols="20" class="field-area span10" id="${field.id}" type="text" name="${field.name}"
+                      placeholder="Commentaire" required>${hobbie?.comment}</textarea> 
+            <span class="help-inline">${field.error}</span>
+        </div>
+    </div>
+    #{/field}
+    <div class="form-actions">
+        <input type="submit" value="Valider" class="btn btn-u" />
+        #{if hobbie?.id }
+        <a class="btn btn-danger" href="@{Cvs.deleteHobbie(hobbie?.id, 'cv')}" onclick="return(confirm('Confirmer la suppression de cet intérêt.'));">X</a>
+        #{/if}
+    </div>
+    #{/if}
+    #{if ass=='language'}
+    <input type='hidden' value="${cv?.id}" name="cv_id"/>
+    <input type='hidden' value="cv" name='act'/>
+    <input type='hidden' value="${language?.id}" name='language.id'/>
+    <div class="row-fluid">
+        #{field 'language.language'}
+        <div
+            class="control-group span6">
+            <label class="control-label" for="${field.id}">Langue : </label>
+            <div class="controls">
+                <select id="${field.id}" name="${field.name}" required > 
+                    #{list items:languages, as:'lang' }
+                    <option value=${language} #{if language?.language == lang} selected="selected" #{/if}>${lang}</option>
+                    #{/list}
+                </select>
+            </div>
+        </div>
+        #{/field}
+        #{field 'language.level'}
+        <div
+            class="control-group span6">
+            <label class="control-label" for="${field.id}">Niveau : </label>
+            <div class="controls">
+                <select id="${field.id}" name="${field.name}" required> 
+                    #{list items:levels, as:'level' }
+                    <option value="${level}" #{if language?.level == level} selected="selected" #{/if}>${level}</option>
+                    #{/list}
+                </select>
+            </div>
+        </div>
+        #{/field}
+    </div>
+    <div class="form-actions">
+        <input type="submit" value="Valider" class="btn btn-u" />
+        #{if language?.id} 
+        <a class="btn btn-danger" href="@{Cvs.deleteLanguage(language?.id, cv?.id, 'cv')}" onclick="return(confirm('Confirmer la suppression de cette langue.'));">X</a>
+        #{/if}
+    </div>
+    #{/if}
+    #{if ass}
+    #{if flash.success}
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>${flash.success}</strong>
+    </div>
+    #{/if} 
+    #{if flash.error}
+    <div class="alert alert-error">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+
+        <strong>${flash.error}</strong>
+
+    </div>
+    #{/if}
+    #{/if}
+</div>

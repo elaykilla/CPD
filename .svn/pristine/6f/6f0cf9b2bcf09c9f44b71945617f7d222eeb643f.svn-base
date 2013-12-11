@@ -1,0 +1,48 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<div id="comment-${_comment?.id}">
+    <div onmousemove="return showTools('${_comment?.id}', true);" onmouseout="return showTools('${_comment?.id}', false);">
+        <div class="posts">
+            <dl class="dl-horizontal">
+                <dt><a href="@{Users.user(_comment?.author?.id)}"><img title="${_comment?.author?.fullName()}" src="${_comment?.author?.smallUrl()}" alt="" /></a></dt>
+                <div class="comment">
+                    <dd>
+                        <a id="themecolor" href="@{Users.user(_comment?.author?.id)}">${_comment?.author?.fullName()}</a>
+                        <hr style="margin-bottom: 0px;"/>
+                        <div class="zone-texte">${_comment?.content}</div> 
+                        <span class="comment-date pull-right "> ${_comment.created.since()} </span>
+                    </dd>
+                    <div style="float: right; display: none;" class="tools-${_comment?.id}">
+                        #{if _connected?.contains('DELETE_COMMENT') || _connected?.isMine(_comment)}
+                        #{if _as=='article'}
+                        <a title="Supprimer ce commentaire" 
+                           class="btn btn-danger" href="@{Articles.deleteComment(_comment.id, _article?.id)}"
+                           onclick="return deleteComment('article', '${_article?.id}', '${_comment.id}');">
+                            <i class="icon-only icon-share-alt"></i>
+                        </a>
+                        #{/if}
+                        #{if _as=='announce'}
+                        <a title="Supprimer ce commentaire" 
+                           class="btn btn-danger" href="@{Announces.deleteComment(_comment.id, _article?.id)}"
+                           onclick="return deleteComment('announce', '${_article?.id}', '${_comment.id}');">
+                            <i class="icon-only icon-share-alt"></i>
+                        </a>
+                        #{/if}
+                        #{if _as=='event'}
+                        <a title="Supprimer ce commentaire" 
+                           class="btn btn-danger" href="@{Events.deleteComment(_comment.id, _article?.id)}"
+                           onclick="return deleteComment('event', '${_article?.id}', '${_comment.id}');">
+                            <i class="icon-only icon-share-alt"></i>
+                        </a>
+                        #{/if}
+                        #{/if}
+                    </div>
+                </div>
+            </dl>
+        </div>
+    </div><!--/media-->
+    <!--<hr/>-->
+</div>

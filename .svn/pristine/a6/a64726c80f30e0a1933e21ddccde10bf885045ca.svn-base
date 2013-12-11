@@ -1,0 +1,14 @@
+<!--
+Display a formation of a user.
+-->
+<div class="span12 cv-info">
+    <div class="row">
+        #{if _formation?.onGoing} <span class="span3">${_formation?.beginYear} : </span> #{/if}
+        #{else} <span class="span3">${_formation?.beginYear} - ${_formation?.endYear} : </span> #{/else}
+        <span class="school span9">${_formation?.school}</span>
+    </div>
+    <div>
+        <span>${_formation?.level} : </span>
+        <span>${_formation?.domain}</span>
+    </div>
+</div>

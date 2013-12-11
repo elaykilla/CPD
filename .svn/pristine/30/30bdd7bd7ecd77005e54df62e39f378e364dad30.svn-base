@@ -1,0 +1,37 @@
+#{extends 'Cellule/bureauTemplate.html' /}
+#{set title:'La CPD' /}
+<div class="container-fluid span9" style="text-align: justify;">
+    <p>
+        La Cellule Pour le Développement est une association créée en 2007 par des boursiers d'excellence du "Programme 300 jeunes cadres pour le Mali". 
+        Ce programme est une initiative lancée par l’ex-président Malien Alpha Oumar Konaré dans le but de former des futurs cadres dans différents
+        domaines au service du Mali.        
+    </p>
+    <br/>
+    <p>
+        L'objectif de la CPD est double
+            <ul TYPE="square">
+                <li> D'une part,faciliter l’intégration des <a href="#">jeunes étudiants maliens</a>,
+                    les aider dans les démarches administratives et organiser des activités socio-culturelles afin 
+                    de créer une cohésion sociale entre des personnes venues de divers horizons du Mali.
+                    Au cours de l'année, différents évènements sont organisés à savoir: <a href="#">le weekend d'intégration</a>, <a href="#">la journée de Ski</a>, 
+                    <a href="#">le minicode</a> et bien d'autres <a href="#">activités mineures</a>: sortie bowling, resto, balade, pique-nique etc...
+                </li>
+                <li>
+                    Et d'autre part,contribuer à faire du Mali, un pays, indépendant, prospère et rayonnant, 
+                    en contribuant à son développement éducatif et socio-économique. 
+                </li>
+            </ul>
+    </p>
+    <br/>
+    <p>
+        Pour bien coordonner ses activités, la Cellule Pour le Développement est composé d'un <a href="#">bureau</a> principale et de 4 grandes dendrites (ou sous-bureau)
+         <ul TYPE="square">
+             <a href="#"><li>Paris</li></a>
+               <a href="#"> <li>Grenoble</li></a>
+               <a href="#"> <li>Valence</li></a>
+              <a href="#">  <li>Lyon</li></a>
+            </ul>
+    </p>
+    
+    
+</div>

@@ -1,0 +1,27 @@
+<div class="ajaxable-annuaire container-fluid">
+    <div class="row-fluid blog-page blog-item">
+        <!--<h2 class="titles">Rechercher un Boursier D'Excellence</h2>-->
+        #{searchFormTag page:page, search:search, as:'annuaire' /}
+        #{if users?.size()}
+
+        #{pagination page:page, size:size, nbPages:nbPages, nbPagesMax:nbPagesMax, search:search, as:'annuaire' /}
+        #{list items:users, as:'user'}
+        <div class="posts margin-bottom-20">
+            <dl class="dl-horizontal">
+                <dt><a href="@{Users.user(user?.id, user?.username())}">
+                    <img #{if user?.photo == null}  
+                        src="@{'/public/images/election.jpg'}" #{/if} 
+                        #{else} src="${user?.profileUrl()}" #{/else} alt="Mon image" alt="" />
+                </a>
+                <dd>
+                    <a id="themecolor" href="@{Users.user(user?.id, user?.username())}">${user?.fullName()}</a>
+                    <hr style="margin-bottom: 0px;"/>
+                    <span>${user?.dendrite?.named}</span> <span> ${user?.promotion} </span><br/>
+                    <span>${user?.cv?.resume}</span>
+                </dd>
+            </dl>
+        </div>
+        #{/list}
+        #{pagination page:page, size:size, nbPages:nbPages, nbPagesMax:nbPagesMax, search:search, as:'annuaire' /}
+        #{/if}
+    </div>

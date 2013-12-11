@@ -1,0 +1,463 @@
+/* 
+    Document   : main
+    Created on : 12 juin 2013, 20:53:00
+    Author     : Sissoko
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/**************************************** Header *********************************************/
+#top-fixed{
+    /*position:fixed;*/
+    width: 100%;
+    top:0px;
+    /*margin-bottom: 80px;*/
+    z-index: 130;
+}
+
+.slider-inner .da-slider{
+    z-index: 120;
+
+}
+
+#over-banner{
+    z-index: 150;
+}
+
+
+
+
+
+/**************************************** Header *********************************************/
+
+#breadcrumb{
+    color:#51a8e3; 
+    font-size:40px;
+    /*margin-top: 7%;*/
+}
+
+
+/**************************************** Body *********************************************/
+
+
+
+/************************************ Menu ***********************************/
+#sidebar-nav-fixed-index {
+
+    /*position:fixed;*/
+    top:60px;
+    width:16.97%;
+
+}
+
+#sidebar-nav-fixed{
+    /*position:fixed;*/
+    top:22%;
+    /*width:14.97%;*/
+
+}
+
+.fixed {
+    /*margin-left: 350px !important;*/
+    position: fixed;
+    width:14.97%;    
+}
+
+.not-fixed{
+    position: absolute;
+    width:14.97%;
+}
+
+
+.navbar .nav>li>.dropdown-menu:before{
+    left: auto !important ;
+    right: 13px;
+}
+
+.navbar .nav>li>.dropdown-menu:after{
+    left: auto !important ;
+    right: 13px;
+}
+.log-page {
+    width: 310px !important ;
+}
+
+
+/*.row-fluid > .span-fixed-sidebar {
+    margin-left: 290px;
+}*/
+
+
+
+
+
+/************************************ Menu ***********************************/
+/** Color **/
+body {
+    background-color: rgb(230,230,230);
+    padding-top: 60px;  
+    padding-bottom: 40px;  
+}  
+
+.inner-body{
+    padding-top: 60px;
+}
+/********************************USER DATA*********************************/
+
+#themecolor{
+    color: #51a8e3;
+}
+.name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cv-title {
+    cursor: default;
+    font-size: 25px;
+    font-weight: bold;
+    /*margin-bottom: 0px;*/
+}
+
+.line {
+    font-weight: bold;
+    font-size: 30px;
+    color: activeborder;
+}
+
+.disabled {
+    color: darksalmon;
+}
+
+.logo {
+    height: 20px;
+}
+
+.profile-info {
+    border: 3px solid #51a8e3;
+    margin-bottom: 0px;
+}
+
+.barre_separation {
+    border: 2px #51a8e3 solid;
+    margin-top: -10px;
+    margin-bottom: 0px;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.cv-info {
+    margin-bottom: 10px;
+}
+
+.cv-info .cv-info{
+    padding-left: 10px;
+}
+
+.school {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.resume{
+    /*padding-bottom: 20px;*/
+}
+
+.mission {
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+.comments {
+    margin-left: -10px;
+}
+
+.desactive h1{
+    color: red;
+}
+
+.desactive p{
+    color: orange;
+    font-size: 16px;
+}
+
+.my-left-navbar li a{
+    color: white;
+}
+
+.my-left-navbar-black {
+    color: green;
+}
+
+a {
+    color: green;
+}
+
+.btn-info {
+    color: #51a8e3;
+}
+
+
+.leaderboard {  
+    padding: 60px;  
+    margin-bottom: 30px;  
+    background-image: url('/twitter-bootstrap/images/gridbg.gif');  
+    background-repeat:repeat;  
+    -webkit-border-radius: 6px;  
+    -moz-border-radius: 6px;  
+    border-radius: 6px;  
+}  
+.leaderboard h1 {  
+    font-size: 40px;  
+    margin-bottom: 5px;  
+    line-height: 1;  
+    letter-spacing: -1px;  
+    color:#FF6600;  
+}  
+.leaderboard p {  
+    font-size: 18px;  
+    font-weight: 200;  
+    line-height: 27px;  
+} 
+
+/********************************USER DATA*********************************/
+
+.cachable-group {
+    margin-bottom: 10px;
+}
+
+.cachable-button .cv {
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cachable-button .cv:hover {
+    color: #51a8e3;
+}
+
+/***************************** Form **********************************/
+
+#form {
+    padding: 10px;
+    background: aliceblue;
+    /*border-color: yellowgreen;*/
+    border-color: #51a8e3;
+    /*background: -webkit-gradient(linear, left top, left 60%, from(gainsboro), to(antiquewhite));*/
+    /*background: -webkit-gradient(linear, left top, left 60%, from(olivedrab), to(yellowgreen));*/
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+#form .error {
+    background: #c00;
+    color: #fff;
+    font-size: 90%;
+    padding: 3px 5px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-box-shadow: 0 2px 0 #800;
+}
+
+#form p {
+    margin: 5px 0 0 0;
+}
+
+#form input, form textarea {
+    font-size: 14px;
+}
+
+#form label {
+    color: black;
+    font-weight: bold;
+    font-size: 90%;
+    margin-bottom: 3px;
+}
+
+/***************************** Form **********************************/
+
+/*****************************VOTING*********************************/
+#rules{
+    padding: 10px;
+
+    /*background: greenyellow;*/
+    border-color: red;
+    font-weight: bold;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+/*****************************VOTING*********************************/
+/** Pagination **/
+
+#pagination {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    color: #869AB1;
+    font-size: 90%;
+    top: -20px;
+    margin-bottom: 30px;
+}
+
+#pagination a {
+    color: #869AB1;
+    font-size: 90%;
+}
+
+#pagination #previous {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#pagination #previous:before {
+    content: '<< ';
+}
+
+#pagination #next {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#pagination #next:after {
+    content: ' >>';
+}
+
+/*.well {  
+    background-image: url('/twitter-bootstrap/images/gridbg.gif');  
+    background-repeat:repeat;  
+    -webkit-border-radius: 6px;  
+    -moz-border-radius: 6px;  
+    border-radius: 6px;  
+}  */
+
+/*.nav .nav-header {  
+    font-size: 18px;  
+    color:#FF9900;  
+}  */
+
+/*.container {
+    background-color: gold;
+}*/
+
+#highlighted-titles{
+    background-color: #51a8e3;
+    color:white;
+}
+
+.circle-img {
+    border-radius: 50%/50%; 
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+.titles{
+    text-align: center;
+    color: #51a8e3;
+    font-size: 200%;
+}
+.titlesleft{
+    text-align: left;
+    color: #51a8e3;
+    font-size: 200%;
+}
+
+#pCenter{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.descriptions{
+    color:black;
+}
+
+.alert {
+    margin-top:67px;
+    z-index: 160;
+}
+
+
+/****************************************RECENTS****************************************/
+#recents{
+    margin-left: 0%;
+    background-color: white;
+}
+
+#white-part{
+    background-color: white;
+}
+
+#white-part-border{
+    background-color: white;
+    border: 2px solid;
+    border-color: #51a8e3;
+}
+
+.field-area{
+    height: 80px;
+}
+
+.zone-texte{
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.comment{
+    background-color: #DCDCDC;
+}
+
+
+/****************************************RECENTS****************************************/
+
+/**************************************** Body *********************************************/
+
+
+/**************************************** Footer *********************************************/
+
+/*#footer {
+    bottom: 0;
+    border-top: 1px solid #45597A;
+    font-size: 70%;
+    padding: 10px 30px;
+    text-align: center;
+    color: #869AB1;
+    margin-top: 30px;
+}
+
+#footer a {
+    color: #869AB1;
+    font-weight: bold;
+}
+
+#footer {
+    float: bottom;
+    background-color: #C4D0DC;
+    border: 1px solid #93A7BF;
+    clear: both;
+    color: #476D91;
+    margin: 30px auto 10px;
+    padding: 3px;
+    text-align: center;
+}
+#footer p {
+    background-color: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 5px 0;
+}
+#footer a {
+    background-color: inherit;
+    color: white;
+}
+#footer a:hover {
+    background-color: inherit;
+    color: green;
+}*/
+/**************************************** Footer *********************************************/

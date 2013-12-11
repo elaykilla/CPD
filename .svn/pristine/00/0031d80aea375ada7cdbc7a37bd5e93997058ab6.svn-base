@@ -1,0 +1,3 @@
+#{commentsTag comments:comments, type:type, 
+            commentSize:commentSize, maxSize:maxSize, 
+            connected:connected, article:article, commentPage:commentPage/}

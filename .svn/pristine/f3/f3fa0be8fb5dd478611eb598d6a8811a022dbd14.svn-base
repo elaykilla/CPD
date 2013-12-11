@@ -1,0 +1,81 @@
+<!--Countdown tag-->
+<head>
+    <style>
+        .background {
+            border-style: none;
+            width: 62px;
+            height: 58px;
+        }
+        .numbers {
+            border-style: none;
+            background-color: #292929;
+            padding: 0px;
+            margin: 0px;
+            width: 62px;
+            height: 42px;
+            text-align: center; 
+            font-family: Arial; 
+            font-size: 34px;
+            font-weight: normal;    /* options are normal, bold, bolder, lighter */
+            color: #FFFFFF;     /* change color using the hexadecimal color codes for HTML */
+        }
+        .title {    /* the styles below will affect the title under the numbers, i.e., “Days”, “Hours”, etc. */
+            border: none;    
+            padding: 0px;
+            margin: 0px 3px;
+            width: 62px;
+            text-align: center; 
+            font-family: Arial; 
+            font-size: 10px; 
+            font-weight: normal;    /* options are normal, bold, bolder, lighter */
+            color: #999999;    /* change color using the hexadecimal color codes for HTML */
+            background-color: #000000;  
+        }
+        #form-count {    /* the styles below will affect the outer border of the countdown timer */
+            width: 400px;
+            height: 100px;
+            border-style: ridge;    /* options are none, dotted, dashed, solid, double, groove, ridge, inset, outset */
+            border-width: 2px;
+            border-color: #666666;  /* change color using the hexadecimal color codes for HTML */ 
+            background-color: #000000;
+            padding: 5px;
+            margin: 0px auto;
+            position: relative;   /* leave as "relative" to keep timer centered on your page, or change to "absolute" then change the values of the "top" and "left" properties to position the timer */
+            top: 0px;            /* change to position the timer */
+            left: 0px;            /* change to position the timer; delete this property and it's value to keep timer centered on page */
+        }
+        .line {
+            border-style: none;
+            width: 62px; 
+            height: 2px;
+            z-index: 15;
+        }
+
+    </style>
+
+</head>
+<body onload="countdown('${_year}', '${_month}', '${_day}', '${_hour}', '${_minute}')">
+    <div id="form-count">
+        <div class="numbers" id="count2" style="position: absolute; top: 10px; height: 60px; padding: 15px 0 0 10px; background-color: #000000; z-index: 20;"></div>
+        <img src="@{'/public/images/counts/bkgdimage.gif'}" class="background" style="position: absolute; left: 69px; top: 12px;"/>
+        <img src="@{'/public/images/counts/line.jpg'}" class="line" style="position: absolute; left: 69px; top: 40px;"/> 
+        <div class="numbers" id="dday" style="position: absolute; left: 69px; top: 15px;" ></div>
+
+        <img src="@{'/public/images/counts/bkgdimage.gif'}" class="background" style="position: absolute; left: 141px; top: 12px;"/>
+        <img src="@{'/public/images/counts/line.jpg'}" class="line" style="position: absolute; left: 141px; top: 40px;"/>
+        <div class="numbers" id="dhour" style="position: absolute; left: 141px; top: 15px;" ></div>
+
+        <img src="@{'/public/images/counts/bkgdimage.gif'}" class="background" style="position: absolute; left: 213px; top: 12px;"/>
+        <img src="@{'/public/images/counts/line.jpg'}" class="line" style="position: absolute; left: 213px; top: 40px;"/>
+        <div class="numbers" id="dmin" style="position: absolute; left: 213px; top: 15px;" ></div>
+
+        <img src="@{'/public/images/counts/bkgdimage.gif'}" class="background" style="position: absolute; left: 285px; top: 12px;"/>
+        <img src="@{'/public/images/counts/line.jpg'}" class="line" style="position: absolute; left: 285px; top: 40px;"/>
+        <div class="numbers" id="dsec" style="position: absolute; left: 285px; top: 15px;" ></div>
+
+        <div class="title" id="days" style="position: absolute; left: 66px; top: 73px;" >Days</div>
+        <div class="title" id="hours" style="position: absolute; left: 138px; top: 73px;" >Hours</div>
+        <div class="title" id="minutes" style="position: absolute; left: 210px; top: 73px;" >Minutes</div>
+        <div class="title" id="seconds" style="position: absolute; left: 282px; top: 73px;" >Seconds</div>
+    </div>
+</body>

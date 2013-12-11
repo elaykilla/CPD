@@ -1,0 +1,22 @@
+<!--Receives connected, last, elections and dendrite-->
+#{extends 'Dendrites/template.html' /}
+#{set title:'Elections' /}
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="titles">
+            Les Elections du Bureau de ${dendrite?.named}
+        </div><br>
+    </div>
+</div><br>
+
+
+<div class="container-fluid span10">
+    #{if connected}
+
+    <div style="float:right;">
+        <a class="btn btn-u" href="@{dendrites.editElection(dendriteId,null)}">Nouvelle election</a>
+    </div>
+
+    #{/if}
+    #{listElectionTag connected:connected, last:last, elections:elections, dendriteId:dendriteId /}
+</div>

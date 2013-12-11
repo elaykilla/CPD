@@ -1,0 +1,47 @@
+<!--This receives the election, postes, and the connected user-->
+<div><br>
+    <h2 class="titlesleft"> Bienvenue à ${_election?.code}. <br></h2>
+    
+    <h2 class="titlesleft">Veuillez trouver ci dessous la liste des postes!</h2>
+
+    <!--Verifier la date de l'election-->
+
+    <div class="container-fluid span10"><br>
+        <!--Pre-election phase-->
+        #{if _election.status()=="preElection"}
+        <h3>L'election n'a pas encore debuté. Vous ne pouvez donc pas encore candidater ou voter. Cependant vous pouvez
+        vous informer sur les postes. La candidature debutera le ${_election.startCandidature}.</h3>
+        #{/if}
+
+        <!--candidature phase-->
+        #{elseif _election.status()=="candidature"}
+        <div class="well rules" id="rules">
+        <h3>Les candidatures sont ouvertes!!!!!! N'hesitez pas à postuler. </h3><br>
+        <h3>1. Vous etes libres de candidater à autant de postes que vous desirez.</h3><br> 
+        <h3>2. Vous ne pouvez bien evidemment deposer qu'une seule candidature par Poste.</h3>
+        </div>
+        #{/ elseif}
+        <!--voting phase-->
+        #{elseif _election.status()=="voting"}
+        <h3>Votez pour votre candidat!! Assurez vous de ne voter qu'une seule fois par poste.</h3>
+
+        #{/ elseif}
+
+        <!--postelection phase-->
+        #{else}
+        <h3>Nous remercions tous les candidats pour leur participation. </h3>
+
+        <p align="center"><a href="@{Elections.resultsElection(_election.id)}" class="btn btn-u btn-block">Voir Resultats</a></p>
+
+
+        #{/ else}
+    </div>
+
+
+</div>
+
+<div class="span10">
+
+    #{listPosteTag connected:_connected, election:_election, postes:_postes /}
+
+</div>

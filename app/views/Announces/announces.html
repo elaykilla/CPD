@@ -1,0 +1,10 @@
+#{extends 'Announces/template.html' /} 
+#{set title:'Les annonces' /}
+<!--<div class="container-fluid">-->
+#{if connected}
+<div style="float:right;" class="span3">
+    <a class="btn btn-u" href="@{Announces.editAnnounce(dendrite?.id)}">Nouvelle annonce</a>
+</div>
+#{/if}
+#{announcesTag announces:allAnnounces /}
+<!--</div>-->

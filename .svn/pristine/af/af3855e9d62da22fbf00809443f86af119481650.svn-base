@@ -1,0 +1,134 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<form id="${_experience?.id ? 'form-experience' : '' }" class="${_experience?.id ? 'form-experience' : '' } well form-horizontal"  
+      action="@{Cvs.updateExperience}" method="POST"
+      accept-charset="UTF-8">
+    <div class="ajaxable">
+        <input type='hidden' value="${_cv?.id}" name="cv_id"/>
+        <input type='hidden' value="cv" name='act'/>
+        <input type='hidden' value="${_experience?.id}" name='experience.id'/>
+        #{field 'experience.company'}
+        <div
+            class="control-group">
+            <label class="control-label" for="${field.id}">&{'Compagnie'}</label>
+            <div class="controls">
+                <input id="${field.id}" type="text" name="${field.name}"
+                       value="${_experience?.company}" placeholder="&{'Compagnie'}" required /> 
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+        #{field 'experience.sector'}
+        <div
+            class="control-group">
+            <label class="control-label" for="${field.id}">&{'Secteur : '}</label>
+            <div class="controls">
+                <input id="${field.id}" type="text" name="${field.name}"
+                       value="${_experience?.sector}" placeholder="&{'Secteur'}" required /> 
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+        #{field 'experience.poste'}
+        <div
+            class="control-group">
+            <label class="control-label" for="${field.id}">&{'Poste : '}</label>
+            <div class="controls">
+                <input id="${field.id}" type="text" name="${field.name}"
+                       value="${_experience?.poste}" placeholder="&{'Poste'}" required /> 
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+        #{field 'experience.mission'}
+        <div
+            class="control-group">
+            <label class="control-label" for="${field.id}">&{'Mission : '}</label>
+            <div class="controls">
+                <textarea class="span6" id="${field.id}" type="text" name="${field.name}" placeholder="&{'Mission'}" required >${_experience?.mission}</textarea> 
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+        <div class="row-fluid">
+            #{field 'experience.beginMonth'}
+            <div
+                class="control-group span6">
+                <label class="control-label" for="${field.id}">&{'Mois début : '}</label>
+                <div class="controls">
+                    <select class="span10" id="${field.id}" name="${field.name}" required> 
+                        #{list items:_months, as:'month' }
+                        <option value="${month}" #{if _experience?.beginMonth == month} selected="selected" #{/if}>${month}</option>
+                        #{/list}
+                    </select>
+                    <span class="help-inline">${field.error}</span>
+                </div>
+            </div>
+            #{/field}
+            #{field 'experience.beginYear'}
+            <div
+                class="control-group span6">
+                <label class="control-label" for="${field.id}">&{'Année début : '}</label>
+                <div class="controls">
+                    <select class="span10" id="${field.id}" name="${field.name}" required > 
+                        #{list items:_years, as:'year' }
+                        <option value=${year} #{if _experience?.beginYear == year} selected="selected" #{/if}>${year}</option>
+                        #{/list}
+                    </select>
+                    <span class="help-inline">${field.error}</span>
+                </div>
+            </div>
+            #{/field}
+        </div>
+        #{field 'onGoing'}
+        <div
+            class="control-group">
+            <label class="control-label" for="${field.id}">&{'En cours : '}</label>
+            <div class="controls">
+                <input class="cochable-inverse" type="checkbox" name="${field.name}" #{if _experience?.onGoing == true} checked='checked' #{/if}/><span>Cocher si votre expérience est en cours.</span> 
+                <span class="help-inline">${field.error}</span>
+            </div>
+        </div>
+        #{/field}
+        <div class="cochable-effect-inverse row-fluid">
+            #{field 'experience.endMonth'}
+            <div
+                class="control-group span6">
+                <label class="control-label" for="${field.id}">&{'Mois fin : '}</label>
+                <div class="controls">
+                    <select class="span10" id="${field.id}" name="${field.name}" > 
+                        <option></option>
+                        #{list items:_months, as:'month' }
+                        <option value="${month}" #{if _experience?.endMonth == month} selected="selected" #{/if}>${month}</option>
+                        #{/list}
+                    </select>
+                    <span class="help-inline">${field.error}</span>
+                </div>
+            </div>
+            #{/field}
+            #{field 'experience.endYear'}
+            <div
+                class="control-group span6">
+                <label class="control-label" for="${field.id}">&{'Année fin : '}</label>
+                <div class="controls">
+                    <select class="span10" id="${field.id}" type="number" name="${field.name}" > 
+                        <option></option>
+                        #{list items:_years, as:'year' }
+                        <option value=${year} #{if _experience?.endYear == year} selected="selected" #{/if}>${year}</option>
+                        #{/list}
+                    </select>
+                    <span class="help-inline">${field.error}</span>
+                </div>
+            </div>
+            #{/field}
+        </div>
+        <div class="form-actions">
+            <input type="submit" value="&{'Valider'}" class="btn btn-u" />
+            #{if _experience?.id }
+            <a class="btn btn-danger" href="@{Cvs.deleteExperience(_experience?.id, 'cv')}" onclick="return(confirm('Confirmer la suppression de cette expérience.'));">X</a>
+            #{/if}
+        </div>
+    </div>
+</form>

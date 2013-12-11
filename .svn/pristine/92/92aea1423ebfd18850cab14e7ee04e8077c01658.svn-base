@@ -1,0 +1,36 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="container-fluid span9">
+    #{if _caller?.connected}
+    <div style="float:right;" class="span3">
+        <a class="btn btn-u" href="@{Events.editEvent(_caller?.dendrite?.id)}">Nouvel évènement</a>
+    </div>
+    #{/if}
+    #{if _caller?.frontEvent}
+    <div class="blog margin-bottom-60" id="white-part">
+        <h2><a id="themecolor" href="@{Events.event(_caller?.frontEvent.id)}">${_caller?.frontEvent.title}</a></h2>
+        <ul class="unstyled inline blog-info">
+            <li><i class="icon-calendar"></i> ${_caller?.frontEvent.created.format('MMMM dd, yyyy')}</li>
+            <li><i class="icon-pencil"></i> <a href="@{Users.user(_caller?.frontEvent.author.id)}"> ${_caller?.frontEvent.author.fullName()}</a></li>
+            <li><i class="icon-comments"></i> <a href="#">${_caller?.frontEvent.comments.size()} Comment${_caller?.frontEvent.comments.size().pluralize()}</a></li>
+        </ul>
+        <div class="event-content">
+            <h2><div class="text">${_caller?.frontEvent.content.nl2br()}</div></h2>
+        </div>
+        <a class="btn btn-u" href="@{Events.event(_caller?.frontEvent.id)}"> +En savoir plus</a>
+    </div>
+
+    #{if _caller?.olderEvents.size() > 0}
+    <div class="older-events">    
+        <h2 id="highlighted-titles">Les anciens évènements de la CPD</h2>
+        #{eventsTag events:_caller?.olderEvents, as:'dendrite' /}
+    </div>
+    #{/if}
+
+    #{/if}
+    #{if _caller?.olderEvents}
+    #{eventsTag events:_caller?.olderEvents /}
+    #{/if}
+</div>

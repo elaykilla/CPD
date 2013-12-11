@@ -1,0 +1,10 @@
+#{extends 'Users/template.html' /} 
+#{set title:'Mes Articles' /}
+<div class="container-fluid span9">
+    #{if connected}
+    <div style="float:right;">
+        <a class="btn btn-u" href="@{Articles.editArticle}">Nouvel article</a>
+    </div>
+    #{/if}
+    #{listArticlesTag articles:articles, connected:connected /}
+</div>

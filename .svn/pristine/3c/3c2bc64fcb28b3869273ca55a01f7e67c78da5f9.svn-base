@@ -1,0 +1,2302 @@
+models.User(u1):
+    lastName:      CISSE
+    firstName:     Aboubacar
+    promotion:     2000
+    email:         aboubacar.cisse2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u2):
+    lastName:      COULIBALY
+    firstName:     Daouda
+    promotion:     2000
+    email:         daouda.coulibaly2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u3):
+    lastName:      DIAKITE
+    firstName:     Sadio
+    promotion:     2000
+    email:         sadio.diakite2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u4):
+    lastName:      DOUMBIA
+    firstName:     Soumaïla
+    promotion:     2000
+    email:         soumaila.doumbia2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u5):
+    lastName:      KAMENA
+    firstName:     Brehima
+    promotion:     2000
+    email:         brehima.kamena2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u6):
+    lastName:      KEITA
+    firstName:     Cheick
+    promotion:     2000
+    email:         cheick.keita2000bis@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u7):
+    lastName:      KOLOMA
+    firstName:     Yaya
+    promotion:     2000
+    email:         yaya.koloma2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u8):
+    lastName:      KONE
+    firstName:     Amadou
+    promotion:     2000
+    email:         amadou.kone2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u9):
+    lastName:      KONE
+    firstName:     Djibril
+    promotion:     2000
+    email:         djibril.kone2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u10):
+    lastName:      KONE 
+    firstName:     Salif
+    promotion:     2000
+    email:         salif.kone-2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u11):
+    lastName:      LY
+    firstName:     Diaminatou
+    promotion:     2000
+    email:         diaminatou.ly2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u12):
+    lastName:      MACALOU
+    firstName:     Sira
+    promotion:     2000
+    email:         sira.macalou2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u13):
+    lastName:      MAIGA
+    firstName:     Cheick Oumar
+    promotion:     2000
+    email:         cheick-oumar.maiga2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u14):
+    lastName:      MARIKO
+    firstName:     Boubacar
+    promotion:     2000
+    email:         boubacar.mariko2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u15):
+    lastName:      SOW
+    firstName:     Fanta
+    promotion:     2000
+    email:         fanta.sow2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u16):
+    lastName:      TEMBELY
+    firstName:     Moussa
+    promotion:     2000
+    email:         moussa.tembely2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u17):
+    lastName:      TRAORE
+    firstName:     Daouda A. K.
+    promotion:     2000
+    email:         daouda-a.-k..traore2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u18):
+    lastName:      TRAORE
+    firstName:     Daouda
+    promotion:     2000
+    email:         daouda.traore2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u19):
+    lastName:      KEITA
+    firstName:     Cheick
+    promotion:     2000
+    email:         cheick.keita2000@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2000-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u20):
+    lastName:      BAGAYOKO
+    firstName:     Abdoulaye Zana
+    promotion:     2001
+    email:         abdoulaye-zana.bagayoko2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u21):
+    lastName:      BAH
+    firstName:     Fousseynou
+    promotion:     2001
+    email:         fousseynou.bah2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u22):
+    lastName:      CAMARA
+    firstName:     Fatoumata Goundo
+    promotion:     2001
+    email:         fatoumata-goundo.camara2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u23):
+    lastName:      CISSE
+    firstName:     Abdoul Karim
+    promotion:     2001
+    email:         abdoul-karim.cisse2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u24):
+    lastName:      DEMBELE
+    firstName:     Awa
+    promotion:     2001
+    email:         awa.dembele2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u25):
+    lastName:      DIBO
+    firstName:     Mariam
+    promotion:     2001
+    email:         mariam.dibo2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u26):
+    lastName:      DOUMBIA
+    firstName:     Fassely
+    promotion:     2001
+    email:         fassely.doumbia2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u27):
+    lastName:      FABE
+    firstName:     Daouda
+    promotion:     2001
+    email:         daouda.fabe2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u28):
+    lastName:      HAIDARA
+    firstName:     Cheick Oumar
+    promotion:     2001
+    email:         cheick-oumar.haidara2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u29):
+    lastName:      HAIDARA
+    firstName:     Mariam
+    promotion:     2001
+    email:         mariam.haidara2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u30):
+    lastName:      KEITA
+    firstName:     Aïssata
+    promotion:     2001
+    email:         aissata.keita2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u31):
+    lastName:      KEITA
+    firstName:     Kadidia
+    promotion:     2001
+    email:         kadidia.keita2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u32):
+    lastName:      KONATE
+    firstName:     Jacqueline
+    promotion:     2001
+    email:         jacqueline.konate2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u33):
+    lastName:      KONE
+    firstName:     Issiaka
+    promotion:     2001
+    email:         issiaka.kone2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u34):
+    lastName:      KOURIBA
+    firstName:     Timothé
+    promotion:     2001
+    email:         timothe.kouriba2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u35):
+    lastName:      SANTARA
+    firstName:     Fatoumata Bintou
+    promotion:     2001
+    email:         fatoumata-bintou.santara2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u36):
+    lastName:      SOW
+    firstName:     Amadou
+    promotion:     2001
+    email:         amadou.sow2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u37):
+    lastName:      TEMBINE
+    firstName:     Hamidou
+    promotion:     2001
+    email:         hamidou.tembine2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u38):
+    lastName:      TOURE
+    firstName:     Mahamadou
+    promotion:     2001
+    email:         mahamadou.toure2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u39):
+    lastName:      TRAORE
+    firstName:     Binta
+    promotion:     2001
+    email:         binta.traore2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u40):
+    lastName:      TRAORE
+    firstName:     Nouhoum Bouya
+    promotion:     2001
+    email:         nouhoum-bouya.traore2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u41):
+    lastName:      TRAORE
+    firstName:     Olivier
+    promotion:     2001
+    email:         olivier.traore2001@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2001-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u42):
+    lastName:      CAMARA
+    firstName:     Djeneb
+    promotion:     2002
+    email:         djeneb.camara2002@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2002-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u43):
+    lastName:      KASSAMBARA
+    firstName:     Abdoul Kader
+    promotion:     2002
+    email:         abdoul-kader.kassambara2002@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2002-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u44):
+    lastName:      KONATE
+    firstName:     Moussa
+    promotion:     2002
+    email:         moussa.konate2002@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2002-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u45):
+    lastName:      LAH
+    firstName:     Ishaka
+    promotion:     2002
+    email:         ishaka.lah2002@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2002-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u46):
+    lastName:      MAIGA
+    firstName:     Arhamatoulaye 
+    promotion:     2002
+    email:         arhamatoulaye-.maiga2002@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2002-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u47):
+    lastName:      SAMAKE
+    firstName:     Alimata
+    promotion:     2002
+    email:         alimata.samake2002@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2002-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u48):
+    lastName:      SANGARE
+    firstName:     Mariam
+    promotion:     2002
+    email:         mariam.sangare2002@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2002-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u49):
+    lastName:      TAMBOURA
+    firstName:     Weloré
+    promotion:     2002
+    email:         welore.tamboura2002@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2002-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u50):
+    lastName:      TEMBELY
+    firstName:     Salif
+    promotion:     2002
+    email:         salif.tembely2002@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2002-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u51):
+    lastName:      TOUNGARA
+    firstName:     Mamadou
+    promotion:     2002
+    email:         mamadou.toungara2002@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2002-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u52):
+    lastName:      CISSE
+    firstName:     Cheickna
+    promotion:     2003
+    email:         cheickna.cisse2003@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2003-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u53):
+    lastName:      DIAWARA
+    firstName:     Bintou
+    promotion:     2003
+    email:         bintou.diawara2003@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2003-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u54):
+    lastName:      DICKO
+    firstName:     Ahmadoun
+    promotion:     2003
+    email:         ahmadoun.dicko2003@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2003-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u55):
+    lastName:      DOUMBIA
+    firstName:     Awa Soronfe
+    promotion:     2003
+    email:         awa-soronfe.doumbia2003@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2003-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u56):
+    lastName:      DRABA
+    firstName:     Souleymane
+    promotion:     2003
+    email:         souleymane.draba2003@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2003-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u57):
+    lastName:      IDRISSA
+    firstName:     Abdourhamane
+    promotion:     2003
+    email:         abdourhamane.idrissa2003@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2003-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u58):
+    lastName:      KOITA
+    firstName:     Boureima
+    promotion:     2003
+    email:         boureima.koita2003@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2003-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u59):
+    lastName:      MOHAMEDINE
+    firstName:     Rissa ag
+    promotion:     2003
+    email:         rissa-ag.mohamedine2003@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2003-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u60):
+    lastName:      SIDIBE
+    firstName:     Modibo
+    promotion:     2003
+    email:         modibo.sidibe2003@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2003-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u61):
+    lastName:      SYLLA
+    firstName:     Gaoussou Mamadou
+    promotion:     2003
+    email:         gaoussou-mamadou.sylla2003@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2003-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u62):
+    lastName:      COULIBALY
+    firstName:     Aminata Niélé
+    promotion:     2004
+    email:         aminata-niele.coulibaly2004@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2004-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u63):
+    lastName:      COULIBALY
+    firstName:     Aoua
+    promotion:     2004
+    email:         aoua.coulibaly2004@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2004-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u64):
+    lastName:      DIARRA
+    firstName:     Bakary
+    promotion:     2004
+    email:         bakary.diarra2004@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2004-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u65):
+    lastName:      HAIDARA
+    firstName:     Arkia
+    promotion:     2004
+    email:         arkia.haidara2004@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2004-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u66):
+    lastName:      KONE
+    firstName:     Habib
+    promotion:     2004
+    email:         habib.kone2004@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2004-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u67):
+    lastName:      KOUTAM
+    firstName:     Sidy
+    promotion:     2004
+    email:         sidy.koutam2004@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2004-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u68):
+    lastName:      M’BAYE
+    firstName:     Cheick Kader
+    promotion:     2004
+    email:         cheick-kader.m’baye2004@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2004-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u69):
+    lastName:      SANOGO
+    firstName:     Seydou
+    promotion:     2004
+    email:         seydou.sanogo2004@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2004-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u70):
+    lastName:      SIDIBE
+    firstName:     Korian
+    promotion:     2004
+    email:         korian.sidibe2004@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2004-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u71):
+    lastName:      TRAORE
+    firstName:     Mariam
+    promotion:     2004
+    email:         mariam.traore2004@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2004-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u72):
+    lastName:      ARBY
+    firstName:     Maouloune
+    promotion:     2005
+    email:         maouloune.arby2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u73):
+    lastName:      BATHILY
+    firstName:     Mamadou
+    promotion:     2005
+    email:         mamadou.bathily2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u74):
+    lastName:      BOCOUM
+    firstName:     Adama
+    promotion:     2005
+    email:         adama.bocoum2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u75):
+    lastName:      CISSE
+    firstName:     Cheick
+    promotion:     2005
+    email:         cheick.cisse2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u76):
+    lastName:      COULIBALY
+    firstName:     Boubacar
+    promotion:     2005
+    email:         boubacar.coulibaly2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u77):
+    lastName:      COULIBALY
+    firstName:     Ousmane
+    promotion:     2005
+    email:         ousmane.coulibaly2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u78):
+    lastName:      DIALLO
+    firstName:     Kaltoum
+    promotion:     2005
+    email:         kaltoum.diallo2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u79):
+    lastName:      DIARRA
+    firstName:     Sekou
+    promotion:     2005
+    email:         sekou.diarra2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u80):
+    lastName:      DICKO
+    firstName:     Ali
+    promotion:     2005
+    email:         ali.dicko2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u81):
+    lastName:      KALISA
+    firstName:     Thierry
+    promotion:     2005
+    email:         thierry.kalisa2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u82):
+    lastName:      KODIO
+    firstName:     Ousmane
+    promotion:     2005
+    email:         ousmane.kodio2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u83):
+    lastName:      SAGARA
+    firstName:     Yacouba
+    promotion:     2005
+    email:         yacouba.sagara2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u84):
+    lastName:      SISSOKO
+    firstName:     Cheick
+    promotion:     2005
+    email:         cheick.sissoko2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u85):
+    lastName:      SISSOKO
+    firstName:     Cheichna Hamala
+    promotion:     2005
+    email:         cheichna-hamala.sissoko2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u86):
+    lastName:      IVAN
+    firstName:     SOGODOGO
+    promotion:     2005
+    email:         sogodogo.ivan2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u87):
+    lastName:      SOW
+    firstName:     Aliou
+    promotion:     2005
+    email:         aliou.sow2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u88):
+    lastName:      SOW
+    firstName:     Yaya
+    promotion:     2005
+    email:         yaya.sow2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u89):
+    lastName:      TIENTA
+    firstName:     Nana
+    promotion:     2005
+    email:         nana.tienta2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u90):
+    lastName:      TOURE
+    firstName:     Aïcha
+    promotion:     2005
+    email:         aicha.toure2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u91):
+    lastName:      YALCOUYE
+    firstName:     Boubacar
+    promotion:     2005
+    email:         boubacar.yalcouye2005@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2005-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u92):
+    lastName:      DEMBA
+    firstName:     Baya
+    promotion:     2006
+    email:         baya.demba2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u93):
+    lastName:      CISSE
+    firstName:     Sanounou
+    promotion:     2006
+    email:         sanounou.cisse2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u94):
+    lastName:      COULIBALY
+    firstName:     Abdrahmane
+    promotion:     2006
+    email:         abdrahmane.coulibaly2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u95):
+    lastName:      DIABY
+    firstName:     Mamadou
+    promotion:     2006
+    email:         mamadou.diaby2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u96):
+    lastName:      DIARRA
+    firstName:     Amadou G.
+    promotion:     2006
+    email:         amadou-g..diarra2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u97):
+    lastName:      DIARRA
+    firstName:     Djeneba
+    promotion:     2006
+    email:         djeneba.diarra2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u98):
+    lastName:      DICKO
+    firstName:     Fatoumata
+    promotion:     2006
+    email:         fatoumata.dicko2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u99):
+    lastName:      GUIDO
+    firstName:     Mariétou
+    promotion:     2006
+    email:         marietou.guido2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u100):
+    lastName:      KANTE
+    firstName:     Mohamed
+    promotion:     2006
+    email:         mohamed.kante2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u101):
+    lastName:      KONATE
+    firstName:     Fayssal
+    promotion:     2006
+    email:         fayssal.konate2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u102):
+    lastName:      KOUTAM
+    firstName:     Cheick
+    promotion:     2006
+    email:         cheick.koutam2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u103):
+    lastName:      MAIGA
+    firstName:     Aissata
+    promotion:     2006
+    email:         aissata.maiga2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u104):
+    lastName:      SADIO
+    firstName:     SOUKOUNA
+    promotion:     2006
+    email:         soukouna.sadio2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u105):
+    lastName:      TAMBOURA
+    firstName:     Hamadoun
+    promotion:     2006
+    email:         hamadoun.tamboura2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u106):
+    lastName:      TOURE
+    firstName:     Niandou
+    promotion:     2006
+    email:         niandou.toure2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u107):
+    lastName:      TOURE
+    firstName:     Abdoulaye 
+    promotion:     2006
+    email:         abdoulaye-.toure2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u108):
+    lastName:      TOURE
+    firstName:     Fatouma
+    promotion:     2006
+    email:         fatouma.toure2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u109):
+    lastName:      TRAORE
+    firstName:     Abdoulaye 
+    promotion:     2006
+    email:         abdoulaye-.traore2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u110):
+    lastName:      TRAORE
+    firstName:     Bilal
+    promotion:     2006
+    email:         bilal.traore2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u111):
+    lastName:      TRAORE
+    firstName:     Seydou
+    promotion:     2006
+    email:         seydou.traore2006@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2006-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u112):
+    lastName:      BADINI
+    firstName:     Habibatou
+    promotion:     2007
+    email:         habibatou.badini2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u113):
+    lastName:      DIOLLA
+    firstName:     Aboubacar Nouhoum
+    promotion:     2007
+    email:         aboubacar-nouhoum.diolla2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u114):
+    lastName:      DIOLLA
+    firstName:     Mamadou Sada
+    promotion:     2007
+    email:         mamadou-sada.diolla2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u115):
+    lastName:      DIARRA
+    firstName:     Oumar Amadou
+    promotion:     2007
+    email:         oumar-amadou.diarra2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u116):
+    lastName:      DOUMBIA
+    firstName:     Seydou
+    promotion:     2007
+    email:         seydou.doumbia2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u117):
+    lastName:      KEITA
+    firstName:     Sékou Theodor
+    promotion:     2007
+    email:         sekou-theodor.keita2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u118):
+    lastName:      KIDA
+    firstName:     Fatoumata Djénné
+    promotion:     2007
+    email:         fatoumata-djenne.kida2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u119):
+    lastName:      KONATE
+    firstName:     Makadidia
+    promotion:     2007
+    email:         makadidia.konate2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u120):
+    lastName:      KONE
+    firstName:     Nouhoum
+    promotion:     2007
+    email:         nouhoum.kone2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u121):
+    lastName:      MAIGA
+    firstName:     Abdoulaye
+    promotion:     2007
+    email:         abdoulaye.maiga2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+    roles:         [super_user]
+
+models.User(u122):
+    lastName:      MAIGA
+    firstName:     Baba Wadiam
+    promotion:     2007
+    email:         baba-wadiam.maiga2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u123):
+    lastName:      NANAKASSE
+    firstName:     Souleymane
+    promotion:     2007
+    email:         souleymane.nanakasse2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u124):
+    lastName:      SAMAKE
+    firstName:     Abdoulaye
+    promotion:     2007
+    email:         abdoulaye.samake2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u125):
+    lastName:      TAPO
+    firstName:     Amadou
+    promotion:     2007
+    email:         amadou.tapo2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u126):
+    lastName:      TRAORE
+    firstName:     Aïssata
+    promotion:     2007
+    email:         aissata.traore2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u127):
+    lastName:      TRAORE
+    firstName:     Habibatou
+    promotion:     2007
+    email:         habibatou.traore2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u128):
+    lastName:      TRAORE
+    firstName:     Fatouma H.
+    promotion:     2007
+    email:         fatouma-h..traore2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u129):
+    lastName:      TRAORE
+    firstName:     Masséni
+    promotion:     2007
+    email:         masseni.traore2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u130):
+    lastName:      YATTARA
+    firstName:     Rehanna
+    promotion:     2007
+    email:         rehanna.yattara2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u131):
+    lastName:      DIOLLA
+    firstName:     Issa
+    promotion:     2007
+    email:         issa.diolla2007@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2007-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u132):
+    lastName:      AYDI
+    firstName:     Oumana
+    promotion:     2008
+    email:         oumana.aydi2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u133):
+    lastName:      DIABY
+    firstName:     Fatimata Tata
+    promotion:     2008
+    email:         fatimata-tata.diaby2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u134):
+    lastName:      DIALLO
+    firstName:     Oumou
+    promotion:     2008
+    email:         oumou.diallo2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u135):
+    lastName:      DIARRA
+    firstName:     Baye Siaka
+    promotion:     2008
+    email:         baye-siaka.diarra2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u136):
+    lastName:      DJIBO
+    firstName:     Mahamadou
+    promotion:     2008
+    email:         mahamadou.djibo2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u137):
+    lastName:      DOUMBIA
+    firstName:     Modibo
+    promotion:     2008
+    email:         modibo.doumbia2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u138):
+    lastName:      GOUNDIAM
+    firstName:     Mamadou
+    promotion:     2008
+    email:         mamadou.goundiam2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u139):
+    lastName:      KEITA
+    firstName:     Mamadou
+    promotion:     2008
+    email:         mamadou.keita2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u140):
+    lastName:      KONATE
+    firstName:     Rokiatou
+    promotion:     2008
+    email:         rokiatou.konate2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u141):
+    lastName:      MOHAMED
+    firstName:     Mina Mint
+    promotion:     2008
+    email:         mina-mint.mohamed2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u142):
+    lastName:      MOUHAMEIDOU
+    firstName:     Moulaye Ismael
+    promotion:     2008
+    email:         moulaye-ismael.mouhameidou2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u143):
+    lastName:      SECK
+    firstName:     Aminata
+    promotion:     2008
+    email:         aminata.seck2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u144):
+    lastName:      SISSOKO
+    firstName:     Cheick Mahady
+    promotion:     2008
+    email:         cheick-mahady.sissoko2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MONSIEUR
+    active:        true
+    roles:         [super_user]
+
+models.User(u145):
+    lastName:      SOW
+    firstName:     Aïssata Aya
+    promotion:     2008
+    email:         aissata-aya.sow2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u146):
+    lastName:      TOURE
+    firstName:     Ibrahim
+    promotion:     2008
+    email:         ibrahim.toure2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u147):
+    lastName:      TOURE
+    firstName:     Kadiatou
+    promotion:     2008
+    email:         kadiatou.toure2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u148):
+    lastName:      TRAORE
+    firstName:     Bassirou
+    promotion:     2008
+    email:         bassirou.traore2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u149):
+    lastName:      TRAORE
+    firstName:     Hawa
+    promotion:     2008
+    email:         hawa.traore2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u150):
+    lastName:      TRAORE
+    firstName:     Mohamed dit Mady
+    promotion:     2008
+    email:         mohamed-dit-mady.traore2008@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2008-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u151):
+    lastName:      CAMARA
+    firstName:     Issa
+    promotion:     2009
+    email:         issa.camara2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u152):
+    lastName:      DEMBELE
+    firstName:     Cheick Oumar
+    promotion:     2009
+    email:         cheick-oumar.dembele2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u153):
+    lastName:      DOUMBIA
+    firstName:     Mahamadou
+    promotion:     2009
+    email:         mahamadou.doumbia2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u154):
+    lastName:      DOUMBIA
+    firstName:     Djénèba
+    promotion:     2009
+    email:         djeneba.doumbia2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u155):
+    lastName:      FOFANA
+    firstName:     Salifou
+    promotion:     2009
+    email:         salifou.fofana2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u156):
+    lastName:      NANAKASSE
+    firstName:     Fatoumata
+    promotion:     2009
+    email:         fatoumata.nanakasse2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u157):
+    lastName:      TRAORE
+    firstName:     Moussa Lansana
+    promotion:     2009
+    email:         moussa-lansana.traore2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u158):
+    lastName:      SIDIBE
+    firstName:     Amadou Marc
+    promotion:     2009
+    email:         amadou-marc.sidibe2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u159):
+    lastName:      SALEM
+    firstName:     Youbba Ould
+    promotion:     2009
+    email:         youbba-ould.salem2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u160):
+    lastName:      DICKO
+    firstName:     Mahamar
+    promotion:     2009
+    email:         mahamar.dicko2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u161):
+    lastName:      SAMAKE
+    firstName:     Abdoulaye
+    promotion:     2009
+    email:         abdoulaye.samake2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u162):
+    lastName:      KEITA
+    firstName:     Kole
+    promotion:     2009
+    email:         kole.keita2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u163):
+    lastName:      DIARRA
+    firstName:     Alimata
+    promotion:     2009
+    email:         alimata.diarra2009@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2009-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u164):
+    lastName:      KONATÉ
+    firstName:     Mariam
+    promotion:     2010
+    email:         mariam.konate2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u165):
+    lastName:      THIAM
+    firstName:     Mariam
+    promotion:     2010
+    email:         mariam.thiam2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u166):
+    lastName:      TOURÉ
+    firstName:     Kadidia
+    promotion:     2010
+    email:         kadidia.toure2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u167):
+    lastName:      SOW
+    firstName:     Barakissa
+    promotion:     2010
+    email:         barakissa.sow2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u168):
+    lastName:      KANÉ
+    firstName:     Souleymane
+    promotion:     2010
+    email:         souleymane.kane2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u169):
+    lastName:      TRAORÉ
+    firstName:     Abraham
+    promotion:     2010
+    email:         abraham.traore2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u170):
+    lastName:      KANTÉ
+    firstName:     Souleymane
+    promotion:     2010
+    email:         souleymane.kante2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u171):
+    lastName:      DEMBÉLÉ
+    firstName:     Paul
+    promotion:     2010
+    email:         paul.dembele2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u172):
+    lastName:      DRAMÉ
+    firstName:     Diégui
+    promotion:     2010
+    email:         diegui.drame2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u173):
+    lastName:      TANGARA
+    firstName:     Salia
+    promotion:     2010
+    email:         salia.tangara2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u174):
+    lastName:      CAMARA
+    firstName:     Bambo Adama
+    promotion:     2010
+    email:         bambo-adama.camara2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u175):
+    lastName:      TIGANA
+    firstName:     Mohamed
+    promotion:     2010
+    email:         mohamed.tigana2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u176):
+    lastName:      BAGAYOGO
+    firstName:     Adama
+    promotion:     2010
+    email:         adama.bagayogo2010@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2010-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u177):
+    lastName:      BARRY
+    firstName:     Mariam
+    promotion:     2011
+    email:         mariam.barry2011@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2011-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u178):
+    lastName:      COULIBALY
+    firstName:     Amadou
+    promotion:     2011
+    email:         amadou.coulibaly2011@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2011-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u179):
+    lastName:      TRAORE
+    firstName:     Mazowa Soumaila
+    promotion:     2011
+    email:         mazowa-soumaila.traore2011@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2011-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u180):
+    lastName:      THERA
+    firstName:     Pehan Bayetoulaye
+    promotion:     2011
+    email:         pehan-bayetoulaye.thera2011@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2011-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u181):
+    lastName:      CAMARA
+    firstName:     Abdouramane
+    promotion:     2011
+    email:         abdouramane.camara2011@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2011-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u182):
+    lastName:      DIABATE
+    firstName:     Modibo
+    promotion:     2011
+    email:         modibo.diabate2011@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2011-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u183):
+    lastName:      TOURE
+    firstName:     Tema
+    promotion:     2011
+    email:         tema.toure2011@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2011-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u184):
+    lastName:      KOITE
+    firstName:     Sadio Alima
+    promotion:     2011
+    email:         sadio-alima.koite2011@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2011-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u185):
+    lastName:      KEITA
+    firstName:     Amara Karouga
+    promotion:     2011
+    email:         amara-karouga.keita2011@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2011-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u186):
+    lastName:      SAMAKE
+    firstName:     Abdoulaye
+    promotion:     2011
+    email:         abdoulaye.samake2011@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2011-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u187):
+    lastName:      DEM 
+    firstName:     Seydou Mohamed
+    promotion:     2012
+    email:         seydou-mohamed.dem-2012@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2012-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u188):
+    lastName:      KANTE
+    firstName:     Cheick Mamadou
+    promotion:     2012
+    email:         cheick-mamadou.kante2012@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2012-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u189):
+    lastName:      CISSE
+    firstName:     Ibrahim
+    promotion:     2012
+    email:         ibrahim.cisse2012@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2012-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u190):
+    lastName:      DIOURTE
+    firstName:     Adama
+    promotion:     2012
+    email:         adama.diourte2012@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2012-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u191):
+    lastName:      DEMBELE
+    firstName:     Mady
+    promotion:     2012
+    email:         mady.dembele2012@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2012-10-01
+    civility:      MONSIEUR
+    active:        true
+    
+models.User(u192):
+    lastName:      COULIBALY
+    firstName:     Allélé Boubou
+    promotion:     2013
+    email:         allele-boubou.coulibaly2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u193):
+    lastName:      DEMBÉLÉ
+    firstName:     Mama
+    promotion:     2013
+    email:         mama.dembele2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u194):
+    lastName:      DIARRA
+    firstName:     Zié Drissa
+    promotion:     2013
+    email:         zie-drissa.diarra2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u195):
+    lastName:      KANTA
+    firstName:     Aminata
+    promotion:     2013
+    email:         aminata.kanta2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u196):
+    lastName:      KOITA
+    firstName:     Seydou
+    promotion:     2013
+    email:         seydou.koita2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u197):
+    lastName:      KONATÉ
+    firstName:     Mamadou
+    promotion:     2013
+    email:         mamadou.konate2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u198):
+    lastName:      MAIGA
+    firstName:     Modibo Kane
+    promotion:     2013
+    email:         modibo-kane.maiga2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u199):
+    lastName:      SAMASSA
+    firstName:     Mahamadou
+    promotion:     2013
+    email:         mahamadou.samassa2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u200):
+    lastName:      SIDIBÉ
+    firstName:     Mahamadou
+    promotion:     2013
+    email:         mahamadou.sidibe2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u201):
+    lastName:      TALL
+    firstName:     Amadou Sékou
+    promotion:     2013
+    email:         amadou-sekou.tall2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u202):
+    lastName:      THIAM
+    firstName:     Amadou Yoro
+    promotion:     2013
+    email:         amadou-yoro.thiam2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u203):
+    lastName:      TRAORÉ
+    firstName:     Boubacar
+    promotion:     2013
+    email:         boubacar.traore2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u204):
+    lastName:      TRAORÉ
+    firstName:     Mohamed
+    promotion:     2013
+    email:         mohamed.traore2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u205):
+    lastName:      BAGAYOKO
+    firstName:     Salimata
+    promotion:     2013
+    email:         salimata.bagayoko2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u206):
+    lastName:      DIAKITÉ
+    firstName:     Moussa
+    promotion:     2013
+    email:         moussa.diakite2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MONSIEUR
+    active:        true
+
+models.User(u207):
+    lastName:      SALL
+    firstName:     Kakaman Makan
+    promotion:     2013
+    email:         kakaman-makan.sall2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u208):
+    lastName:      TRAORÉ
+    firstName:     Fatoumata Adama
+    promotion:     2013
+    email:         fatoumata-adama.traore2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MADAME
+    active:        true
+
+models.User(u209):
+    lastName:      TRAORÉ
+    firstName:     Youma
+    promotion:     2013
+    email:         youma.traore2013@cpd-mali.com
+    password:      $2a$10$p847g9AkUFuSbYDy8.XeQeUTWMQBMqps82JOmYtPZb.as6rKKNSSi
+    boursier:      true
+    birthday:      2013-10-01
+    civility:      MADAME
+    active:        true
+
+

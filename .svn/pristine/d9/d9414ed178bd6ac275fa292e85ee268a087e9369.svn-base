@@ -1,0 +1,29 @@
+<!--{extends 'Annuaires/template.html' /}
+{set title:'Resultats de la recherche' /}
+<div class="container-fluid" align="justify" >
+    <div></div>
+    {if users?.size}
+    {list items:users, as:'user'}
+        <div class="blog margin-bottom-30">
+
+        <h3>{user.?fullName(}</h3>
+
+        <h3>${user.fullName()}</h3>
+
+        <div class="posts margin-bottom-20">
+            <dl class="dl-horizontal">
+                <dt><a href="{Users.user(user?.id)}"><img src="{user?.photo?.smallUrl()}" alt="" /></a></dt>
+                <dd>
+                    <p><a href="{Users.user(user?.id)}">{user?.fullName()}</a></p> 
+                    <p></p>
+                </dd>
+            </dl>
+        </div>
+        <p><a class="btn-u btn-u-small" href="@{Users.user(user?.id)}">Sow Profile</a></p>
+    </div>/blog
+    {/list}
+    {/if}
+    {else}
+    Aucun utilisateur correspond à ces critères.
+    {/else}
+</div>-->

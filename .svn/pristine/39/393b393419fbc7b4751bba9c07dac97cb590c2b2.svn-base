@@ -1,0 +1,57 @@
+<!--This tag displays the list of candidatures for a given post.
+The post is passed to the tag by the calling template 
+The tag receives candidatures
+-->
+
+<!-------------------If there are no Candidates for the given post-------------------->
+#{if _candidatures?.isEmpty()}
+<p>
+    À présent aucun candidat ne s'est proposé au poste en question. Desirez vous candidater? 
+</p>
+#{/ if}
+
+<!--------------------When There are candidatures to display-------------------------->
+#{else}
+#{list items:_candidatures, as:'candidature'}
+<div class="span10 well form-horizontal" id="form">
+    <form class="span10" action="@{Elections.createVote}">
+
+        <input type='hidden' value=${_connected.id} name="electorId"/>
+        <input type='hidden' value=${candidature.id} name="candidatureId"/>
+
+        <div class="span4">
+            <a href="@{Users.user(candidature?.candidate?.id)}" class="thumbnail" id="carousel-selector-0">
+                <!--<img src="http://placehold.it/170x100&text=one" />-->
+                <img #{if candidature?.candidate?.profileUrl()} src="${candidature?.candidate?.profileUrl()}" #{/if} #{else} src="@{'/public/images/user_profil.jpeg'}" #{/else} />
+            </a>
+
+            <p class="pCenter">&{candidature.candidate.fullName()}</p>
+        </div>
+        <div class="span6">
+            ${candidature.presentation}
+
+        </div>
+        #{if _connected.canVote(_election.id)}
+        #{if _election.status() == "voting"}
+        #{if !_connected.hasVoted(_poste.id,_election.id)}
+        <button id="contact-submit" type="submit" class="btn btn-u input-medium pull-right">Voter</button>
+        #{/ if}
+        #{else}
+        <p>Vous Avez Deja voté pour cette candidature</p>
+        #{/else}
+        #{/ if}
+        #{/if}
+    </form>
+
+    #{if candidature.candidate == _connected}
+    <form class="span2 pull-right" action="@{Elections.removeCandidature}">
+        <input type='hidden' value=${candidature.id} name="candidatureId"/>
+        <button id="contact-submit" type="submit" class="btn btn-u input-medium">Retirer</button>   
+    </form> 
+    #{/ if}
+
+
+</div>
+#{/ list}
+
+#{/ else}

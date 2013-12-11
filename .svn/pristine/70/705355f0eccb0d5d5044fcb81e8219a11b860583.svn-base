@@ -1,0 +1,73 @@
+#{extends 'Articles/template.html' /} 
+#{set title:article?.title /}
+#{set 'meta'}
+<meta name="description"
+      content="${article.content.length() > 100 ? article.content[0..100]+ '...'  : article.content}" />
+<!-- Facebook -->
+<meta property="og:site_name" content="cpd"/>
+<meta property="fb:app_id" content="738389799521405"/>
+<meta property="og:title" content="${article.title}" />
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="@@{Articles.article(article?.id)}" />
+<meta property="og:image" content="${article.author?.profileUrl()}" />
+<meta property="og:product:brand" content="${article.title}" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:description" content="${article.content.length() > 100 ? article.content[0..100]+ '...'  : article.content}" />
+#{/set}
+<div class="container-fluid">
+    <div class="span12" style="margin-top: 30px; margin-bottom: -20px;">
+        <ul id="pagination">
+            #{if article.previous()}
+            <li id="previous">
+                <a href="@{Articles.article(article.previous().id, article.previous().title())}">${article.previous().title}</a>
+            </li>
+            #{/if}
+            #{if article.next()}
+            <li id="next">
+                <a href="@{Articles.article(article.next().id, article.next().title())}">${article.next().title}</a>
+            </li>
+            #{/if}
+        </ul>
+    </div>
+    <div class="row-fluid">
+        <div class="span12" id="white-part">
+            #{if connected}
+            #{if article?.isMine(connected)}
+            <div class="span3">
+                <a class="btn btn-u" href="@{Articles.editArticle(article.id, article.title())}">Modifier</a>
+            </div>
+            #{/if}
+            #{if connected.contains('DELETE_ARTICLE') || article.isMine(connected)}
+            <div class="span3">
+                <a href="@{Articles.deleteArticle(article.id)}" class="btn btn-danger pull-right"
+                   onClick="return(confirm('êtes vous sûr de vouloir supprimer cet article ?\nCes commentaires aussi seront supprimés'));">Supprimer</a>
+            </div>
+            #{/if}
+            <div class="span3">
+                <a class="btn btn-u" href="@{Articles.editArticle}">Nouvel article</a>
+            </div>
+            <button id="subscribe-articles-${article?.id}" class="btn btn-u pull-right" 
+                    type="button"
+                    #{if article?.isSubscribed(connected)}
+                    onclick="return subscribe('articles', 'un', '${article?.id}');"
+                    style="background: #FF0000;"
+                    #{/if}
+                    #{else}
+                    onclick="return subscribe('articles', '', '${article?.id}');"
+                    style="background: #008800;"
+                    #{/else}
+                    >${article?.isSubscribed(connected) ? 'Se désabonner' : 'S\'abonner'}</button>
+            <div id="social" class="pull-left">
+                <div class="fb-like" data-href="@@{Articles.article(article?.id, article?.title())}"
+                     data-send="false" data-layout="button_count" data-width="450"
+                     data-show-faces="false">
+                </div>
+            </div>
+            #{/if}
+        </div>
+        <div class="blog-page blog-item">
+            #{displayArticleTag article:article, connected:connected, errors:errors/}
+        </div>
+    </div>
+</div>
