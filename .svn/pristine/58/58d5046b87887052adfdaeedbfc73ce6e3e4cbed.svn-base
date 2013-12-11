@@ -1,4 +1,0 @@
-#{extends 'Dendrites/template.html' /}
-#{set title: announce?.title /}
-
-#{announceTag as:'dendrite' /}

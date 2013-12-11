@@ -1,6 +1,0 @@
-#{extends 'Cellule/bureauTemplate.html' /}
-
-
-<div class="container-fluid">
-    #{doLayout /}
-</div>

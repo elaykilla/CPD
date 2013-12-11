@@ -1,3 +1,0 @@
-#{extends 'Cellule/bureauTemplate.html' /}
-#{set title:'Evenement' /}
-#{eventFrontsTag /}

@@ -1,5 +1,0 @@
-#{extends 'Cellule/bureauTemplate.html' /}
-
-
-
-#{contactTag connected:connected/}

@@ -1,7 +1,0 @@
-models.Photo(ph1):
-  title:          90e66d3b-f85f-42ec-a7a0-8085573861f1IMG_0193.PNG
-  url:            https://s3.amazonaws.com/cpd300/90e66d3b-f85f-42ec-a7a0-8085573861f1IMG_0193.PNG
-  
-models.Photo(ph2):
-  title:          b4ee91d5-e6e9-4042-a508-788b348a012celay.jpg
-  url:            https://s3.amazonaws.com/cpd300/b4ee91d5-e6e9-4042-a508-788b348a012celay.jpg

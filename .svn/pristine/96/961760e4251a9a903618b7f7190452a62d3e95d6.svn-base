@@ -1,9 +1,0 @@
-<html>
-    <body>
-        <div id="welcome">
-            #{if user}
-            L'équipe <a href="@@{Application.index}">CPD</a> vous souhaite la bienvenue ${user.firstName}, et très heureuse de vous compter parmi ces membres.
-            #{/if}
-        </div>
-    </body>
-</html>

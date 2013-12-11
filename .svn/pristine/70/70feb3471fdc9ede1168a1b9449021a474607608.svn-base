@@ -1,9 +1,0 @@
-<!--
-Display cv languages
--->
-<div class="span12 cv-info">
-    <div class="row">
-        <span class="school span3">${_language?.language} : </span>
-        <span class="span9">${_language?.level}</span>
-    </div>
-</div>

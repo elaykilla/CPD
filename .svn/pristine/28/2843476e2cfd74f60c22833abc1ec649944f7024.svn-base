@@ -1,4 +1,0 @@
-#{extends 'Dendrites/template.html' /} 
-
-<!--This receives the election, postes, and the connected user-->
-#{showElectionTag connected:connected, election:election, postes:postes /}

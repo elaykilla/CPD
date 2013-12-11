@@ -1,6 +1,0 @@
-#{extends 'Announces/template.html' /}
-#{set title:announce.title /}
-
-<div class="container-fluid">
-    #{announceTag /}
-</div>

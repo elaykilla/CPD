@@ -1,2 +1,0 @@
-#{extends 'Dendrites/template.html' /} 
-#{set title:'Dendrites Edition d\'announce' /}
